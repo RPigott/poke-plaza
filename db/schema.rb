@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 20170118004818) do
 
   create_table "pokemons", force: :cascade do |t|
-    t.string   "species"
     t.integer  "trainer_id"
     t.string   "nickname"
     t.string   "gender"
@@ -31,6 +30,7 @@ ActiveRecord::Schema.define(version: 20170118004818) do
     t.string   "move3"
     t.string   "move2"
     t.string   "move4"
+    t.string   "ball"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "user_id"

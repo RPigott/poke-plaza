@@ -939,6 +939,7 @@ Caterpie = Pokemon.create(
 	:move3 => "String Shot",
 	:move2 => nil,
 	:move4 => nil,
+	:ball => "love-ball"
 )
 
 Species.find_by(:name => "Caterpie").pokemons << Caterpie
