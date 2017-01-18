@@ -911,3 +911,24 @@ species = [
 species.each do |name, dexno|
 	Species.create!(:name => name, :dexno => dexno)
 end
+
+Pokemon.create!(
+	:species => "Caterpie",
+	:trainer_id => "000001",
+	:nickname => nil,
+	:gender => "Male",
+	:shiny => false,
+	:nature => "Timid",
+	:ability => "Run Away",
+	:HPIV => 31,
+	:AtkIV => -1,
+	:DefIV => 31,
+	:SpAIV => 31,
+	:SpDIV => 31,
+	:SpeIV => 31,
+	:hiddenpower => nil,
+	:move1 => "Tackle",
+	:move3 => "String Shot",
+	:move2 => nil,
+	:move4 => nil,
+)

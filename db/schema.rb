@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 20170118004818) do
 
   create_table "pokemons", force: :cascade do |t|
     t.string   "species"
-    t.string   "form"
+    t.integer  "trainer_id"
     t.string   "nickname"
     t.string   "gender"
     t.boolean  "shiny"
@@ -45,7 +45,8 @@ ActiveRecord::Schema.define(version: 20170118004818) do
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "ign"
-    t.string   "friendcode"
+    t.integer  "friendcode"
+    t.integer  "trainer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
