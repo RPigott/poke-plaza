@@ -12,9 +12,40 @@
 
 ActiveRecord::Schema.define(version: 20170118004818) do
 
+  create_table "pokemons", force: :cascade do |t|
+    t.string   "species"
+    t.string   "form"
+    t.string   "nickname"
+    t.string   "gender"
+    t.boolean  "shiny"
+    t.string   "nature"
+    t.string   "ability"
+    t.integer  "HPIV"
+    t.integer  "AtkIV"
+    t.integer  "DefIV"
+    t.integer  "SpAIV"
+    t.integer  "SpDIV"
+    t.integer  "SpeIV"
+    t.string   "hiddenpower"
+    t.string   "move1"
+    t.string   "move3"
+    t.string   "move2"
+    t.string   "move4"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "species", force: :cascade do |t|
     t.string   "name"
     t.integer  "dexno"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "ign"
+    t.string   "friendcode"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
