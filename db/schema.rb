@@ -33,6 +33,10 @@ ActiveRecord::Schema.define(version: 20170118004818) do
     t.string   "move4"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+    t.integer  "species_id"
+    t.index ["species_id"], name: "index_pokemons_on_species_id"
+    t.index ["user_id"], name: "index_pokemons_on_user_id"
   end
 
   create_table "species", force: :cascade do |t|
@@ -45,10 +49,10 @@ ActiveRecord::Schema.define(version: 20170118004818) do
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "ign"
-    t.integer  "friendcode"
+    t.integer  "friend_code"
     t.integer  "trainer_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

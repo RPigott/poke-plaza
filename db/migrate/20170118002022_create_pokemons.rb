@@ -21,6 +21,9 @@ class CreatePokemons < ActiveRecord::Migration[5.0]
       t.string    :move4
 
       t.timestamps
+
+      t.belongs_to :user, :index => true
+      t.belongs_to :species, :index => true
     end
   end
 end

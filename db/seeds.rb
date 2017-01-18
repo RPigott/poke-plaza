@@ -912,9 +912,17 @@ species.each do |name, dexno|
 	Species.create!(:name => name, :dexno => dexno)
 end
 
-Pokemon.create!(
-	:species => "Caterpie",
-	:trainer_id => "000001",
+User.create(
+
+	:username => "Brocellous",
+	:ign => "Ronan",
+	:friend_code => 0,
+	:trainer_id => 1
+
+)
+
+Caterpie = Pokemon.create(
+	:trainer_id => 1,
 	:nickname => nil,
 	:gender => "Male",
 	:shiny => false,
@@ -932,3 +940,6 @@ Pokemon.create!(
 	:move2 => nil,
 	:move4 => nil,
 )
+
+Species.find_by(:name => "Caterpie").pokemons << Caterpie
+User.find_by(:username => "Brocellous").pokemons << Caterpie
