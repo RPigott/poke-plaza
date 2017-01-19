@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <% favicon_link_tag "pokeball.ico" %>
+    <% content_tag :title, "Poke-Plaza" %>
+    <link rel="stylesheet" href="http://static.tumblr.com/28amrxm/I8Soj63cz/bootstrap.min.css">
+    <link rel="stylesheet" href="http://static.tumblr.com/28amrxm/S5yojurg0/style.css">
+    <style>
+        h1 { color:{color:Header} }
+        h1 a { color:{color:Header Link} }
+        h1 a:hover, h1 a:focus { color:{color:Header Link Hover} }
+        nav ul li a { background-color:{color:Button};color:{color:Button Text} }
+        nav ul li.current::after { border-top-color:{color:Button} }
+        table { background-image:url(http://static.tumblr.com/28amrxm/gy9oj63g2/bg-td.gif) }
+        table thead tr { background-image:url(http://static.tumblr.com/28amrxm/Ciloj63g4/bg-th.gif) }
+        .menu-sprite{ background-image:url(http://static.tumblr.com/28amrxm/y5Zoj63gb/menusprites.png) }
+        .item-sprite{ background-image:url(http://static.tumblr.com/28amrxm/g8boj63g7/itemsprites.png) }
+        span.hidden-power{ background-image:url(http://static.tumblr.com/28amrxm/6Mgoj63lm/types.png) }
+        #pokemon-info { background-image:url(http://static.tumblr.com/28amrxm/xLjoj63fz/bg.png) }
+        #pokemon-info figure { background-image:url(http://static.tumblr.com/28amrxm/wIkoj63ge/pokeball-grey.png) }
+    </style>
+</head>
+
+<body>
+    <h1><% flash[:notice] %></h1>
+    <table>
+        <thead>
+            <tr>
+                <th class="name" colspan="2" rowspan="2">Pokémon</th>
+                <th class="nature" rowspan="2">Nature</th>
+                <th class="ability" rowspan="2">Ability</th>
+                <th class="ivs" colspan="6"><abbr title="Individual Values">IVs</abbr></th>
+                <th class="hidden-power" rowspan="2">Hidden Power</th>
+                <th class="egg-moves" rowspan="2"> Moves </th>
+                <th class="poke-balls" rowspan="2">Poké Ball</th>
+            </tr>
+            <tr>
+                <th class="hp"><abbr title="Hit Points">HP</abbr></th>
+                <th class="atk"><abbr title="Attack">Atk</abbr></th>
+                <th class="def"><abbr title="Defense">Def</abbr></th>
+                <th class="spa"><abbr title="Special Attack">SpA</abbr></th>
+                <th class="spd"><abbr title="Special Defense">SpD</abbr></th>
+                <th class="spe"><abbr title="Speed">Spe</abbr></th>
+            </tr>
+        </thead>
+        <% @pokemons.each do |pokemon| %>
+            <tr>
+                <td><%= content_tag :span, "#{pokemon.species.dexno}", :class => "menu-sprite #{pokemon.species.name.downcase}" %></td>
+                <%= content_tag :td, pokemon.species.name %>
+                <%= content_tag :td, pokemon.nature %>
+                <%= content_tag :td, pokemon.ability %>
+                <%= content_tag :td, pokemon.HPIV > 0 ? pokemon.HPIV : "x" %>
+                <%= content_tag :td, pokemon.AtkIV > 0 ? pokemon.AtkIV : "x" %>
+                <%= content_tag :td, pokemon.DefIV > 0 ? pokemon.DefIV : "x" %>
+                <%= content_tag :td, pokemon.SpAIV > 0 ? pokemon.SpAIV : "x" %>
+                <%= content_tag :td, pokemon.SpDIV > 0 ? pokemon.SpDIV : "x" %>
+                <%= content_tag :td, pokemon.SpeIV > 0 ? pokemon.SpeIV : "x" %>
+                <%= content_tag :td, pokemon.hiddenpower.nil? ? "???" : content_tag(:span, "#{pokemon.hiddenpower}", :class => "hidden-power #{pokemon.hiddenpower}") %>
+                <%= content_tag :td, [pokemon.move1, pokemon.move2, pokemon.move3, pokemon.move4].reject(&:nil?).join(", ") %>
+                <td><%= content_tag :span, "#{pokemon.ball}", :class => " item-sprite #{pokemon.ball}" %><td>
+            </tr>
+        <% end %>
+    </table>
+    <h2>TODO: Add EDIT button</h2>
+</body>
+</html>
