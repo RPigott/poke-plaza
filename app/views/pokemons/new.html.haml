@@ -1,0 +1,64 @@
+%h1= flash[:notice]
+
+= form_tag pokemons_path do
+  = label :pokemon, :species, 'Species'
+  = text_field :pokemon, 'species'
+  %br
+  = label :pokemon, :trainer_id, 'Trainer ID'
+  = text_field :pokemon, 'trainer_id'
+  %br
+  = label :pokemon, :nickname, 'Nickname'
+  = text_field :pokemon, 'nickname (use js to autofill after selecting species)'
+  %br
+  = label :pokemon, :gender, 'Gender'
+  = select :pokemon, :gender, ['Male', 'Female', 'Other']
+  %br
+  = label :pokemon, :shiny, 'Shiny?'
+  Yes
+  = radio_button :pokemon, :shiny, "Yes", :checked => true
+  No
+  = radio_button :pokemon, :shiny, "No"
+  %br
+  = label :pokemon, :nature, 'Nature'
+  = select :pokemon, :nature, ['Unknown', 'Adamant', 'Brave', 'Lonely', 'Naughty', 'Bold', 'Impish', 'LaxDefe', 'Relaxed', 'Modest', 'Mild', 'Quiet', 'Rash', 'Calm', 'Careful', 'Gentle', 'Sassy', 'Hasty', 'Jolly', 'Naive', 'Timid']
+  %br
+  = label :pokemon, :ability, 'Ability'
+  = text_field :pokemon, 'ability'
+  %hr
+  = label :pokemon, :HPIV, 'HP IV'
+  = number_field :pokemon, :HPIV, :value => 31
+  %br
+  = label :pokemon, :AtkIV, 'Atk IV'
+  = number_field :pokemon, :AtkIV, :value => 31
+  %br
+  = label :pokemon, :DefIV, 'Def IV'
+  = number_field :pokemon, :DefIV, :value => 31
+  %br
+  = label :pokemon, :SpAIV, 'SpA IV'
+  = number_field :pokemon, :SpAIV, :value => 31
+  %br
+  = label :pokemon, :SpDIV, 'SpD IV'
+  = number_field :pokemon, :SpDIV, :value => 31
+  %br
+  = label :pokemon, :SpeIV, 'Spe IV'
+  = number_field :pokemon, :SpeIV, :value => 31
+  %hr
+  = label :pokemon, :hiddenpower, 'Hidden Power'
+  = select :pokemon, :hiddenpower, ['Unknown']
+  %hr
+  = label :pokemon, :move1, 'Move 1'
+  = text_field :pokemon, 'move1'
+  %br
+  = label :pokemon, :move2, 'Move 2'
+  = text_field :pokemon, 'move2'
+  %br
+  = label :pokemon, :move3, 'Move 3'
+  = text_field :pokemon, 'move3'
+  %br
+  = label :pokemon, :move4, 'Move 4'
+  = text_field :pokemon, 'move4'
+  %hr
+  = label :pokemon, :ball, 'Ball Type'
+  = text_field :pokemon, 'ball'
+  %br
+  = submit_tag 'Post new trade'

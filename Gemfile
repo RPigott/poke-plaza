@@ -29,6 +29,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Devise Authentication
 gem 'devise'
 
+# HAML
+gem 'haml', '~> 4.0', '>= 4.0.7'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
