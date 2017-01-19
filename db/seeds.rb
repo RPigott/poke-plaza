@@ -943,4 +943,4 @@ Caterpie = Pokemon.create(
 )
 
 Species.find_by(:name => "Caterpie").pokemons << Caterpie
-User.find_by(:username => "Brocellous").pokemons << Caterpie
+# User.find_by(:username => "Brocellous").pokemons << Caterpie
