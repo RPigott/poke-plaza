@@ -912,14 +912,12 @@ species.each do |name, dexno|
 	Species.create!(:name => name, :dexno => dexno)
 end
 
-User.create(
-
-	:username => "Brocellous",
-	:ign => "Ronan",
-	:friend_code => 0,
-	:trainer_id => 1
-
-)
+# User.create(
+# 	:username => "Brocellous",
+# 	:ign => "Ronan",
+# 	:friend_code => 0,
+# 	:trainer_id => 1
+# )
 
 Caterpie = Pokemon.create(
 	:trainer_id => 1,
