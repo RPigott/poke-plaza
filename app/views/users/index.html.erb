@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <% favicon_link_tag "pokeball.ico" %>
+    <% content_tag :title, "Poke-Plaza Trainers" %>
+    <link rel="stylesheet" href="http://static.tumblr.com/28amrxm/I8Soj63cz/bootstrap.min.css">
+    <link rel="stylesheet" href="http://static.tumblr.com/28amrxm/S5yojurg0/style.css">
+    <style>
+        h1 { color:{color:Header} }
+        h1 a { color:{color:Header Link} }
+        h1 a:hover, h1 a:focus { color:{color:Header Link Hover} }
+        nav ul li a { background-color:{color:Button};color:{color:Button Text} }
+        nav ul li.current::after { border-top-color:{color:Button} }
+        table { background-image:url(http://static.tumblr.com/28amrxm/gy9oj63g2/bg-td.gif) }
+        table thead tr { background-image:url(http://static.tumblr.com/28amrxm/Ciloj63g4/bg-th.gif) }
+        .menu-sprite{ background-image:url(http://static.tumblr.com/28amrxm/y5Zoj63gb/menusprites.png) }
+        .item-sprite{ background-image:url(http://static.tumblr.com/28amrxm/g8boj63g7/itemsprites.png) }
+        span.hidden-power{ background-image:url(http://static.tumblr.com/28amrxm/6Mgoj63lm/types.png) }
+        #pokemon-info { background-image:url(http://static.tumblr.com/28amrxm/xLjoj63fz/bg.png) }
+        #pokemon-info figure { background-image:url(http://static.tumblr.com/28amrxm/wIkoj63ge/pokeball-grey.png) }
+    </style>
+</head>
+
+<body>
+    <h1><% flash[:notice] %></h1>
+    <table>
+        <thead>
+            <tr>
+                <th class="username" colspan="2">Poke-Plaza Username</th>
+                <th class="ign">Trainer IGN</th>
+                <th class="friend_code">Friend Code</th>
+                <th class="trainer_id">Trainer ID</th>
+            </tr>
+        </thead>
+        <% @users.each do |user| %>
+            <tr>
+                <%= content_tag :td, user.id %>
+                <td><%= link_to user.username, user_path(user.username) %></td>
+                <%= content_tag :td, user.ign %>
+                <%= content_tag :td, user.friend_code %>
+                <%= content_tag :td, user.trainer_id %>
+            </tr>
+        <% end %>
+    </table>
+</body>
+</html>
