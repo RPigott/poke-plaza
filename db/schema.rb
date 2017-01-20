@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119032707) do
+ActiveRecord::Schema.define(version: 20170120005716) do
+
+  create_table "moves", force: :cascade do |t|
+    t.string   "name"
+    t.string   "movetype"
+    t.string   "category"
+    t.integer  "power"
+    t.integer  "accuracy"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "pokemons", force: :cascade do |t|
     t.integer  "trainer_id"
@@ -41,6 +51,7 @@ ActiveRecord::Schema.define(version: 20170119032707) do
 
   create_table "species", force: :cascade do |t|
     t.string   "name"
+    t.string   "form"
     t.integer  "dexno"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
