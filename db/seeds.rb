@@ -19,5 +19,11 @@ end
 
 species = ActiveSupport::JSON.decode(File.read("db/seeds/pokemons.json"))
 species.each do |species|
-	Species.create!(name: species["name"], dexno: species["id"], form: species["form"])
+	if species["forms"].nil?
+		Species.create!(name: species["name"], dexno: species["id"], form: "Base")
+	else
+		species["forms"].each do |form|
+			Species.create!(name: species["name"], dexno: species["id"], form: form)
+		end
+	end
 end
