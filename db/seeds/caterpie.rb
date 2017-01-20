@@ -1,4 +1,4 @@
-User.create!(
+Brocellous = User.create!(
 	username: "Brocellous",
 	ign: "Ronan",
 	friend_code: 0,
