@@ -18,31 +18,6 @@ moves.each do |name, info|
 end
 
 species = ActiveSupport::JSON.decode(File.read("db/seeds/pokemons.json"))
-
 species.each do |species|
 	Species.create!(name: species["name"], dexno: species["id"], form: species["form"])
 end
-
-Caterpie = Pokemon.create(
-	:trainer_id => 1,
-	:nickname => nil,
-	:gender => "Male",
-	:shiny => false,
-	:nature => "Timid",
-	:ability => "Run Away",
-	:HPIV => 31,
-	:AtkIV => -1,
-	:DefIV => 31,
-	:SpAIV => 31,
-	:SpDIV => 31,
-	:SpeIV => 31,
-	:hiddenpower => nil,
-	:move1 => "Tackle",
-	:move3 => "String Shot",
-	:move2 => nil,
-	:move4 => nil,
-	:ball => "love-ball"
-)
-
-Species.find_by(:name => "Caterpie").pokemons << Caterpie
-# User.find_by(:username => "Brocellous").pokemons << Caterpie
