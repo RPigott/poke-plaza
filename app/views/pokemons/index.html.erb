@@ -44,7 +44,7 @@
         </thead>
         <% @pokemons.each do |pokemon| %>
             <tr>
-                <td><%= tag :span, :class => "pkspr pkmn-#{pokemon.sprite_name} form-#{pokemon.form_name}" %></td>
+                <td><%= tag :span, :class => "pkspr pkmn-#{pokemon.sprite_name} color-#{if pokemon.shiny then 'shiny'} form-#{pokemon.form_name}" %></td>
                 <%= content_tag :td,
                 pokemon.species.name + (pokemon.species.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + pokemon.species.form)
                 %>

@@ -1,9 +1,9 @@
 class Species < ApplicationRecord
 	has_many :pokemons
 
-	has_many :levelup_moves,   foreign_key: :levelup_id,   class_name: "Move"
-	has_many :tm_moves,        foreign_key: :tm_id,        class_name: "Move"
-	has_many :egg_moves,       foreign_key: :egg_id,       class_name: "Move"
-	has_many :tutor_moves,     foreign_key: :tutor_id,     class_name: "Move"
-	has_many :evolution_moves, foreign_key: :evolution_id, class_name: "Move"
+	has_and_belongs_to_many :levelup_moves,   join_table: :levelup_moves,   class_name: "Move"
+	has_and_belongs_to_many :tm_moves,        join_table: :tm_moves,        class_name: "Move"
+	has_and_belongs_to_many :egg_moves,       join_table: :egg_moves,       class_name: "Move"
+	has_and_belongs_to_many :tutor_moves,     join_table: :tutor_moves,     class_name: "Move"
+	has_and_belongs_to_many :evolution_moves, join_table: :evolution_moves, class_name: "Move"
 end

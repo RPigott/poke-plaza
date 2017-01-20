@@ -7,12 +7,6 @@ class CreateMoves < ActiveRecord::Migration[5.0]
       t.integer :power
       t.integer :accuracy
 
-      t.integer :levelup_id
-      t.integer :egg_id
-      t.integer :tm_id
-      t.integer :tutor_id
-      t.integer :evolution_id
-
       t.timestamps
     end
   end

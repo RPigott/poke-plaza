@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170120005716) do
+ActiveRecord::Schema.define(version: 20170120223816) do
+
+  create_table "egg_moves", id: false, force: :cascade do |t|
+    t.integer "species_id"
+    t.integer "move_id"
+    t.index ["move_id"], name: "index_egg_moves_on_move_id"
+    t.index ["species_id"], name: "index_egg_moves_on_species_id"
+  end
+
+  create_table "evolution_moves", id: false, force: :cascade do |t|
+    t.integer "species_id"
+    t.integer "move_id"
+    t.index ["move_id"], name: "index_evolution_moves_on_move_id"
+    t.index ["species_id"], name: "index_evolution_moves_on_species_id"
+  end
+
+  create_table "levelup_moves", id: false, force: :cascade do |t|
+    t.integer "species_id"
+    t.integer "move_id"
+    t.index ["move_id"], name: "index_levelup_moves_on_move_id"
+    t.index ["species_id"], name: "index_levelup_moves_on_species_id"
+  end
 
   create_table "moves", force: :cascade do |t|
     t.string   "name"
@@ -18,13 +39,8 @@ ActiveRecord::Schema.define(version: 20170120005716) do
     t.string   "category"
     t.integer  "power"
     t.integer  "accuracy"
-    t.integer  "levelup_id"
-    t.integer  "egg_id"
-    t.integer  "tm_id"
-    t.integer  "tutor_id"
-    t.integer  "evolution_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pokemons", force: :cascade do |t|
@@ -60,6 +76,20 @@ ActiveRecord::Schema.define(version: 20170120005716) do
     t.integer  "dexno"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "tm_moves", id: false, force: :cascade do |t|
+    t.integer "species_id"
+    t.integer "move_id"
+    t.index ["move_id"], name: "index_tm_moves_on_move_id"
+    t.index ["species_id"], name: "index_tm_moves_on_species_id"
+  end
+
+  create_table "tutor_moves", id: false, force: :cascade do |t|
+    t.integer "species_id"
+    t.integer "move_id"
+    t.index ["move_id"], name: "index_tutor_moves_on_move_id"
+    t.index ["species_id"], name: "index_tutor_moves_on_species_id"
   end
 
   create_table "users", force: :cascade do |t|
