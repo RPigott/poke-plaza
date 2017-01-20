@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="http://static.tumblr.com/28amrxm/S5yojurg0/style.css">
     <% javascript_include_tag "pokesprite.js" %>
     <% stylesheet_link_tag "pokesprite.scss" %>
+    <% stylesheet_link_tag "types.scss" %>
     <style>
         h1 { color:{color:Header} }
         h1 a { color:{color:Header Link} }
@@ -53,7 +54,7 @@
                 <%= content_tag :td, pokemon.SpAIV > 0 ? pokemon.SpAIV : "x" %>
                 <%= content_tag :td, pokemon.SpDIV > 0 ? pokemon.SpDIV : "x" %>
                 <%= content_tag :td, pokemon.SpeIV > 0 ? pokemon.SpeIV : "x" %>
-                <%= content_tag :td, pokemon.hiddenpower.nil? ? "???" : content_tag(:span, "#{pokemon.hiddenpower}", :class => "hidden-power #{pokemon.hiddenpower}") %>
+                <%= content_tag :td, tag( :span, :class => "pokemon-type pokemon-type-#{pokemon.hiddenpower.downcase}" ) %>
                 <%= content_tag :td, [pokemon.move1, pokemon.move2, pokemon.move3, pokemon.move4].reject(&:nil?).join(", ") %>
                 <td><%= tag :span, :class => "pkspr pokeball-#{pokemon.ball}" %><td>
             </tr>
