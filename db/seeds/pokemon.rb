@@ -30,7 +30,7 @@ pokemon  = Pokemon.create!(
 	move3: "String Shot",
 	move2: nil,
 	move4: nil,
-	ball: "Loveball",
+	ball: "love",
 	user: Brocellous,
 	species: Caterpie
 )
