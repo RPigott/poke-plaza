@@ -18,8 +18,13 @@ ActiveRecord::Schema.define(version: 20170120005716) do
     t.string   "category"
     t.integer  "power"
     t.integer  "accuracy"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "levelup_id"
+    t.integer  "egg_id"
+    t.integer  "tm_id"
+    t.integer  "tutor_id"
+    t.integer  "evolution_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "pokemons", force: :cascade do |t|
