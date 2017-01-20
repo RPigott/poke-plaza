@@ -20,10 +20,27 @@ end
 species = ActiveSupport::JSON.decode(File.read("db/seeds/pokemons.json"))
 species.each do |species|
 	if species["forms"].nil?
-		Species.create!(name: species["name"], dexno: species["id"], form: "Base")
+		current = Species.create!(name: species["name"], dexno: species["id"], form: "Base")
 	else
 		species["forms"].each do |form|
-			Species.create!(name: species["name"], dexno: species["id"], form: form)
+			current = Species.create!(name: species["name"], dexno: species["id"], form: form)
+		end
+	end
+
+	species["moves"].each do |move|
+		move_name = move["name"]
+		learn_method = move["method"]
+		case learn_method
+		when /^[0-9]+$/
+			current.levelup_moves << move_name
+		when /^egg$/
+			current.egg_moves << move_name
+		when /^tm$/
+			current.tm_moves << move_name
+		when /^tutor$/
+			current.tutor_moves << move_name
+		when /^evolution$/
+			current.evolution_moves << move_name
 		end
 	end
 end
