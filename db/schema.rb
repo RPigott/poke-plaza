@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170120005716) do
   end
 
   create_table "pokemons", force: :cascade do |t|
-    t.integer  "trainer_id"
+    t.integer  "original_trainer_id"
     t.string   "nickname"
     t.string   "gender"
     t.boolean  "shiny"
@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 20170120005716) do
     t.string   "move2"
     t.string   "move4"
     t.string   "ball"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.integer  "user_id"
     t.integer  "species_id"
     t.index ["species_id"], name: "index_pokemons_on_species_id"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 20170120005716) do
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "ign"
-    t.integer  "friend_code"
+    t.string   "friend_code"
     t.integer  "trainer_id"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false

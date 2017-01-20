@@ -1,7 +1,7 @@
 class CreatePokemons < ActiveRecord::Migration[5.0]
   def change
     create_table :pokemons do |t|
-      t.integer   :trainer_id
+      t.integer   :original_trainer_id
       t.string    :nickname
       t.string    :gender
       t.boolean   :shiny
