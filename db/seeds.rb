@@ -32,15 +32,15 @@ species.each do |species|
 		learn_method = move["method"]
 		case learn_method
 		when /^[0-9]+$/
-			current.levelup_moves << moves[move_name]
+			current.levelup_moves << Move.find_by(name: move_name)
 		when /^egg$/
-			current.egg_moves << moves[move_name]
+			current.egg_moves << Move.find_by(name: move_name)
 		when /^tm$/
-			current.tm_moves << moves[move_name]
+			current.tm_moves << Move.find_by(name: move_name)
 		when /^tutor$/
-			current.tutor_moves << moves[move_name]
+			current.tutor_moves << Move.find_by(name: move_name)
 		when /^evolution$/
-			current.evolution_moves << moves[move_name]
+			current.evolution_moves << Move.find_by(name: move_name)
 		end
 	end
 end
