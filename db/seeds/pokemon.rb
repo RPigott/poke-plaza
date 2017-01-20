@@ -1,4 +1,7 @@
-Brocellous = User.create!(
+species = ENV["species"]
+form = ENV["form"] || "Base"
+
+Brocellous = User.find_by(:username => "Brocellous") || User.create!(
 	username: "Brocellous",
 	ign: "Ronan",
 	friend_code: 0,
@@ -7,7 +10,9 @@ Brocellous = User.create!(
 	password: "password"
 )
 
-Caterpie  = Pokemon.create!(
+Caterpie = Species.find_by(name: species, form: form) || Species.find_by(name: "Caterpie")
+
+pokemon  = Pokemon.create!(
 	trainer_id: 1,
 	nickname: nil,
 	gender: "Male",
@@ -26,6 +31,8 @@ Caterpie  = Pokemon.create!(
 	move2: nil,
 	move4: nil,
 	ball: "Loveball",
+	user: Brocellous,
+	species: Caterpie
 )
-Species.find_by(name: "Caterpie").pokemons << Caterpie
-Brocellous.pokemons << Caterpie
+Caterpie.pokemons << pokemon
+Brocellous.pokemons << pokemon
