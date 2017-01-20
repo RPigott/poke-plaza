@@ -24,7 +24,7 @@ number_of.times do
 	species = Species.find_by(name: species_name, form: form) || Species.find(rand(1..Species.all.count))
 	
 	indiv_values = (1..6).to_a.map{|x| rand(10) == 0 ? -1 : 31}
-	moves = rand(10)
+	moves = species.levelup_moves.sample(4)
 	
 	pokemon  = Pokemon.create!(
 		original_trainer_id: user.trainer_id,
@@ -40,10 +40,10 @@ number_of.times do
 		SpDIV: indiv_values[4],
 		SpeIV: indiv_values[5],
 		hiddenpower: ['none', 'Fire', 'Fighting', 'Water', 'Flying', 'Grass', 'Poison', 'Electric', 'Ground', 'Psychic', 'Rock', 'Ice', 'Bug', 'Dragon', 'Ghost', 'Dark', 'Steel'][rand(17)],
-		move1: "move1",
-		move2: moves > 1 ? "move2" : nil,
-		move3: moves > 3 ? "move3" : nil,
-		move4: moves > 7 ? "move4" : nil,
+		move1: moves[0]
+		move2: moves[1]
+		move3: moves[2]
+		move4: moves[3]
 		ball: ['heal', 'dusk', 'safari', 'luxury', 'master', 'fast', 'nest', 'level', 'dream', 'love', 'park', 'dive', 'great', 'moon', 'poke', 'ultra', 'repeat', 'lure', 'net', 'quick', 'heavy', 'beast', 'sport', 'premier', 'timer', 'cherish', 'friend'][rand(27)],
 		user: user,
 		species: species

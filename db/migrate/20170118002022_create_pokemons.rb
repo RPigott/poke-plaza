@@ -14,10 +14,10 @@ class CreatePokemons < ActiveRecord::Migration[5.0]
       t.integer   :SpDIV
       t.integer   :SpeIV
       t.string    :hiddenpower
-      t.string    :move1
-      t.string    :move3
-      t.string    :move2
-      t.string    :move4
+      t.integer   :move1_id
+      t.integer   :move3_id
+      t.integer   :move2_id
+      t.integer   :move4_id
       t.string    :ball
 
       t.timestamps
