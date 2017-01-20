@@ -44,7 +44,7 @@
         </thead>
         <% @pokemons.each do |pokemon| %>
             <tr>
-                <td><%= tag :span, :class => "pkspr pkmn-#{pokemon.species.name.downcase}" %></td>
+                <td><%= tag :span, :class => "pkspr pkmn-#{pokemon.sprite_name}" %></td>
                 <%= content_tag :td, pokemon.species.name %>
                 <%= content_tag :td, pokemon.nature %>
                 <%= content_tag :td, pokemon.ability %>
