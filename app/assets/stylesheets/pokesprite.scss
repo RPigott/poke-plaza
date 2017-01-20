@@ -7,7 +7,7 @@
  * Generated on 2017-01-20 01:28:16.
  */
 
-$pkspr-sprite-url: image-url('pokesprite.png');
+$pkspr-sprite-url: asset-path("pokesprite.png");
 $pkspr-types: (
   pkmn: (
     w: 40, h: 30,
