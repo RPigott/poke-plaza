@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170120223816) do
+ActiveRecord::Schema.define(version: 20170121052830) do
+
+  create_table "abilities", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "egg_moves", id: false, force: :cascade do |t|
     t.integer "species_id"
@@ -57,10 +63,10 @@ ActiveRecord::Schema.define(version: 20170120223816) do
     t.integer  "SpDIV"
     t.integer  "SpeIV"
     t.string   "hiddenpower"
-    t.string   "move1"
-    t.string   "move3"
-    t.string   "move2"
-    t.string   "move4"
+    t.integer  "move1_id"
+    t.integer  "move3_id"
+    t.integer  "move2_id"
+    t.integer  "move4_id"
     t.string   "ball"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
@@ -74,8 +80,11 @@ ActiveRecord::Schema.define(version: 20170120223816) do
     t.string   "name"
     t.string   "form"
     t.integer  "dexno"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "ability1_id"
+    t.integer  "ability2_id"
+    t.integer  "ability3_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "tm_moves", id: false, force: :cascade do |t|

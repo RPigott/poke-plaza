@@ -2,23 +2,26 @@ number_of = ENV["count"].to_i || 1
 species_name = ENV["species"]
 form = ENV["form"] || "Base"
 
+user1 = User.find_by(:username => "Brocellous") || User.create!(
+	username: "Brocellous",
+	ign: "Ronan",
+	friend_code: "0000-0000-0000",
+	trainer_id: 1,
+	email: "Brocellous@gmail.com",
+	password: "password"
+)
+user2 = User.find_by(:username => "Pojostick") || User.create!(
+	username: "Pojostick",
+	ign: "Joseph",
+	friend_code: "1111-1111-1111",
+	trainer_id: 111111,
+	email: "Pojostick@gmail.com",
+	password: "password"
+)
+
+natures = ActiveSupport::JSON.decode(File.read("db/seeds/natures.json"))
+
 number_of.times do
-	user1 = User.find_by(:username => "Brocellous") || User.create!(
-		username: "Brocellous",
-		ign: "Ronan",
-		friend_code: "0000-0000-0000",
-		trainer_id: 1,
-		email: "Brocellous@gmail.com",
-		password: "password"
-	)
-	user2 = User.find_by(:username => "Pojostick") || User.create!(
-		username: "Pojostick",
-		ign: "Joseph",
-		friend_code: "1111-1111-1111",
-		trainer_id: 111111,
-		email: "Pojostick@gmail.com",
-		password: "password"
-	)
 	user = rand(2) == 1 ? user1 : user2
 	
 	species = Species.find_by(name: species_name, form: form) || Species.find(rand(1..Species.all.count))
@@ -30,8 +33,8 @@ number_of.times do
 		original_trainer_id: user.trainer_id,
 		nickname: species_name,
 		gender: ['Male', 'Female', 'Other'][rand(3)],
-		shiny: [true, false, false, false][rand(4)],
-		nature: ['Unknown', 'Adamant', 'Brave', 'Lonely', 'Naughty', 'Bold', 'Impish', 'LaxDefe', 'Relaxed', 'Modest', 'Mild', 'Quiet', 'Rash', 'Calm', 'Careful', 'Gentle', 'Sassy', 'Hasty', 'Jolly', 'Naive', 'Timid'][rand(17)],
+		shiny: rand > 0.95,
+		nature: natures.keys.push("Unknown").sample(),
 		ability: ['Truant', 'Wonder Guard'][(rand(10) / 9).floor],
 		HPIV: indiv_values[0],
 		AtkIV: indiv_values[1],

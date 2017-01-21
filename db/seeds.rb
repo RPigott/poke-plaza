@@ -36,15 +36,21 @@ def attach_learnset(species, current)
 	end
 end
 
+abilities = ActiveSupport::JSON.decode(File.read("db/seeds/abilities.json"))
+abilities.each do |ability, info|
+	Ability.create!(name: ability)
+end
+
 species = ActiveSupport::JSON.decode(File.read("db/seeds/pokemons.json"))
 species.each do |species|
-	if species["forms"].nil?
-		current = Species.create!(name: species["name"], dexno: species["id"], form: "Base")
-		attach_learnset(species, current)
-	else
-		species["forms"].each do |form|
-			current = Species.create!(name: species["name"], dexno: species["id"], form: form)
-			attach_learnset(species, current)
-		end
-	end
+	ability1_name, ability2_name, ability3_name = species["abilities"]
+	current = Species.create!(
+		name: species["name"],
+		dexno: species["id"],
+		form: "Base",
+		ability1: Ability.find_by(name: ability1_name),
+		ability2: Ability.find_by(name: ability2_name),
+		ability3: Ability.find_by(name: ability3_name)
+	)
+	attach_learnset(species, current)
 end
