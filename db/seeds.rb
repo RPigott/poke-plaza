@@ -17,8 +17,8 @@ moves.each do |name, info|
 	)
 end
 
-def attach_learnset(sp, current)
-	sp["moves"].each do |move|
+def attach_learnset(species, current)
+	species["moves"].each do |move|
 		move_name = move["name"]
 		learn_method = move["method"]
 		case learn_method
@@ -40,11 +40,11 @@ species = ActiveSupport::JSON.decode(File.read("db/seeds/pokemons.json"))
 species.each do |species|
 	if species["forms"].nil?
 		current = Species.create!(name: species["name"], dexno: species["id"], form: "Base")
-		attach_learnset(sp, current)
+		attach_learnset(species, current)
 	else
 		species["forms"].each do |form|
 			current = Species.create!(name: species["name"], dexno: species["id"], form: form)
-			attach_learnset(sp, current)
+			attach_learnset(species, current)
 		end
 	end
 end
