@@ -49,7 +49,7 @@
                 pokemon.species.name + (pokemon.species.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + pokemon.species.form)
                 %>
                 <%= content_tag :td, pokemon.nature %>
-                <%= content_tag :td, pokemon.ability %>
+                <%= content_tag :td, pokemon.ability.name %>
                 <%= content_tag :td, pokemon.HPIV  || "x" %>
                 <%= content_tag :td, pokemon.AtkIV || "x" %>
                 <%= content_tag :td, pokemon.DefIV || "x" %>

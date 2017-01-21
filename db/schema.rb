@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20170121052830) do
   create_table "pokemons", force: :cascade do |t|
     t.integer  "original_trainer_id"
     t.string   "nickname"
-    t.string   "gender"
+    t.boolean  "female"
     t.boolean  "shiny"
     t.string   "nature"
     t.string   "ability"
@@ -72,6 +72,8 @@ ActiveRecord::Schema.define(version: 20170121052830) do
     t.datetime "updated_at",          null: false
     t.integer  "user_id"
     t.integer  "species_id"
+    t.integer  "ability_id"
+    t.index ["ability_id"], name: "index_pokemons_on_ability_id"
     t.index ["species_id"], name: "index_pokemons_on_species_id"
     t.index ["user_id"], name: "index_pokemons_on_user_id"
   end
@@ -80,9 +82,13 @@ ActiveRecord::Schema.define(version: 20170121052830) do
     t.string   "name"
     t.string   "form"
     t.integer  "dexno"
+    t.string   "egg_group1"
+    t.string   "egg_group2"
+    t.float    "ratio"
     t.integer  "ability1_id"
     t.integer  "ability2_id"
     t.integer  "ability3_id"
+    t.integer  "prevo_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

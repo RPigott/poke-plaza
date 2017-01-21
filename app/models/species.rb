@@ -11,6 +11,9 @@ class Species < ApplicationRecord
 	belongs_to :ability2, class_name: "Ability", optional: true
 	belongs_to :ability3, class_name: "Ability", optional: true
 
+	has_many :evo, foreign_key: :prevo_id, class_name: "Species"
+	belongs_to :prevo, class_name: "Species", optional: true
+
 	def moves
 		return self.levelup_moves + self.tm_moves + self.egg_moves + self.tutor_moves + self.evolution_moves
 	end
