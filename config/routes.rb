@@ -8,4 +8,4 @@ Rails.application.routes.draw do
   resources :users, :param => :username
   
   post 'pokemons/search', :to => 'pokemons#search', :as => :pokemon_search
-iend
+end
