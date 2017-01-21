@@ -23,7 +23,7 @@ number_of.times do
 	
 	species = Species.find_by(name: species_name, form: form) || Species.find(rand(1..Species.all.count))
 	
-	indiv_values = (1..6).to_a.map{|x| rand(10) == 0 ? -1 : 31}
+	indiv_values = (1..5).map {31} .push(nil) .shuffle
 	moves = species.moves.sample(4)
 	
 	pokemon  = Pokemon.create!(
