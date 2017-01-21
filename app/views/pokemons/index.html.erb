@@ -57,7 +57,7 @@
                 <%= content_tag :td, pokemon.SpDIV > 0 ? pokemon.SpDIV : "x" %>
                 <%= content_tag :td, pokemon.SpeIV > 0 ? pokemon.SpeIV : "x" %>
                 <%= content_tag :td, tag( :span, :class => "pokemon-type pokemon-type-#{pokemon.hiddenpower.downcase}" ) %>
-                <%= content_tag :td, [pokemon.move1, pokemon.move2, pokemon.move3, pokemon.move4].reject(&:nil?).join(", ") %>
+                <%= content_tag :td, [pokemon.move1.name, pokemon.move2.name, pokemon.move3.name, pokemon.move4.name].reject(&:nil?).join(", ") %>
                 <td><%= tag :span, :class => "pkspr pokeball-#{pokemon.ball}" %><td>
             </tr>
         <% end %>
