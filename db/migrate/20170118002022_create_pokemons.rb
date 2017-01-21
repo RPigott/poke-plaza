@@ -24,6 +24,7 @@ class CreatePokemons < ActiveRecord::Migration[5.0]
 
       t.belongs_to :user, :index => true
       t.belongs_to :species, :index => true
+      t.belongs_to :ability, :index => true
     end
   end
 end
