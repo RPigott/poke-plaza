@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   resources :pokemons
   resources :users, :param => :username
-
-end
+  
+  post 'pokemons/search', :to => 'pokemons#search', :as => :pokemon_search
+iend
