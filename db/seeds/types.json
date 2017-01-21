@@ -7,7 +7,7 @@
         "immunities": [
             "Ghost"
         ],
-        "number": "16"
+        "number": 16
     },
     "Fire": {
         "strengths": [
@@ -24,7 +24,7 @@
             "Water"
         ],
         "immunities": [],
-        "number": "8"
+        "number": 8
     },
     "Water": {
         "strengths": [
@@ -38,7 +38,7 @@
             "Grass"
         ],
         "immunities": [],
-        "number": "9"
+        "number": 9
     },
     "Electric": {
         "strengths": [
@@ -50,7 +50,7 @@
             "Ground"
         ],
         "immunities": [],
-        "number": "11"
+        "number": 11
     },
     "Grass": {
         "strengths": [
@@ -67,7 +67,7 @@
             "Poison"
         ],
         "immunities": [],
-        "number": "10"
+        "number": 10
     },
     "Ice": {
         "strengths": [
@@ -80,7 +80,7 @@
             "Steel"
         ],
         "immunities": [],
-        "number": "13"
+        "number": 13
     },
     "Fighting": {
         "strengths": [
@@ -94,7 +94,7 @@
             "Psychic"
         ],
         "immunities": [],
-        "number": "0"
+        "number": 0
     },
     "Poison": {
         "strengths": [
@@ -109,7 +109,7 @@
             "Psychic"
         ],
         "immunities": [],
-        "number": "2"
+        "number": 2
     },
     "Ground": {
         "strengths": [
@@ -124,7 +124,7 @@
         "immunities": [
             "Electric"
         ],
-        "number": "3"
+        "number": 3
     },
     "Flying": {
         "strengths": [
@@ -140,7 +140,7 @@
         "immunities": [
             "Ground"
         ],
-        "number": "1"
+        "number": 1
     },
     "Psychic": {
         "strengths": [
@@ -153,7 +153,7 @@
             "Ghost"
         ],
         "immunities": [],
-        "number": "12"
+        "number": 12
     },
     "Bug": {
         "strengths": [
@@ -167,7 +167,7 @@
             "Rock"
         ],
         "immunities": [],
-        "number": "5"
+        "number": 5
     },
     "Rock": {
         "strengths": [
@@ -184,7 +184,7 @@
             "Water"
         ],
         "immunities": [],
-        "number": "4"
+        "number": 4
     },
     "Ghost": {
         "strengths": [
@@ -199,7 +199,7 @@
             "Fighting",
             "Normal"
         ],
-        "number": "6"
+        "number": 6
     },
     "Dragon": {
         "strengths": [
@@ -214,7 +214,7 @@
             "Ice"
         ],
         "immunities": [],
-        "number": "14"
+        "number": 14
     },
     "Dark": {
         "strengths": [
@@ -229,7 +229,7 @@
         "immunities": [
             "Psychic"
         ],
-        "number": "15"
+        "number": 15
     },
     "Steel": {
         "strengths": [
@@ -252,7 +252,7 @@
         "immunities": [
             "Poison"
         ],
-        "number": "7"
+        "number": 7
     },
     "Fairy": {
         "strengths": [
@@ -267,6 +267,6 @@
         "immunities": [
             "Dragon"
         ],
-        "number": "17"
+        "number": 17
     }
 }

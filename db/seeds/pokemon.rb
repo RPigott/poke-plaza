@@ -19,14 +19,47 @@ user2 = User.find_by(:username => "Pojostick") || User.create!(
 	password: "password"
 )
 
-natures = ActiveSupport::JSON.decode(File.read("db/seeds/natures.json"))
+$natures = ActiveSupport::JSON.decode(File.read("db/seeds/natures.json"))
+types = ActiveSupport::JSON.decode(File.read("db/seeds/types.json"))
+$type_names = []
+types.each do |k, v|
+	$type_names[v["number"]] = k
+end
+
+
+def legal_hp_types(ivs)
+	ivs.all?(&:nil?) and return type_names[0..15]
+	legal = []
+	weights = [1, 2, 4, 16, 32, 8]
+	dotmin = ivs.each_index.map{|i| ((ivs[i] || 0)%2) * weights[i]}.inject(&:+)
+	dotmax = ivs.each_index.map{|i| ((ivs[i] || 1)%2) * weights[i]}.inject(&:+)
+	legal_min = (dotmin * (15.0/63.0)).floor
+	legal_max = (dotmax * (15.0/63.0)).floor
+	tools = weights.each_with_index.select{|x, i| ivs[i].nil?}.map(&:first).sort.reverse
+	(legal_min..legal_max).each do |n|
+		value = dotmin
+		tools.each do |v|
+			if (value + v)*(15.0/63.0) > n+1
+				next
+			else
+				value = value + v
+			end
+		end
+		if (value * (15.0/63.0)).floor == n
+			legal.push $type_names[n]
+		end
+	end
+	legal.push $type_names[legal_min]
+	legal.push $type_names[legal_max]
+	return legal.uniq
+end
 
 number_of.times do
 	user = rand(2) == 1 ? user1 : user2
 	
 	species = Species.find_by(name: species_name, form: form) || Species.find(rand(1..Species.all.count))
 	
-	indiv_values = (1..5).map {31} .push(nil) .shuffle
+	ivs = (1..5).map {31} .push(nil) .shuffle
 	moves = species.moves.sample(4)
 	
 	pokemon  = Pokemon.create!(
@@ -34,20 +67,20 @@ number_of.times do
 		nickname: species_name,
 		female: species.ratio && rand > species.ratio,
 		shiny: rand > 0.95,
-		nature: natures.keys.push("Unknown").sample(),
+		nature: $natures.keys.push("Unknown").sample,
 		ability: species.abilities.sample,
-		HPIV: indiv_values[0],
-		AtkIV: indiv_values[1],
-		DefIV: indiv_values[2],
-		SpAIV: indiv_values[3],
-		SpDIV: indiv_values[4],
-		SpeIV: indiv_values[5],
-		hiddenpower: ['none', 'Fire', 'Fighting', 'Water', 'Flying', 'Grass', 'Poison', 'Electric', 'Ground', 'Psychic', 'Rock', 'Ice', 'Bug', 'Dragon', 'Ghost', 'Dark', 'Steel'][rand(17)],
+		HPIV: ivs[0],
+		AtkIV: ivs[1],
+		DefIV: ivs[2],
+		SpAIV: ivs[3],
+		SpDIV: ivs[4],
+		SpeIV: ivs[5],
+		hiddenpower: legal_hp_types.push("none").sample,
 		move1: moves[0],
 		move2: moves[1],
 		move3: moves[2],
 		move4: moves[3],
-		ball: ['heal', 'dusk', 'safari', 'luxury', 'master', 'fast', 'nest', 'level', 'dream', 'love', 'park', 'dive', 'great', 'moon', 'poke', 'ultra', 'repeat', 'lure', 'net', 'quick', 'heavy', 'beast', 'sport', 'premier', 'timer', 'cherish', 'friend'][rand(27)],
+		ball: ['heal', 'dusk', 'safari', 'luxury', 'master', 'fast', 'nest', 'level', 'dream', 'love', 'park', 'dive', 'great', 'moon', 'poke', 'ultra', 'repeat', 'lure', 'net', 'quick', 'heavy', 'beast', 'sport', 'premier', 'timer', 'cherish', 'friend'].sample,
 		user: user,
 		species: species
 	)
