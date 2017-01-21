@@ -75,7 +75,7 @@ number_of.times do
 		SpAIV: ivs[3],
 		SpDIV: ivs[4],
 		SpeIV: ivs[5],
-		hiddenpower: legal_hp_types.push("none").sample,
+		hiddenpower: legal_hp_types(ivs).push("none").sample,
 		move1: moves[0],
 		move2: moves[1],
 		move3: moves[2],
