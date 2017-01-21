@@ -15,7 +15,13 @@ class Species < ApplicationRecord
 	belongs_to :prevo, class_name: "Species", optional: true
 
 	def moves
-		return self.levelup_moves + self.tm_moves + self.egg_moves + self.tutor_moves + self.evolution_moves
+		return (self.levelup_moves +
+				self.tm_moves +
+				self.egg_moves +
+				self.tutor_moves +
+				self.evolution_moves +
+				(self.prevo.nil? ? [] : self.prevo.moves)
+			   ).uniq
 	end
 
 	def abilities

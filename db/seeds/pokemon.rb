@@ -67,7 +67,7 @@ number_of.times do
 		nickname: species_name,
 		female: species.ratio && rand > species.ratio,
 		shiny: rand > 0.95,
-		nature: $natures.keys.push("Unknown").sample,
+		nature: $natures.keys.push("").sample,
 		ability: species.abilities.sample,
 		HPIV: ivs[0],
 		AtkIV: ivs[1],
