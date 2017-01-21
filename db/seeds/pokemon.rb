@@ -35,7 +35,7 @@ number_of.times do
 		gender: ['Male', 'Female', 'Other'][rand(3)],
 		shiny: rand > 0.95,
 		nature: natures.keys.push("Unknown").sample(),
-		ability: ['Truant', 'Wonder Guard'][(rand(10) / 9).floor],
+		ability: species.abilities.sample,
 		HPIV: indiv_values[0],
 		AtkIV: indiv_values[1],
 		DefIV: indiv_values[2],
