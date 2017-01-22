@@ -9,6 +9,8 @@ class Pokemon < ApplicationRecord
 	belongs_to :move3, class_name: "Move", optional: true
 	belongs_to :move4, class_name: "Move", optional: true
 
+	belongs_to :hiddenpower, class_name: "Type"
+
 	belongs_to :ability
 	belongs_to :item, optional: true
 
