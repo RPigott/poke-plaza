@@ -45,13 +45,26 @@
         </thead>
         <% @pokemons.each do |pokemon| %>
             <tr>
-                <td><%= tag :span, :class => "pkspr pkmn-#{pokemon.sprite_name} color-#{if pokemon.shiny then 'shiny' end} form-#{pokemon.form_name}" %></td>
+                <td><%= tag :span,
+                :class => ["pkspr",
+                           "pokemon",
+                           "pkmn-#{pokemon.sprite_name}",
+                           ("color-shiny" if pokemon.shiny),
+                           ((pokemon.female ? "gender-female" : "gender-male") if pokemon.species.ratio),
+                           "form-#{pokemon.form_name}"
+                          ]
+                     %>
+                     <%= image_tag("ShinyStar.png", :class => "shiny-star") if pokemon.shiny %>
+                </td>
                 <%= content_tag :td,
                 pokemon.species.name + (pokemon.species.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + pokemon.species.form)
                 %>
+                <%= content_tag :td, pokemon.species.ratio.nil? ?
+                image_tag("ungendered.svg", width: "15") : pokemon.female ?
+                image_tag("female.svg", width: "15") :
+                image_tag("male.svg", width: "20") %>
                 <%= content_tag :td, pokemon.nature %>
                 <%= content_tag :td, pokemon.ability.name %>
-                <%= content_tag :td, pokemon.female? "Female" : "Male" %>
                 <%= content_tag :td, pokemon.HPIV  || "x" %>
                 <%= content_tag :td, pokemon.AtkIV || "x" %>
                 <%= content_tag :td, pokemon.DefIV || "x" %>

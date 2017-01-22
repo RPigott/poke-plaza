@@ -14,3 +14,19 @@
 		background-image: image-url("ungendered.svg");
 	}
 }
+
+@keyframes bounce {
+	0% {top: 0px;}
+	100% {top: 3px;}
+}
+
+tr:hover {
+	.pokemon {
+		animation: bounce 0.15s linear 0s infinite alternate;
+	}
+}
+
+.shiny-star {
+	position: absolute;
+	transform: translate(11px);
+}
