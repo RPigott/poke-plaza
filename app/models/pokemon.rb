@@ -1,4 +1,6 @@
 class Pokemon < ApplicationRecord
+	enum gender: [:male, :female]
+
 	belongs_to :species
 	belongs_to :user
 
@@ -8,6 +10,7 @@ class Pokemon < ApplicationRecord
 	belongs_to :move4, class_name: "Move", optional: true
 
 	belongs_to :ability
+	belongs_to :item
 
 	def sprite_name
 		return self.species.name.delete("'").sub(/[^A-Za-z0-9]/, "-").downcase

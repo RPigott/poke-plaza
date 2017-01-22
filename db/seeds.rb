@@ -44,6 +44,16 @@ abilities.each do |ability, info|
 	Ability.create!(name: ability)
 end
 
+# Populate the items table
+items = ActiveSupport::JSON.decode(File.read("db/seeds/items.json"))
+items.each do |item|
+	Item.create!(
+			name: item["fullname"],
+			spritename: item["spritename"],
+			group: item["group"]
+		)
+end
+
 # Populate species table
 species = ActiveSupport::JSON.decode(File.read("db/seeds/pokemons.json"))
 species.each do |species|

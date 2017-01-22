@@ -1,0 +1,341 @@
+ev-item: power-anklet
+ev-item: power-bracer
+ev-item: power-weight
+ev-item: power-belt
+ev-item: power-band
+ev-item: power-lens
+ev-item: macho-brace
+evo-item: protector
+evo-item: shiny-stone
+evo-item: sun-stone
+evo-item: deep-sea-scale
+evo-item: oval-stone
+evo-item: electirizer
+evo-item: moon-stone
+evo-item: ice-stone
+evo-item: prism-scale
+evo-item: kings-rock
+evo-item: razor-fang
+evo-item: thunder-stone
+evo-item: leaf-stone
+evo-item: deep-sea-tooth
+evo-item: reaper-cloth
+evo-item: dubious-disc
+evo-item: magmarizer
+evo-item: water-stone
+evo-item: metal-coat
+evo-item: whipped-dream
+evo-item: dusk-stone
+evo-item: dragon-scale
+evo-item: up-grade
+evo-item: razor-claw
+evo-item: dawn-stone
+evo-item: sachet
+evo-item: fire-stone
+fossil: helix fossil
+fossil: jaw fossil
+fossil: dome fossil
+fossil: cover fossil
+fossil: skull fossil
+fossil: armor fossil
+fossil: sail fossil
+fossil: plume fossil
+fossil: claw fossil
+fossil: root fossil
+hold-item: choice-scarf
+hold-item: luminous-moss
+hold-item: everstone
+hold-item: metronome
+hold-item: lagging-tail
+hold-item: light-clay
+hold-item: burn-drive
+hold-item: lucky-punch
+hold-item: adamant-orb
+hold-item: float-stone
+hold-item: bright-powder
+hold-item: focus-band
+hold-item: chill-drive
+hold-item: smoke-ball
+hold-item: life-orb
+hold-item: ring-target
+hold-item: cell-battery
+hold-item: wise-glasses
+hold-item: snowball
+hold-item: shock-drive
+hold-item: electric-seed
+hold-item: icy-rock
+hold-item: red-orb
+hold-item: griseous-orb
+hold-item: psychic-seed
+hold-item: light-ball
+hold-item: grip-claw
+hold-item: quick-powder
+hold-item: choice-specs
+hold-item: cleanse-tag
+hold-item: hard-stone
+hold-item: red-card
+hold-item: black-belt
+hold-item: kings-rock
+hold-item: smooth-rock
+hold-item: stick
+hold-item: leftovers
+hold-item: heat-rock
+hold-item: protective-pads
+hold-item: muscle-band
+hold-item: sticky-barb
+hold-item: absorb-bulb
+hold-item: binding-band
+hold-item: grassy-seed
+hold-item: focus-sash
+hold-item: twisted-spoon
+hold-item: lucky-egg
+hold-item: shell-bell
+hold-item: charcoal
+hold-item: spell-tag
+hold-item: weakness-policy
+hold-item: wide-lens
+hold-item: miracle-seed
+hold-item: big-root
+hold-item: never-melt-ice
+hold-item: adrenaline-orb
+hold-item: zoom-lens
+hold-item: white-herb
+hold-item: black-glasses
+hold-item: scope-lens
+hold-item: destiny-knot
+hold-item: shed-shell
+hold-item: flame-orb
+hold-item: silver-powder
+hold-item: metal-coat
+hold-item: assault-vest
+hold-item: misty-seed
+hold-item: dragon-fang
+hold-item: rocky-helmet
+hold-item: eviolite
+hold-item: expert-belt
+hold-item: lustrous-orb
+hold-item: eject-button
+hold-item: toxic-orb
+hold-item: air-balloon
+hold-item: iron-ball
+hold-item: safety-goggles
+hold-item: soul-dew
+hold-item: thick-club
+hold-item: terrain-extender
+hold-item: douse-drive
+hold-item: mental-herb
+hold-item: quick-claw
+hold-item: poison-barb
+hold-item: sharp-beak
+hold-item: blue-orb
+hold-item: magnet
+hold-item: choice-band
+hold-item: power-herb
+hold-item: silk-scarf
+hold-item: soft-sand
+hold-item: mystic-water
+hold-item: black-sludge
+hold-item: metal-powder
+hold-item: damp-rock
+hold-item: amulet-coin
+incense: rose incense
+incense: sea incense
+incense: odd incense
+incense: full incense
+incense: lax incense
+incense: luck incense
+incense: pure incense
+incense: rock incense
+incense: wave incense
+other-item: honey
+other-item: soothe-bell
+other-item: escape-rope
+other-item: gold-bottle-cap
+other-item: discount-coupon
+other-item: poke-doll
+other-item: purple-nectar
+other-item: yellow-nectar
+other-item: super-repel
+other-item: poke-toy
+other-item: repel
+other-item: fluffy-tail
+other-item: odd-keystone
+other-item: max-repel
+other-item: bottle-cap
+other-item: red-nectar
+other-item: pink-nectar
+other-item: heart-scale
+other-item: strange-souvenir
+medicine: hp-up
+medicine: big-malasada
+medicine: genius-wing
+medicine: old-gateau
+medicine: super-potion
+medicine: max-revive
+medicine: ability-capsule
+medicine: calcium
+medicine: ice-heal
+medicine: paralyze-heal
+medicine: sweet-heart
+medicine: pp-max
+medicine: zinc
+medicine: burn-heal
+medicine: resist-wing
+medicine: berry-juice
+medicine: sacred-ash
+medicine: lemonade
+medicine: revival-herb
+medicine: rage-candy-bar
+medicine: awakening
+medicine: shalour-sable
+medicine: heal-powder
+medicine: lava-cookie
+medicine: elixir
+medicine: max-ether
+medicine: full-restore
+medicine: fresh-water
+medicine: clever-wing
+medicine: carbos
+medicine: energy-powder
+medicine: hyper-potion
+medicine: casteliacone
+medicine: swift-wing
+medicine: soda-pop
+medicine: health-wing
+medicine: antidote
+medicine: max-elixir
+medicine: pp-up
+medicine: rare-candy
+medicine: full-heal
+medicine: lumiose-galette
+medicine: energy-root
+medicine: iron
+medicine: potion
+medicine: max-potion
+medicine: ether
+medicine: muscle-wing
+medicine: revive
+medicine: moomoo-milk
+medicine: protein
+mega-stone: latiosite
+mega-stone: pidgeotite
+mega-stone: gyaradosite
+mega-stone: galladite
+mega-stone: blazikenite
+mega-stone: steelixite
+mega-stone: garchompite
+mega-stone: aggronite
+mega-stone: mewtwonite-y
+mega-stone: audinite
+mega-stone: cameruptite
+mega-stone: slowbronite
+mega-stone: medichamite
+mega-stone: mawilite
+mega-stone: diancite
+mega-stone: charizardite-x
+mega-stone: beedrillite
+mega-stone: tyranitarite
+mega-stone: absolite
+mega-stone: manectite
+mega-stone: banettite
+mega-stone: venusaurite
+mega-stone: altarianite
+mega-stone: gardevoirite
+mega-stone: lopunnite
+mega-stone: salamencite
+mega-stone: houndoominite
+mega-stone: sablenite
+mega-stone: charizardite-y
+mega-stone: blastoisinite
+mega-stone: sceptilite
+mega-stone: mewtwonite-x
+mega-stone: gengarite
+mega-stone: abomasite
+mega-stone: lucarionite
+mega-stone: pinsirite
+mega-stone: heracronite
+mega-stone: glalite
+mega-stone: swampertite
+mega-stone: sharpedonite
+mega-stone: kangaskhanite
+mega-stone: metagrossite
+mega-stone: scizorite
+mega-stone: ampharosite
+mega-stone: aerodactylite
+mega-stone: latiasite
+mega-stone: alakazite
+pokeball: safari ball
+pokeball: luxury ball
+pokeball: master ball
+pokeball: fast ball
+pokeball: nest ball
+pokeball: level ball
+pokeball: dream ball
+pokeball: love ball
+pokeball: park ball
+pokeball: dive ball
+pokeball: great ball
+pokeball: moon ball
+pokeball: poke ball
+pokeball: ultra ball
+pokeball: repeat ball
+pokeball: lure ball
+pokeball: net ball
+pokeball: quick ball
+pokeball: heavy ball
+pokeball: beast ball
+pokeball: sport ball
+pokeball: premier ball
+pokeball: timer ball
+pokeball: cherish ball
+pokeball: friend ball
+valuable-item: rare-bone
+valuable-item: star-piece
+valuable-item: big-pearl
+valuable-item: big-nugget
+valuable-item: shoal-salt
+valuable-item: pearl
+valuable-item: shoal-shell
+valuable-item: pretty-wing
+valuable-item: comet-shard
+valuable-item: big-mushroom
+valuable-item: slowpoke-tail
+valuable-item: tiny-mushroom
+valuable-item: balm-mushroom
+valuable-item: stardust
+valuable-item: nugget
+valuable-item: pearl-string
+memory: ice memory
+memory: water memory
+memory: fire memory
+memory: fairy memory
+memory: dragon memory
+memory: poison memory
+memory: dark memory
+memory: ghost memory
+memory: grass memory
+memory: steel memory
+memory: flying memory
+memory: psychic memory
+memory: ground memory
+memory: electric memory
+memory: rock memory
+memory: bug memory
+memory: fighting memory
+plate: spooky plate
+plate: flame plate
+plate: zap plate
+plate: insect plate
+plate: draco plate
+plate: mind plate
+plate: sky plate
+plate: dread plate
+plate: fist plate
+plate: earth plate
+plate: splash plate
+plate: iron plate
+plate: toxic plate
+plate: pixie plate
+plate: meadow plate
+plate: stone plate
+plate: icicle plate
