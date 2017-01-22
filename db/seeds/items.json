@@ -1,0 +1,1707 @@
+[
+    {
+        "group": "ev-item",
+        "spritename": "power-anklet",
+        "fullname": "Power Anklet"
+    },
+    {
+        "group": "ev-item",
+        "spritename": "power-bracer",
+        "fullname": "Power Bracer"
+    },
+    {
+        "group": "ev-item",
+        "spritename": "power-weight",
+        "fullname": "Power Weight"
+    },
+    {
+        "group": "ev-item",
+        "spritename": "power-belt",
+        "fullname": "Power Belt"
+    },
+    {
+        "group": "ev-item",
+        "spritename": "power-band",
+        "fullname": "Power Band"
+    },
+    {
+        "group": "ev-item",
+        "spritename": "power-lens",
+        "fullname": "Power Lens"
+    },
+    {
+        "group": "ev-item",
+        "spritename": "macho-brace",
+        "fullname": "Macho Brace"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "protector",
+        "fullname": "Protector"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "shiny-stone",
+        "fullname": "Shiny Stone"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "sun-stone",
+        "fullname": "Sun Stone"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "deep-sea-scale",
+        "fullname": "Deep Sea Scale"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "oval-stone",
+        "fullname": "Oval Stone"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "electirizer",
+        "fullname": "Electirizer"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "moon-stone",
+        "fullname": "Moon Stone"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "ice-stone",
+        "fullname": "Ice Stone"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "prism-scale",
+        "fullname": "Prism Scale"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "kings-rock",
+        "fullname": "Kings Rock"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "razor-fang",
+        "fullname": "Razor Fang"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "thunder-stone",
+        "fullname": "Thunder Stone"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "leaf-stone",
+        "fullname": "Leaf Stone"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "deep-sea-tooth",
+        "fullname": "Deep Sea Tooth"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "reaper-cloth",
+        "fullname": "Reaper Cloth"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "dubious-disc",
+        "fullname": "Dubious Disc"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "magmarizer",
+        "fullname": "Magmarizer"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "water-stone",
+        "fullname": "Water Stone"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "metal-coat",
+        "fullname": "Metal Coat"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "whipped-dream",
+        "fullname": "Whipped Dream"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "dusk-stone",
+        "fullname": "Dusk Stone"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "dragon-scale",
+        "fullname": "Dragon Scale"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "up-grade",
+        "fullname": "Up Grade"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "razor-claw",
+        "fullname": "Razor Claw"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "dawn-stone",
+        "fullname": "Dawn Stone"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "sachet",
+        "fullname": "Sachet"
+    },
+    {
+        "group": "evo-item",
+        "spritename": "fire-stone",
+        "fullname": "Fire Stone"
+    },
+    {
+        "group": "fossil",
+        "spritename": "helix",
+        "fullname": "Helix Fossil"
+    },
+    {
+        "group": "fossil",
+        "spritename": "jaw",
+        "fullname": "Jaw Fossil"
+    },
+    {
+        "group": "fossil",
+        "spritename": "dome",
+        "fullname": "Dome Fossil"
+    },
+    {
+        "group": "fossil",
+        "spritename": "cover",
+        "fullname": "Cover Fossil"
+    },
+    {
+        "group": "fossil",
+        "spritename": "skull",
+        "fullname": "Skull Fossil"
+    },
+    {
+        "group": "fossil",
+        "spritename": "armor",
+        "fullname": "Armor Fossil"
+    },
+    {
+        "group": "fossil",
+        "spritename": "sail",
+        "fullname": "Sail Fossil"
+    },
+    {
+        "group": "fossil",
+        "spritename": "plume",
+        "fullname": "Plume Fossil"
+    },
+    {
+        "group": "fossil",
+        "spritename": "claw",
+        "fullname": "Claw Fossil"
+    },
+    {
+        "group": "fossil",
+        "spritename": "root",
+        "fullname": "Root Fossil"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "choice-scarf",
+        "fullname": "Choice Scarf"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "luminous-moss",
+        "fullname": "Luminous Moss"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "everstone",
+        "fullname": "Everstone"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "metronome",
+        "fullname": "Metronome"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "lagging-tail",
+        "fullname": "Lagging Tail"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "light-clay",
+        "fullname": "Light Clay"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "burn-drive",
+        "fullname": "Burn Drive"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "lucky-punch",
+        "fullname": "Lucky Punch"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "adamant-orb",
+        "fullname": "Adamant Orb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "float-stone",
+        "fullname": "Float Stone"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "bright-powder",
+        "fullname": "Bright Powder"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "focus-band",
+        "fullname": "Focus Band"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "chill-drive",
+        "fullname": "Chill Drive"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "smoke-ball",
+        "fullname": "Smoke Ball"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "life-orb",
+        "fullname": "Life Orb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "ring-target",
+        "fullname": "Ring Target"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "cell-battery",
+        "fullname": "Cell Battery"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "wise-glasses",
+        "fullname": "Wise Glasses"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "snowball",
+        "fullname": "Snowball"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "shock-drive",
+        "fullname": "Shock Drive"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "electric-seed",
+        "fullname": "Electric Seed"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "icy-rock",
+        "fullname": "Icy Rock"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "red-orb",
+        "fullname": "Red Orb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "griseous-orb",
+        "fullname": "Griseous Orb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "psychic-seed",
+        "fullname": "Psychic Seed"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "light-ball",
+        "fullname": "Light Ball"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "grip-claw",
+        "fullname": "Grip Claw"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "quick-powder",
+        "fullname": "Quick Powder"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "choice-specs",
+        "fullname": "Choice Specs"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "cleanse-tag",
+        "fullname": "Cleanse Tag"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "hard-stone",
+        "fullname": "Hard Stone"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "red-card",
+        "fullname": "Red Card"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "black-belt",
+        "fullname": "Black Belt"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "kings-rock",
+        "fullname": "Kings Rock"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "smooth-rock",
+        "fullname": "Smooth Rock"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "stick",
+        "fullname": "Stick"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "leftovers",
+        "fullname": "Leftovers"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "heat-rock",
+        "fullname": "Heat Rock"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "protective-pads",
+        "fullname": "Protective Pads"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "muscle-band",
+        "fullname": "Muscle Band"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "sticky-barb",
+        "fullname": "Sticky Barb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "absorb-bulb",
+        "fullname": "Absorb Bulb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "binding-band",
+        "fullname": "Binding Band"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "grassy-seed",
+        "fullname": "Grassy Seed"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "focus-sash",
+        "fullname": "Focus Sash"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "twisted-spoon",
+        "fullname": "Twisted Spoon"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "lucky-egg",
+        "fullname": "Lucky Egg"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "shell-bell",
+        "fullname": "Shell Bell"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "charcoal",
+        "fullname": "Charcoal"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "spell-tag",
+        "fullname": "Spell Tag"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "weakness-policy",
+        "fullname": "Weakness Policy"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "wide-lens",
+        "fullname": "Wide Lens"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "miracle-seed",
+        "fullname": "Miracle Seed"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "big-root",
+        "fullname": "Big Root"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "never-melt-ice",
+        "fullname": "Never Melt Ice"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "adrenaline-orb",
+        "fullname": "Adrenaline Orb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "zoom-lens",
+        "fullname": "Zoom Lens"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "white-herb",
+        "fullname": "White Herb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "black-glasses",
+        "fullname": "Black Glasses"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "scope-lens",
+        "fullname": "Scope Lens"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "destiny-knot",
+        "fullname": "Destiny Knot"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "shed-shell",
+        "fullname": "Shed Shell"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "flame-orb",
+        "fullname": "Flame Orb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "silver-powder",
+        "fullname": "Silver Powder"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "metal-coat",
+        "fullname": "Metal Coat"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "assault-vest",
+        "fullname": "Assault Vest"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "misty-seed",
+        "fullname": "Misty Seed"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "dragon-fang",
+        "fullname": "Dragon Fang"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "rocky-helmet",
+        "fullname": "Rocky Helmet"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "eviolite",
+        "fullname": "Eviolite"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "expert-belt",
+        "fullname": "Expert Belt"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "lustrous-orb",
+        "fullname": "Lustrous Orb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "eject-button",
+        "fullname": "Eject Button"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "toxic-orb",
+        "fullname": "Toxic Orb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "air-balloon",
+        "fullname": "Air Balloon"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "iron-ball",
+        "fullname": "Iron Ball"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "safety-goggles",
+        "fullname": "Safety Goggles"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "soul-dew",
+        "fullname": "Soul Dew"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "thick-club",
+        "fullname": "Thick Club"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "terrain-extender",
+        "fullname": "Terrain Extender"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "douse-drive",
+        "fullname": "Douse Drive"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "mental-herb",
+        "fullname": "Mental Herb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "quick-claw",
+        "fullname": "Quick Claw"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "poison-barb",
+        "fullname": "Poison Barb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "sharp-beak",
+        "fullname": "Sharp Beak"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "blue-orb",
+        "fullname": "Blue Orb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "magnet",
+        "fullname": "Magnet"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "choice-band",
+        "fullname": "Choice Band"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "power-herb",
+        "fullname": "Power Herb"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "silk-scarf",
+        "fullname": "Silk Scarf"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "soft-sand",
+        "fullname": "Soft Sand"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "mystic-water",
+        "fullname": "Mystic Water"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "black-sludge",
+        "fullname": "Black Sludge"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "metal-powder",
+        "fullname": "Metal Powder"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "damp-rock",
+        "fullname": "Damp Rock"
+    },
+    {
+        "group": "hold-item",
+        "spritename": "amulet-coin",
+        "fullname": "Amulet Coin"
+    },
+    {
+        "group": "incense",
+        "spritename": "rose",
+        "fullname": "Rose Incense"
+    },
+    {
+        "group": "incense",
+        "spritename": "sea",
+        "fullname": "Sea Incense"
+    },
+    {
+        "group": "incense",
+        "spritename": "odd",
+        "fullname": "Odd Incense"
+    },
+    {
+        "group": "incense",
+        "spritename": "full",
+        "fullname": "Full Incense"
+    },
+    {
+        "group": "incense",
+        "spritename": "lax",
+        "fullname": "Lax Incense"
+    },
+    {
+        "group": "incense",
+        "spritename": "luck",
+        "fullname": "Luck Incense"
+    },
+    {
+        "group": "incense",
+        "spritename": "pure",
+        "fullname": "Pure Incense"
+    },
+    {
+        "group": "incense",
+        "spritename": "rock",
+        "fullname": "Rock Incense"
+    },
+    {
+        "group": "incense",
+        "spritename": "wave",
+        "fullname": "Wave Incense"
+    },
+    {
+        "group": "other-item",
+        "spritename": "honey",
+        "fullname": "Honey"
+    },
+    {
+        "group": "other-item",
+        "spritename": "soothe-bell",
+        "fullname": "Soothe Bell"
+    },
+    {
+        "group": "other-item",
+        "spritename": "escape-rope",
+        "fullname": "Escape Rope"
+    },
+    {
+        "group": "other-item",
+        "spritename": "gold-bottle-cap",
+        "fullname": "Gold Bottle Cap"
+    },
+    {
+        "group": "other-item",
+        "spritename": "discount-coupon",
+        "fullname": "Discount Coupon"
+    },
+    {
+        "group": "other-item",
+        "spritename": "poke-doll",
+        "fullname": "Poke Doll"
+    },
+    {
+        "group": "other-item",
+        "spritename": "purple-nectar",
+        "fullname": "Purple Nectar"
+    },
+    {
+        "group": "other-item",
+        "spritename": "yellow-nectar",
+        "fullname": "Yellow Nectar"
+    },
+    {
+        "group": "other-item",
+        "spritename": "super-repel",
+        "fullname": "Super Repel"
+    },
+    {
+        "group": "other-item",
+        "spritename": "poke-toy",
+        "fullname": "Poke Toy"
+    },
+    {
+        "group": "other-item",
+        "spritename": "repel",
+        "fullname": "Repel"
+    },
+    {
+        "group": "other-item",
+        "spritename": "fluffy-tail",
+        "fullname": "Fluffy Tail"
+    },
+    {
+        "group": "other-item",
+        "spritename": "odd-keystone",
+        "fullname": "Odd Keystone"
+    },
+    {
+        "group": "other-item",
+        "spritename": "max-repel",
+        "fullname": "Max Repel"
+    },
+    {
+        "group": "other-item",
+        "spritename": "bottle-cap",
+        "fullname": "Bottle Cap"
+    },
+    {
+        "group": "other-item",
+        "spritename": "red-nectar",
+        "fullname": "Red Nectar"
+    },
+    {
+        "group": "other-item",
+        "spritename": "pink-nectar",
+        "fullname": "Pink Nectar"
+    },
+    {
+        "group": "other-item",
+        "spritename": "heart-scale",
+        "fullname": "Heart Scale"
+    },
+    {
+        "group": "other-item",
+        "spritename": "strange-souvenir",
+        "fullname": "Strange Souvenir"
+    },
+    {
+        "group": "medicine",
+        "spritename": "hp-up",
+        "fullname": "Hp Up"
+    },
+    {
+        "group": "medicine",
+        "spritename": "big-malasada",
+        "fullname": "Big Malasada"
+    },
+    {
+        "group": "medicine",
+        "spritename": "genius-wing",
+        "fullname": "Genius Wing"
+    },
+    {
+        "group": "medicine",
+        "spritename": "old-gateau",
+        "fullname": "Old Gateau"
+    },
+    {
+        "group": "medicine",
+        "spritename": "super-potion",
+        "fullname": "Super Potion"
+    },
+    {
+        "group": "medicine",
+        "spritename": "max-revive",
+        "fullname": "Max Revive"
+    },
+    {
+        "group": "medicine",
+        "spritename": "ability-capsule",
+        "fullname": "Ability Capsule"
+    },
+    {
+        "group": "medicine",
+        "spritename": "calcium",
+        "fullname": "Calcium"
+    },
+    {
+        "group": "medicine",
+        "spritename": "ice-heal",
+        "fullname": "Ice Heal"
+    },
+    {
+        "group": "medicine",
+        "spritename": "paralyze-heal",
+        "fullname": "Paralyze Heal"
+    },
+    {
+        "group": "medicine",
+        "spritename": "sweet-heart",
+        "fullname": "Sweet Heart"
+    },
+    {
+        "group": "medicine",
+        "spritename": "pp-max",
+        "fullname": "Pp Max"
+    },
+    {
+        "group": "medicine",
+        "spritename": "zinc",
+        "fullname": "Zinc"
+    },
+    {
+        "group": "medicine",
+        "spritename": "burn-heal",
+        "fullname": "Burn Heal"
+    },
+    {
+        "group": "medicine",
+        "spritename": "resist-wing",
+        "fullname": "Resist Wing"
+    },
+    {
+        "group": "medicine",
+        "spritename": "berry-juice",
+        "fullname": "Berry Juice"
+    },
+    {
+        "group": "medicine",
+        "spritename": "sacred-ash",
+        "fullname": "Sacred Ash"
+    },
+    {
+        "group": "medicine",
+        "spritename": "lemonade",
+        "fullname": "Lemonade"
+    },
+    {
+        "group": "medicine",
+        "spritename": "revival-herb",
+        "fullname": "Revival Herb"
+    },
+    {
+        "group": "medicine",
+        "spritename": "rage-candy-bar",
+        "fullname": "Rage Candy Bar"
+    },
+    {
+        "group": "medicine",
+        "spritename": "awakening",
+        "fullname": "Awakening"
+    },
+    {
+        "group": "medicine",
+        "spritename": "shalour-sable",
+        "fullname": "Shalour Sable"
+    },
+    {
+        "group": "medicine",
+        "spritename": "heal-powder",
+        "fullname": "Heal Powder"
+    },
+    {
+        "group": "medicine",
+        "spritename": "lava-cookie",
+        "fullname": "Lava Cookie"
+    },
+    {
+        "group": "medicine",
+        "spritename": "elixir",
+        "fullname": "Elixir"
+    },
+    {
+        "group": "medicine",
+        "spritename": "max-ether",
+        "fullname": "Max Ether"
+    },
+    {
+        "group": "medicine",
+        "spritename": "full-restore",
+        "fullname": "Full Restore"
+    },
+    {
+        "group": "medicine",
+        "spritename": "fresh-water",
+        "fullname": "Fresh Water"
+    },
+    {
+        "group": "medicine",
+        "spritename": "clever-wing",
+        "fullname": "Clever Wing"
+    },
+    {
+        "group": "medicine",
+        "spritename": "carbos",
+        "fullname": "Carbos"
+    },
+    {
+        "group": "medicine",
+        "spritename": "energy-powder",
+        "fullname": "Energy Powder"
+    },
+    {
+        "group": "medicine",
+        "spritename": "hyper-potion",
+        "fullname": "Hyper Potion"
+    },
+    {
+        "group": "medicine",
+        "spritename": "casteliacone",
+        "fullname": "Casteliacone"
+    },
+    {
+        "group": "medicine",
+        "spritename": "swift-wing",
+        "fullname": "Swift Wing"
+    },
+    {
+        "group": "medicine",
+        "spritename": "soda-pop",
+        "fullname": "Soda Pop"
+    },
+    {
+        "group": "medicine",
+        "spritename": "health-wing",
+        "fullname": "Health Wing"
+    },
+    {
+        "group": "medicine",
+        "spritename": "antidote",
+        "fullname": "Antidote"
+    },
+    {
+        "group": "medicine",
+        "spritename": "max-elixir",
+        "fullname": "Max Elixir"
+    },
+    {
+        "group": "medicine",
+        "spritename": "pp-up",
+        "fullname": "Pp Up"
+    },
+    {
+        "group": "medicine",
+        "spritename": "rare-candy",
+        "fullname": "Rare Candy"
+    },
+    {
+        "group": "medicine",
+        "spritename": "full-heal",
+        "fullname": "Full Heal"
+    },
+    {
+        "group": "medicine",
+        "spritename": "lumiose-galette",
+        "fullname": "Lumiose Galette"
+    },
+    {
+        "group": "medicine",
+        "spritename": "energy-root",
+        "fullname": "Energy Root"
+    },
+    {
+        "group": "medicine",
+        "spritename": "iron",
+        "fullname": "Iron"
+    },
+    {
+        "group": "medicine",
+        "spritename": "potion",
+        "fullname": "Potion"
+    },
+    {
+        "group": "medicine",
+        "spritename": "max-potion",
+        "fullname": "Max Potion"
+    },
+    {
+        "group": "medicine",
+        "spritename": "ether",
+        "fullname": "Ether"
+    },
+    {
+        "group": "medicine",
+        "spritename": "muscle-wing",
+        "fullname": "Muscle Wing"
+    },
+    {
+        "group": "medicine",
+        "spritename": "revive",
+        "fullname": "Revive"
+    },
+    {
+        "group": "medicine",
+        "spritename": "moomoo-milk",
+        "fullname": "Moomoo Milk"
+    },
+    {
+        "group": "medicine",
+        "spritename": "protein",
+        "fullname": "Protein"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "latiosite",
+        "fullname": "Latiosite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "pidgeotite",
+        "fullname": "Pidgeotite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "gyaradosite",
+        "fullname": "Gyaradosite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "galladite",
+        "fullname": "Galladite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "blazikenite",
+        "fullname": "Blazikenite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "steelixite",
+        "fullname": "Steelixite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "garchompite",
+        "fullname": "Garchompite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "aggronite",
+        "fullname": "Aggronite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "mewtwonite-y",
+        "fullname": "Mewtwonite Y"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "audinite",
+        "fullname": "Audinite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "cameruptite",
+        "fullname": "Cameruptite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "slowbronite",
+        "fullname": "Slowbronite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "medichamite",
+        "fullname": "Medichamite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "mawilite",
+        "fullname": "Mawilite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "diancite",
+        "fullname": "Diancite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "charizardite-x",
+        "fullname": "Charizardite X"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "beedrillite",
+        "fullname": "Beedrillite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "tyranitarite",
+        "fullname": "Tyranitarite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "absolite",
+        "fullname": "Absolite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "manectite",
+        "fullname": "Manectite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "banettite",
+        "fullname": "Banettite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "venusaurite",
+        "fullname": "Venusaurite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "altarianite",
+        "fullname": "Altarianite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "gardevoirite",
+        "fullname": "Gardevoirite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "lopunnite",
+        "fullname": "Lopunnite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "salamencite",
+        "fullname": "Salamencite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "houndoominite",
+        "fullname": "Houndoominite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "sablenite",
+        "fullname": "Sablenite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "charizardite-y",
+        "fullname": "Charizardite Y"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "blastoisinite",
+        "fullname": "Blastoisinite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "sceptilite",
+        "fullname": "Sceptilite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "mewtwonite-x",
+        "fullname": "Mewtwonite X"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "gengarite",
+        "fullname": "Gengarite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "abomasite",
+        "fullname": "Abomasite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "lucarionite",
+        "fullname": "Lucarionite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "pinsirite",
+        "fullname": "Pinsirite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "heracronite",
+        "fullname": "Heracronite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "glalite",
+        "fullname": "Glalite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "swampertite",
+        "fullname": "Swampertite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "sharpedonite",
+        "fullname": "Sharpedonite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "kangaskhanite",
+        "fullname": "Kangaskhanite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "metagrossite",
+        "fullname": "Metagrossite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "scizorite",
+        "fullname": "Scizorite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "ampharosite",
+        "fullname": "Ampharosite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "aerodactylite",
+        "fullname": "Aerodactylite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "latiasite",
+        "fullname": "Latiasite"
+    },
+    {
+        "group": "mega-stone",
+        "spritename": "alakazite",
+        "fullname": "Alakazite"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "safari",
+        "fullname": "Safari Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "luxury",
+        "fullname": "Luxury Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "master",
+        "fullname": "Master Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "fast",
+        "fullname": "Fast Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "nest",
+        "fullname": "Nest Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "level",
+        "fullname": "Level Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "dream",
+        "fullname": "Dream Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "love",
+        "fullname": "Love Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "park",
+        "fullname": "Park Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "dive",
+        "fullname": "Dive Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "great",
+        "fullname": "Great Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "moon",
+        "fullname": "Moon Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "poke",
+        "fullname": "Poke Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "ultra",
+        "fullname": "Ultra Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "repeat",
+        "fullname": "Repeat Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "lure",
+        "fullname": "Lure Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "net",
+        "fullname": "Net Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "quick",
+        "fullname": "Quick Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "heavy",
+        "fullname": "Heavy Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "beast",
+        "fullname": "Beast Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "sport",
+        "fullname": "Sport Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "premier",
+        "fullname": "Premier Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "timer",
+        "fullname": "Timer Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "cherish",
+        "fullname": "Cherish Ball"
+    },
+    {
+        "group": "pokeball",
+        "spritename": "friend",
+        "fullname": "Friend Ball"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "rare-bone",
+        "fullname": "Rare Bone"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "star-piece",
+        "fullname": "Star Piece"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "big-pearl",
+        "fullname": "Big Pearl"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "big-nugget",
+        "fullname": "Big Nugget"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "shoal-salt",
+        "fullname": "Shoal Salt"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "pearl",
+        "fullname": "Pearl"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "shoal-shell",
+        "fullname": "Shoal Shell"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "pretty-wing",
+        "fullname": "Pretty Wing"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "comet-shard",
+        "fullname": "Comet Shard"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "big-mushroom",
+        "fullname": "Big Mushroom"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "slowpoke-tail",
+        "fullname": "Slowpoke Tail"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "tiny-mushroom",
+        "fullname": "Tiny Mushroom"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "balm-mushroom",
+        "fullname": "Balm Mushroom"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "stardust",
+        "fullname": "Stardust"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "nugget",
+        "fullname": "Nugget"
+    },
+    {
+        "group": "valuable-item",
+        "spritename": "pearl-string",
+        "fullname": "Pearl String"
+    },
+    {
+        "group": "memory",
+        "spritename": "ice",
+        "fullname": "Ice Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "water",
+        "fullname": "Water Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "fire",
+        "fullname": "Fire Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "fairy",
+        "fullname": "Fairy Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "dragon",
+        "fullname": "Dragon Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "poison",
+        "fullname": "Poison Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "dark",
+        "fullname": "Dark Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "ghost",
+        "fullname": "Ghost Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "grass",
+        "fullname": "Grass Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "steel",
+        "fullname": "Steel Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "flying",
+        "fullname": "Flying Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "psychic",
+        "fullname": "Psychic Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "ground",
+        "fullname": "Ground Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "electric",
+        "fullname": "Electric Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "rock",
+        "fullname": "Rock Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "bug",
+        "fullname": "Bug Memory"
+    },
+    {
+        "group": "memory",
+        "spritename": "fighting",
+        "fullname": "Fighting Memory"
+    },
+    {
+        "group": "plate",
+        "spritename": "spooky",
+        "fullname": "Spooky Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "flame",
+        "fullname": "Flame Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "zap",
+        "fullname": "Zap Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "insect",
+        "fullname": "Insect Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "draco",
+        "fullname": "Draco Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "mind",
+        "fullname": "Mind Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "sky",
+        "fullname": "Sky Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "dread",
+        "fullname": "Dread Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "fist",
+        "fullname": "Fist Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "earth",
+        "fullname": "Earth Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "splash",
+        "fullname": "Splash Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "iron",
+        "fullname": "Iron Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "toxic",
+        "fullname": "Toxic Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "pixie",
+        "fullname": "Pixie Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "meadow",
+        "fullname": "Meadow Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "stone",
+        "fullname": "Stone Plate"
+    },
+    {
+        "group": "plate",
+        "spritename": "icicle",
+        "fullname": "Icicle Plate"
+    }
+]

@@ -14,6 +14,12 @@ class Species < ApplicationRecord
 	has_many :evo, foreign_key: :prevo_id, class_name: "Species"
 	belongs_to :prevo, class_name: "Species", optional: true
 
+	belongs_to :type1, class_name: "Type"
+	belongs_to :type2, class_name: "Type", optional: true
+
+	belongs_to :egg_group1, class_name: "EggGroup"
+	belongs_to :egg_group2, class_name: "EggGroup", optional: true
+
 	def moves
 		return (self.levelup_moves +
 				self.tm_moves +
@@ -24,7 +30,15 @@ class Species < ApplicationRecord
 			   ).uniq
 	end
 
+	def types
+		return [self.type1, self.type2].compact
+	end
+
 	def abilities
-		return [self.ability1, self.ability2, self.ability3].reject(&:nil?)
+		return [self.ability1, self.ability2, self.ability3].compact
+	end
+
+	def egg_groups
+		return [self.egg_group1, self.egg_group2].compact
 	end
 end

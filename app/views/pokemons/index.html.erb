@@ -50,7 +50,7 @@
                            "pokemon",
                            "pkmn-#{pokemon.sprite_name}",
                            ("color-shiny" if pokemon.shiny),
-                           ((pokemon.gender.female? ? "gender-female" : "gender-male") if pokemon.species.ratio),
+                           ("gender-#{pokemon.gender}") if pokemon.species.ratio),
                            "form-#{pokemon.form_name}"
                           ]
                      %>
@@ -61,7 +61,7 @@
                 pokemon.species.name + (pokemon.species.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + pokemon.species.form)
                 %>
                 <%= content_tag :td, pokemon.species.ratio.nil? ?
-                image_tag("ungendered.svg", width: "15") : pokemon.gender.female? ?
+                image_tag("ungendered.svg", width: "15") : pokemon.female? ?
                 image_tag("female.svg", width: "15") :
                 image_tag("male.svg", width: "20") %>
                 <%= content_tag :td, pokemon.nature %>

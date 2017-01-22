@@ -10,9 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170121052830) do
+ActiveRecord::Schema.define(version: 20170122105048) do
 
   create_table "abilities", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "egg_groups", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -32,6 +38,19 @@ ActiveRecord::Schema.define(version: 20170121052830) do
     t.index ["species_id"], name: "index_evolution_moves_on_species_id"
   end
 
+  create_table "immunities", id: false, force: :cascade do |t|
+    t.integer "attacker_id"
+    t.integer "defender_id"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.string   "spritename"
+    t.string   "group"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "levelup_moves", id: false, force: :cascade do |t|
     t.integer "species_id"
     t.integer "move_id"
@@ -41,18 +60,19 @@ ActiveRecord::Schema.define(version: 20170121052830) do
 
   create_table "moves", force: :cascade do |t|
     t.string   "name"
-    t.string   "movetype"
     t.string   "category"
     t.integer  "power"
     t.integer  "accuracy"
+    t.integer  "type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["type_id"], name: "index_moves_on_type_id"
   end
 
   create_table "pokemons", force: :cascade do |t|
     t.integer  "original_trainer_id"
     t.string   "nickname"
-    t.boolean  "female"
+    t.boolean  "gender"
     t.boolean  "shiny"
     t.string   "nature"
     t.string   "ability"
@@ -73,24 +93,33 @@ ActiveRecord::Schema.define(version: 20170121052830) do
     t.integer  "user_id"
     t.integer  "species_id"
     t.integer  "ability_id"
+    t.integer  "item_id"
     t.index ["ability_id"], name: "index_pokemons_on_ability_id"
+    t.index ["item_id"], name: "index_pokemons_on_item_id"
     t.index ["species_id"], name: "index_pokemons_on_species_id"
     t.index ["user_id"], name: "index_pokemons_on_user_id"
+  end
+
+  create_table "resistances", id: false, force: :cascade do |t|
+    t.integer "attacker_id"
+    t.integer "defender_id"
   end
 
   create_table "species", force: :cascade do |t|
     t.string   "name"
     t.string   "form"
     t.integer  "dexno"
-    t.string   "egg_group1"
-    t.string   "egg_group2"
     t.float    "ratio"
     t.integer  "ability1_id"
     t.integer  "ability2_id"
     t.integer  "ability3_id"
     t.integer  "prevo_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "type1_id"
+    t.integer  "type2_id"
+    t.integer  "egg_group1_id"
+    t.integer  "egg_group2_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "tm_moves", id: false, force: :cascade do |t|
@@ -105,6 +134,12 @@ ActiveRecord::Schema.define(version: 20170121052830) do
     t.integer "move_id"
     t.index ["move_id"], name: "index_tutor_moves_on_move_id"
     t.index ["species_id"], name: "index_tutor_moves_on_species_id"
+  end
+
+  create_table "types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -126,6 +161,11 @@ ActiveRecord::Schema.define(version: 20170121052830) do
     t.string   "last_sign_in_ip"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "weaknesses", id: false, force: :cascade do |t|
+    t.integer "attacker_id"
+    t.integer "defender_id"
   end
 
 end
