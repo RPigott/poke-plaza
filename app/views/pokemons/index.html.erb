@@ -47,12 +47,14 @@
             <tr>
                 <td><%= tag :span,
                 :class => ["pkspr",
+                           "pokemon",
                            "pkmn-#{pokemon.sprite_name}",
                            ("color-shiny" if pokemon.shiny),
                            ((pokemon.female ? "gender-female" : "gender-male") if pokemon.species.ratio),
                            "form-#{pokemon.form_name}"
                           ]
                      %>
+                     <%= image_tag("ShinyStar.png", :class => "shiny-star") if pokemon.shiny %>
                 </td>
                 <%= content_tag :td,
                 pokemon.species.name + (pokemon.species.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + pokemon.species.form)
