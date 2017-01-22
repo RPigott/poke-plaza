@@ -92,6 +92,7 @@ end
 # Populate species table
 p "Populate species table"
 species = ActiveSupport::JSON.decode(File.read("db/seeds/pokemons.json"))
+species = species[0..2]
 species.each do |species|
 	ability1_name, ability2_name, ability3_name = species["abilities"]
 	type1, type2 = species["types"]

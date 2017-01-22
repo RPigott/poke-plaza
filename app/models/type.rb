@@ -24,4 +24,21 @@ class Type < ApplicationRecord
 		association_foreign_key: :defender_id,
 		class_name: "Type"
 		)
+
+	has_and_belongs_to_many(:strengths,
+		join_table: :weaknesses,
+		foreign_key: :attacker_id,
+		association_foreign_key: :defender_id,
+		class_name: "Type",
+		inverse_of: :weaknesses
+		)
+
+	has_and_belongs_to_many(:ineffectivenesses,
+		join_table: :resistances,
+		foreign_key: :attacker_id,
+		association_foreign_key: :defender_id,
+		class_name: "Type",
+		inverse_of: :resistances
+		)
+
 end
