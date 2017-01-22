@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 20170122105048) do
   create_table "pokemons", force: :cascade do |t|
     t.integer  "original_trainer_id"
     t.string   "nickname"
-    t.boolean  "gender"
+    t.integer  "gender"
     t.boolean  "shiny"
     t.string   "nature"
     t.string   "ability"
