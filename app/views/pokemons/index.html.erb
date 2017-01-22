@@ -55,6 +55,7 @@
                           ]
                      %>
                      <%= image_tag("ShinyStar.png", :class => "shiny-star") if pokemon.shiny %>
+                     <%= image_tag("helditem.png", :class => "held-item") if pokemon.item %>
                 </td>
                 <%= content_tag :td,
                 pokemon.species.name + (pokemon.species.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + pokemon.species.form)

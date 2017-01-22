@@ -26,6 +26,11 @@ tr:hover {
 	}
 }
 
+.held-item {
+	position: absolute;
+	transform: translate(12px, 20px);
+}
+
 .shiny-star {
 	position: absolute;
 	transform: translate(11px);
