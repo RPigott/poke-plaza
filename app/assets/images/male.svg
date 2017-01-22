@@ -1,3 +1,102 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1200 800"><defs><path d="M606.01 319.86L612.58 322.39L618.67 325.8L624.2 330.01L629.09 334.95L633.26 340.52L636.64 346.67L639.15 353.31L640.71 360.36L641.25 367.74L640.71 375.13L639.15 382.18L636.64 388.81L633.26 394.96L629.09 400.54L624.2 405.47L618.67 409.68L612.58 413.09L606.01 415.62L599.02 417.2L591.7 417.74L584.39 417.2L577.4 415.62L570.82 413.09L564.73 409.68L559.21 405.47L554.32 400.54L550.15 394.96L546.77 388.81L544.26 382.18L542.7 375.13L542.16 367.74L542.7 360.36L544.26 353.31L546.77 346.67L550.15 340.52L554.32 334.95L559.21 330.01L564.73 325.8L570.82 322.39L577.4 319.86L584.39 318.28L591.7 317.74L599.02 318.28L606.01 319.86ZM582.17 335.82L577.78 337.51L573.72 339.78L570.04 342.59L566.78 345.88L564 349.6L561.75 353.69L560.07 358.12L559.03 362.82L558.67 367.74L559.03 372.67L560.07 377.36L561.75 381.79L564 385.89L566.78 389.61L570.04 392.9L573.72 395.7L577.78 397.98L582.17 399.66L586.83 400.71L591.7 401.08L596.58 400.71L601.24 399.66L605.62 397.98L609.68 395.7L613.37 392.9L616.63 389.61L619.41 385.89L621.66 381.79L623.33 377.36L624.38 372.67L624.73 367.74L624.38 362.82L623.33 358.12L621.66 353.69L619.41 349.6L616.63 345.88L613.37 342.59L609.68 339.78L605.62 337.51L601.24 335.82L596.58 334.77L591.7 334.41L586.83 334.77L582.17 335.82Z" id="jOdSYemV5"></path><path d="M631.48 295.24L676.39 283.16L664.31 328.07L653.91 317.66L623.69 347.88L611.64 335.84L641.86 305.62L631.48 295.24Z" id="bXAT4kpvt"></path></defs><g visibility="inherit"><g visibility="inherit"><g visibility="inherit"><use xlink:href="#jOdSYemV5" opacity="1" fill="#124788" fill-opacity="1"></use></g><g visibility="inherit"><use xlink:href="#bXAT4kpvt" opacity="1" fill="#114788" fill-opacity="1"></use></g></g></g></svg>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   preserveAspectRatio="xMidYMid meet"
+   viewBox="0 0 134.23 134.58"
+   id="svg3713"
+   sodipodi:docname="male.svg"
+   width="134.23"
+   height="134.58"
+   inkscape:version="0.92.0 r15299">
+  <metadata
+     id="metadata3717">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview3715"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.26166667"
+     inkscape:cx="57.84"
+     inkscape:cy="17.74"
+     inkscape:window-x="276"
+     inkscape:window-y="1247"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3713" />
+  <defs
+     id="defs3699">
+    <path
+       d="m 606.01,319.86 6.57,2.53 6.09,3.41 5.53,4.21 4.89,4.94 4.17,5.57 3.38,6.15 2.51,6.64 1.56,7.05 0.54,7.38 -0.54,7.39 -1.56,7.05 -2.51,6.63 -3.38,6.15 -4.17,5.58 -4.89,4.93 -5.53,4.21 -6.09,3.41 -6.57,2.53 -6.99,1.58 -7.32,0.54 -7.31,-0.54 -6.99,-1.58 -6.58,-2.53 -6.09,-3.41 -5.52,-4.21 -4.89,-4.93 -4.17,-5.58 -3.38,-6.15 -2.51,-6.63 -1.56,-7.05 -0.54,-7.39 0.54,-7.38 1.56,-7.05 2.51,-6.64 3.38,-6.15 4.17,-5.57 4.89,-4.94 5.52,-4.21 6.09,-3.41 6.58,-2.53 6.99,-1.58 7.31,-0.54 7.32,0.54 z m -23.84,15.96 -4.39,1.69 -4.06,2.27 -3.68,2.81 -3.26,3.29 -2.78,3.72 -2.25,4.09 -1.68,4.43 -1.04,4.7 -0.36,4.92 0.36,4.93 1.04,4.69 1.68,4.43 2.25,4.1 2.78,3.72 3.26,3.29 3.68,2.8 4.06,2.28 4.39,1.68 4.66,1.05 4.87,0.37 4.88,-0.37 4.66,-1.05 4.38,-1.68 4.06,-2.28 3.69,-2.8 3.26,-3.29 2.78,-3.72 2.25,-4.1 1.67,-4.43 1.05,-4.69 0.35,-4.93 -0.35,-4.92 -1.05,-4.7 -1.67,-4.43 -2.25,-4.09 -2.78,-3.72 -3.26,-3.29 -3.69,-2.81 -4.06,-2.27 -4.38,-1.69 -4.66,-1.05 -4.88,-0.36 -4.87,0.36 z"
+       id="jOdSYemV5"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 631.48,295.24 44.91,-12.08 -12.08,44.91 -10.4,-10.41 -30.22,30.22 -12.05,-12.04 30.22,-30.22 z"
+       id="bXAT4kpvt"
+       inkscape:connector-curvature="0" />
+  </defs>
+  <g
+     visibility="inherit"
+     id="g3711"
+     style="visibility:inherit"
+     transform="translate(-542.16,-283.16)">
+    <g
+       visibility="inherit"
+       id="g3709"
+       style="visibility:inherit">
+      <g
+         visibility="inherit"
+         id="g3703"
+         style="visibility:inherit">
+        <use
+           xlink:href="#jOdSYemV5"
+           id="use3701"
+           style="opacity:1;fill:#124788;fill-opacity:1"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <g
+         visibility="inherit"
+         id="g3707"
+         style="visibility:inherit">
+        <use
+           xlink:href="#bXAT4kpvt"
+           id="use3705"
+           style="opacity:1;fill:#114788;fill-opacity:1"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+  </g>
+</svg>
