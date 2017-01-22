@@ -50,7 +50,7 @@
                            "pokemon",
                            "pkmn-#{pokemon.sprite_name}",
                            ("color-shiny" if pokemon.shiny),
-                           ("gender-#{pokemon.gender}") if pokemon.species.ratio),
+                           ("gender-#{pokemon.gender}" if pokemon.species.ratio),
                            "form-#{pokemon.form_name}"
                           ]
                      %>
