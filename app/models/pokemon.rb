@@ -10,7 +10,7 @@ class Pokemon < ApplicationRecord
 	belongs_to :move4, class_name: "Move", optional: true
 
 	belongs_to :ability
-	belongs_to :item
+	belongs_to :item, optional: true
 
 	def sprite_name
 		return self.species.name.delete("'").sub(/[^A-Za-z0-9]/, "-").downcase
