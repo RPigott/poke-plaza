@@ -26,6 +26,7 @@
         <thead>
             <tr>
                 <th class="name" colspan="2" rowspan="2">Pokémon</th>
+                <th class="gender" rowspan="2">Gender</th>
                 <th class="nature" rowspan="2">Nature</th>
                 <th class="ability" rowspan="2">Ability</th>
                 <th class="ivs" colspan="6"><abbr title="Individual Values">IVs</abbr></th>
@@ -50,6 +51,7 @@
                 %>
                 <%= content_tag :td, pokemon.nature %>
                 <%= content_tag :td, pokemon.ability.name %>
+                <%= content_tag :td, pokemon.female? "Female" : "Male" %>
                 <%= content_tag :td, pokemon.HPIV  || "x" %>
                 <%= content_tag :td, pokemon.AtkIV || "x" %>
                 <%= content_tag :td, pokemon.DefIV || "x" %>

@@ -1,0 +1,16 @@
+.gender-icon {
+	width: 20px;
+	height: 20px;
+
+	&-female {
+		background-image: image-url("female.svg");
+	}
+
+	&-male {
+		background-image: image-url("male.svg");
+	}
+
+	&-none {
+		background-image: image-url("ungendered.svg");
+	}
+}
