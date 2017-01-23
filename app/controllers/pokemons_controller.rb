@@ -1,8 +1,12 @@
 class PokemonsController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :authenticate_user!, except: [:index, :show, :search]
   
   def pokemon_params
-    params.require(:pokemon).permit(:trainer_id, :nickname, :gender, :shiny, :nature, :ability, :HPIV, :AtkIV, :DefIV, :SpAIV, :SpDIV, :SpeIV, :hiddenpower, :move1, :move3, :move2, :move4, :ball)
+    params.require(:pokemon).permit(:original_trainer_id, :nickname, :gender, :shiny, :nature, :ability, :HPIV, :AtkIV, :DefIV, :SpAIV, :SpDIV, :SpeIV, :hiddenpower, :move1, :move2, :move3, :move4, :ball)
+  end
+  
+  def search_params
+    params.permit(:original_trainer_id, :nickname, :gender, :shiny, :nature, :ability, :HPIV, :AtkIV, :DefIV, :SpAIV, :SpDIV, :SpeIV, :hiddenpower, :move1, :move2, :move3, :move4, :ball)
   end
   
   def create
@@ -41,5 +45,13 @@ class PokemonsController < ApplicationController
     flash[:notice] = "Removed #{@pokemon.nickname} (#{@pokemon.species.name})"
     @pokemon.destroy
     redirect_to pokemons_path
+  end
+  
+  def search
+    query = search_params
+    query['species'] = Species.find_by(:name => params['species']).id if params['species']
+    query['user'] = User.find_by(:username => params['username']).id if params['username']
+    @pokemons = Pokemon.where(query)
+    render :index
   end
 end

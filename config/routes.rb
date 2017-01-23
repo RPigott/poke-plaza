@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   root to: "pokemons#index"
 
+  get 'pokemons/search', :to => 'pokemons#search', :as => :pokemon_search
+
   resources :pokemons
   resources :users, :param => :username
-  
-  post 'pokemons/search', :to => 'pokemons#search', :as => :pokemon_search
 end
