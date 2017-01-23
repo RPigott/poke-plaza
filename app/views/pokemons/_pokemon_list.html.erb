@@ -20,7 +20,7 @@
             %>
             <%= content_tag(:th,
                     column,
-                    :class => columns.map{|s| s.downcase.sub(/\s/, "-")},
+                    :class => column.downcase.sub(/\s/, "-"),
                     :rowspan => rowspan,
                     :colspan => colspan
                 )
