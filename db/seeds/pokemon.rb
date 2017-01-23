@@ -32,6 +32,7 @@ number_of.times do
 	pokemon  = Pokemon.create!(
 		original_trainer_id: user.trainer_id,
 		nickname: species_name,
+		level: (1..100).sample,
 		gender: species.ratio && (rand < species.ratio ? :female : :male),
 		shiny: rand > 0.95,
 		nature: $natures.keys.push("").sample,
