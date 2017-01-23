@@ -108,20 +108,27 @@ species.each do |species|
 	ability1_name, ability2_name, ability3_name = species["abilities"]
 	type1, type2 = species["types"]
 	egg_group1, egg_group2 = species["eggGroups"]
-	current = Species.create!(
-		name: species["name"],
-		dexno: species["id"],
-		form: species["form"],
-		type1: Type.find_by(name: type1),
-		type2: Type.find_by(name: type2),
-		egg_group1: EggGroup.find_by(name: egg_group1),
-		egg_group2: EggGroup.find_by(name: egg_group2),
-		ratio: species["ratio"].match(/([0-9]):([0-9])/) { $2.to_f / ($1.to_f + $2.to_f)},
-		ability1: Ability.find_by(name: ability1_name),
-		ability2: Ability.find_by(name: ability2_name),
-		ability3: Ability.find_by(name: ability3_name),
-	)
-	attach_learnset(species, current)
+	if (species["form"] =~ /^Base$/)
+		forms = species["forms"] || ["Base"]
+	else
+		forms = [species["form"]]
+	end
+	forms.each do |form|
+		current = Species.create!(
+			name: species["name"],
+			dexno: species["id"],
+			form: form,
+			type1: Type.find_by(name: type1),
+			type2: Type.find_by(name: type2),
+			egg_group1: EggGroup.find_by(name: egg_group1),
+			egg_group2: EggGroup.find_by(name: egg_group2),
+			ratio: species["ratio"].match(/([0-9]):([0-9])/) { $2.to_f / ($1.to_f + $2.to_f)},
+			ability1: Ability.find_by(name: ability1_name),
+			ability2: Ability.find_by(name: ability2_name),
+			ability3: Ability.find_by(name: ability3_name),
+		)
+		attach_learnset(species, current)
+	end
 end
 
 # Construct evo tree
