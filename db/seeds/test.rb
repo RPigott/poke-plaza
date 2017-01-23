@@ -6,7 +6,6 @@ user = User.create!(
 	ign: "IGN",
 	friend_code: "0000-0000-0000",
 	trainer_id: 0,
-	email: "email@email.com",
 	password: "password"
 )
 
@@ -23,22 +22,8 @@ ivs = Enumerator.new { |g|
 	end
 }
 
-$natures = ActiveSupport::JSON.decode(File.read("db/seeds/natures.json"))
-types = ActiveSupport::JSON.decode(File.read("db/seeds/types.json"))
-$type_names = []
-types.each do |k, v|
-	$type_names[v["number"]] = k
-end
-items = Item.all
-
-def legal_hp_types(ivs)
-	weights = [1, 2, 4, 16, 32, 8]
-	dotmin = ivs.each_index.map{|i| ((ivs[i] || 0)%2) * weights[i]}.inject(&:+)
-	return $type_names[(dotmin * (15.0/63.0)).floor]
-end
-
-Species.all.sample(50).each do |species|
-	puts "#{species.id}: #{species.name}"
+Species.all.each do |species|
+	puts "#{species.id.to_s.rjust(3, '0')}: #{species.name}"
 	moves = species.moves.sample(4)
 	
 	pokemon  = Pokemon.create!(
@@ -46,7 +31,7 @@ Species.all.sample(50).each do |species|
 		nickname: species.name,
 		gender: species.ratio && (rand < species.ratio ? :female : :male),
 		shiny: rand > 0.95,
-		nature: $natures.keys.push("").sample,
+		nature: rand > 0.95 ? nil : Nature.all.sample,
 		ability: species.abilities.sample,
 		HPIV: ivs.next,
 		AtkIV: ivs.next,
@@ -54,16 +39,16 @@ Species.all.sample(50).each do |species|
 		SpAIV: ivs.next,
 		SpDIV: ivs.next,
 		SpeIV: ivs.next,
-		hiddenpower: legal_hp_types(ivs.next),
 		move1: moves[0],
 		move2: moves[1],
 		move3: moves[2],
 		move4: moves[3],
-		ball: ['heal', 'dusk', 'safari', 'luxury', 'master', 'fast', 'nest', 'level', 'dream', 'love', 'park', 'dive', 'great', 'moon', 'poke', 'ultra', 'repeat', 'lure', 'net', 'quick', 'heavy', 'beast', 'sport', 'premier', 'timer', 'cherish', 'friend'].sample,
+		ball: Item.where(group: "pokeball").sample,
 		user: user,
 		species: species,
-		item: rand > 0.75 ? items.sample : nil
+		item: rand > 0.95 ? Item.all.sample : nil
 	)
+	pokemon.hiddenpower = pokemon.legal_hp_types.sample
 	species.pokemons << pokemon
 	user.pokemons << pokemon
 end
