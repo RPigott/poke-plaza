@@ -43,7 +43,7 @@ moves.each do |name, info|
 end
 
 def attach_learnset(species, current)
-	p "Construct learnset for #{species['name']}-#{species['form']}"
+	p "Construct learnset for #{species['name']}-#{current.form}"
 	species["moves"].each do |move|
 		move_name = move["name"]
 		learn_method = move["method"]
