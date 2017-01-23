@@ -5,7 +5,8 @@
         :title => "#{move.name}#{' (Egg Move)' if egg}"
     %>
 <% else %>
-    <%= tag :span,
-        :class => ["pokemon-move", "pokemon-move-none"]
+    <%= content_tag :abbr, tag(:span,
+        :class => ["pokemon-move", "pokemon-move-none"]),
+        :title => '(no move)'
     %>
 <% end %>
