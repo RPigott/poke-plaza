@@ -26,4 +26,36 @@ class Pokemon < ApplicationRecord
 		end
 		return san
 	end
+
+	def legal_hp_types
+		ivs = [self.HPIV, self.AtkIV, self.DefIV, self.SpAIV, self.SpDIV, self.SpeIV]
+		weights = [1, 2, 4, 16, 32, 8]
+		types = Type.where(:id => 1..16).to_a
+		scale = (15.0/63.0)
+		legal = []
+
+		dotmin = ivs.each_index.map{|i| ((ivs[i] || 0)%2) * weights[i]}.inject(&:+)
+		dotmax = ivs.each_index.map{|i| ((ivs[i] || 1)%2) * weights[i]}.inject(&:+)
+		legal_min = (dotmin * scale).floor
+		legal_max = (dotmax * scale).floor
+		tools = weights.each_with_index.select{|x, i| ivs[i].nil?}.map(&:first).sort.reverse
+
+		(legal_min..legal_max).each do |n|
+			value = dotmin
+			tools.each do |v|
+				if (value + v)*scale > n+1
+					next
+				else
+					value = value + v
+				end
+			end
+			if (value * scale).floor == n
+				legal.push type_names[n]
+			end
+		end
+		
+		legal.push type_names[legal_min]
+		legal.push type_names[legal_max]
+		return legal.uniq
+	end
 end

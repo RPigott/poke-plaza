@@ -20,39 +20,6 @@ user2 = User.find_by(:username => "Pojostick") || User.create!(
 )
 
 $natures = ActiveSupport::JSON.decode(File.read("db/seeds/natures.json"))
-types = ActiveSupport::JSON.decode(File.read("db/seeds/types.json"))
-$type_names = []
-types.each do |k, v|
-	$type_names[v["number"]] = k
-end
-
-
-def legal_hp_types(ivs)
-	ivs.all?(&:nil?) and return type_names[0..15]
-	legal = []
-	weights = [1, 2, 4, 16, 32, 8]
-	dotmin = ivs.each_index.map{|i| ((ivs[i] || 0)%2) * weights[i]}.inject(&:+)
-	dotmax = ivs.each_index.map{|i| ((ivs[i] || 1)%2) * weights[i]}.inject(&:+)
-	legal_min = (dotmin * (15.0/63.0)).floor
-	legal_max = (dotmax * (15.0/63.0)).floor
-	tools = weights.each_with_index.select{|x, i| ivs[i].nil?}.map(&:first).sort.reverse
-	(legal_min..legal_max).each do |n|
-		value = dotmin
-		tools.each do |v|
-			if (value + v)*(15.0/63.0) > n+1
-				next
-			else
-				value = value + v
-			end
-		end
-		if (value * (15.0/63.0)).floor == n
-			legal.push $type_names[n]
-		end
-	end
-	legal.push $type_names[legal_min]
-	legal.push $type_names[legal_max]
-	return legal.uniq
-end
 
 number_of.times do
 	user = rand(2) == 1 ? user1 : user2
@@ -75,7 +42,7 @@ number_of.times do
 		SpAIV: ivs[3],
 		SpDIV: ivs[4],
 		SpeIV: ivs[5],
-		hiddenpower: legal_hp_types(ivs).push("none").sample,
+		hiddenpower: pokemon.legal_hp_types.push(nil).sample,
 		move1: moves[0],
 		move2: moves[1],
 		move3: moves[2],
