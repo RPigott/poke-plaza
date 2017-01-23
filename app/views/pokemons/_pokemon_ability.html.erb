@@ -1,1 +1,1 @@
-<%= content_tag :td, pokemon.ability.name %>
+<%= content_tag :td, pokemon.ability.name, :class => [("ability-hidden" if pokemon.ability == pokemon.species.ability3)] %>
