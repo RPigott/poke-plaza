@@ -1,3 +1,67 @@
 // Place all the styles related to the Pokemons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pokemon-list {
+    .nature {
+        &-adamant, &-brave, &-lonely, &-naughty {
+            ~ .atkiv {
+                color: red;
+            }
+        }
+        
+        &-bold, &-impish, &-lax, &-relaxed {
+            ~ .defiv {
+                color: red;
+            }
+        }
+        
+        &-mild, &-modest, &-quiet, &-rash {
+            ~ .spaiv {
+                color: red;
+            }
+        }
+        
+        &-calm, &-careful, &-gentle, &-sassy {
+            ~ .spdiv {
+                color: red;
+            }
+        }
+        
+        &-hasty, &-jolly, &-naive, &-timid {
+            ~ .speiv {
+                color: red;
+            }
+        }
+        
+        &-bold, &-calm, &-modest, &-timid {
+            ~ .atkiv {
+                color: blue;
+            }
+        }
+        
+        &-gentle, &-hasty, &-lonely, &-mild {
+            ~ .defiv {
+                color: blue;
+            }
+        }
+        
+        &-adamant, &-careful, &-impish, &-jolly {
+            ~ .spaiv {
+                color: blue;
+            }
+        }
+        
+        &-lax, &-naive, &-naughty, &-rash {
+            ~ .spdiv {
+                color: blue;
+            }
+        }
+        
+        &-brave, &-quiet, &-relaxed, &-sassy {
+            ~ .speiv {
+                color: blue;
+            }
+        }
+    }
+}

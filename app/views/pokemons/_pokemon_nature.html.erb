@@ -1,1 +1,1 @@
-<%= content_tag :td, pokemon.nature && pokemon.nature.name %>
+<%= content_tag :td, pokemon.nature&.name, :class => "nature-#{pokemon.nature&.name&.downcase || :none}", :data => {nature: pokemon.nature&.name} %>
