@@ -2,9 +2,9 @@
 <%=
   content_tag(:abbr,
     tag(:span,
-  	    :class => "pkspr pokeball-#{pokemon.ball}"
+  	    :class => "pkspr pokeball-#{pokemon.ball.spritename}"
     ),
-    :title => "#{pokemon.ball.capitalize} Ball"
+    :title => "#{pokemon.ball.name}"
   )
 %>
 <td>

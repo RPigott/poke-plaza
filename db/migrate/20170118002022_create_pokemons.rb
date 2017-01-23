@@ -18,7 +18,7 @@ class CreatePokemons < ActiveRecord::Migration[5.0]
       t.integer   :move3_id
       t.integer   :move2_id
       t.integer   :move4_id
-      t.string    :ball
+      t.integer   :ball_id
 
       t.timestamps
 

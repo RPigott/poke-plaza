@@ -46,7 +46,7 @@ number_of.times do
 		move2: moves[1],
 		move3: moves[2],
 		move4: moves[3],
-		ball: ['heal', 'dusk', 'safari', 'luxury', 'master', 'fast', 'nest', 'level', 'dream', 'love', 'park', 'dive', 'great', 'moon', 'poke', 'ultra', 'repeat', 'lure', 'net', 'quick', 'heavy', 'beast', 'sport', 'premier', 'timer', 'cherish', 'friend'].sample,
+		ball: Item.where(group: "pokeball").sample,
 		user: user,
 		species: species
 	)
