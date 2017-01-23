@@ -1,7 +1,7 @@
 <table>
 <thead>
     <% unless local_assigns[:columns] %>
-        <% columns = ["Name, Gender, Nature, Ability, IVs, Hidden Power, Moves, Ball Type"] %>
+        <% columns = ["Name", "Gender", "Nature", "Ability", "IVs", "Hidden Power", "Moves", "Ball"] %>
     <% end %>
     <tr>
         <% columns.each do |column| %>
@@ -10,14 +10,17 @@
             when /IVs/
                 colspan = 6
                 rowspan = 1
+            when /Name/
+                colspan = 2
+                rowspan = 2
             else
                 colspan = 1
                 rowspan = 2
             end
             %>
             <%= content_tag(:th,
-                    column
-                    :class => columns.downcase.sub(/\s/, "-"),
+                    column,
+                    :class => columns.map{|s| s.downcase.sub(/\s/, "-")},
                     :rowspan => rowspan,
                     :colspan => colspan
                 )
@@ -35,5 +38,5 @@
         <% end %>
     </tr>
 </thead>
-    <%= render pokemons %>
+    <%= render @pokemons, :columns => columns %>
 </table>

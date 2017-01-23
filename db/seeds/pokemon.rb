@@ -33,7 +33,7 @@ number_of.times do
 		level: rand(1..100),
 		gender: species.ratio && (rand < species.ratio ? :female : :male),
 		shiny: rand > 0.95,
-		nature: rand > 0.95 ? nil : Natures.all.sample,
+		nature: rand > 0.95 ? nil : Nature.all.sample,
 		ability: species.abilities.sample,
 		HPIV: ivs[0],
 		AtkIV: ivs[1],

@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 20170123043849) do
     t.integer  "move3_id"
     t.integer  "move2_id"
     t.integer  "move4_id"
-    t.string   "ball"
+    t.integer  "ball_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "user_id"

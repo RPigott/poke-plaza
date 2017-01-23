@@ -1,32 +1,6 @@
 <tr>
-    <td><%= tag :span,
-    :class => ["pkspr",
-               "pokemon",
-               "pkmn-#{pokemon.sprite_name}",
-               ("color-shiny" if pokemon.shiny),
-               ("gender-#{pokemon.gender}" if pokemon.species.ratio),
-               "form-#{pokemon.form_name}"
-              ]
-         %>
-         <%= image_tag("ShinyStar.png", :class => "shiny-star") if pokemon.shiny %>
-         <%= image_tag("helditem.png", :class => "held-item") if pokemon.item %>
-    </td>
-    <%= content_tag :td,
-    pokemon.species.name + (pokemon.species.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + pokemon.species.form)
-    %>
-    <%= content_tag :td, pokemon.species.ratio.nil? ?
-    image_tag("ungendered.svg", width: "15") : pokemon.female? ?
-    image_tag("female.svg", width: "15") :
-    image_tag("male.svg", width: "20") %>
-    <%= content_tag :td, pokemon.nature %>
-    <%= content_tag :td, pokemon.ability.name %>
-    <%= content_tag :td, pokemon.HPIV  || "x" %>
-    <%= content_tag :td, pokemon.AtkIV || "x" %>
-    <%= content_tag :td, pokemon.DefIV || "x" %>
-    <%= content_tag :td, pokemon.SpAIV || "x" %>
-    <%= content_tag :td, pokemon.SpDIV || "x" %>
-    <%= content_tag :td, pokemon.SpeIV || "x" %>
-    <%= content_tag :td, tag( :span, :class => "pokemon-type pokemon-type-#{pokemon.hiddenpower.downcase}" ) %>
-    <%= content_tag :td, [pokemon.move1, pokemon.move2, pokemon.move3, pokemon.move4].reject(&:nil?).map(&:name).join(", ") %>
-    <td><%= tag :span, :class => "pkspr pokeball-#{pokemon.ball}" %><td>
+    <% columns.each do |column| %>
+        <% partial_name = column.sub(/\s/, "").downcase %>
+        <%= render "pokemon_#{partial_name}", :pokemon => pokemon %>
+    <% end %>
 </tr>
