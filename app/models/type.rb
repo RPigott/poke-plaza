@@ -2,6 +2,8 @@ class Type < ApplicationRecord
 	has_many :primary, foreign_key: :type1_id, class_name: "Species"
 	has_many :secondary, foreign_key: :type2_id, class_name: "Species"
 
+	has_many :hiddenpower_users, foreign_key: :hiddenpower_id, class_name: "Pokemon"
+
 	has_many :moves
 
 	has_and_belongs_to_many(:resistances,

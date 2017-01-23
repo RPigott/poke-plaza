@@ -1,0 +1,38 @@
+<table>
+<thead>
+    <% unless local_assigns[:columns] %>
+        <% columns = ["Name, Gender, Nature, Ability, IVs, Hidden Power, Moves, Ball Type"] %>
+    <% end %>
+    <tr>
+        <% columns.each do |column| %>
+            <%
+            case column
+            when /IVs/
+                colspan = 6
+                rowspan = 1
+            else
+                colspan = 1
+                rowspan = 2
+            end
+            %>
+            <%= content_tag :th,
+                    column
+                    :class => columns.downcase.sub(/\s/, "-"),
+                    :rowspan => rowspan,
+                    :colspan => colspan
+            %>
+        <% end %>
+    </tr>
+    <tr>
+        <% if columns.include? "IVs" %>
+            <th class="hp"><abbr title="Hit Points">HP</abbr></th>
+            <th class="atk"><abbr title="Attack">Atk</abbr></th>
+            <th class="def"><abbr title="Defense">Def</abbr></th>
+            <th class="spa"><abbr title="Special Attack">SpA</abbr></th>
+            <th class="spd"><abbr title="Special Defense">SpD</abbr></th>
+            <th class="spe"><abbr title="Speed">Spe</abbr></th>
+        <% end %>
+    </tr>
+</thead>
+    <%= render pokemons %>
+</table>
