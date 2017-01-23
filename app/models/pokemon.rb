@@ -17,7 +17,7 @@ class Pokemon < ApplicationRecord
 	belongs_to :ball, class_name: "Item"
 
 	def sprite_name
-		return self.species.name.delete("'").delete(".").delete(":").sub(" ", "-").sub("♀", "-f").sub("♂", "-m").sub("ébé", "ebe").downcase
+		return self.species.name.delete("'").sub(/[^A-Za-z0-9]/, "-").downcase
 	end
 
 	def form_name
