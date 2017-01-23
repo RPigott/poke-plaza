@@ -108,8 +108,8 @@ species.each do |species|
 	ability1_name, ability2_name, ability3_name = species["abilities"]
 	type1, type2 = species["types"]
 	egg_group1, egg_group2 = species["eggGroups"]
-	if (species["form"] =~ /^Base$/)
-		forms = species["forms"] || ["Base"]
+	if (species["form"] =~ /^Base$/) && species["forms"] && not species["forms"].include? "Base"
+		forms = species["forms"]
 	else
 		forms = [species["form"]]
 	end
