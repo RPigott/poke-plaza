@@ -7,7 +7,6 @@ user1 = User.find_by(:username => "Brocellous") || User.create!(
 	ign: "Ronan",
 	friend_code: "0000-0000-0000",
 	trainer_id: 1,
-	email: "Brocellous@gmail.com",
 	password: "password"
 )
 user2 = User.find_by(:username => "Pojostick") || User.create!(
@@ -15,7 +14,6 @@ user2 = User.find_by(:username => "Pojostick") || User.create!(
 	ign: "Joseph",
 	friend_code: "1111-1111-1111",
 	trainer_id: 111111,
-	email: "Pojostick@gmail.com",
 	password: "password"
 )
 
