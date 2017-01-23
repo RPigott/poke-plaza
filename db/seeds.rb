@@ -137,9 +137,17 @@ species.each do |species|
 	prevo = species["evolvesFrom"]
 	prevo_id = prevo && prevo["id"]
 	prevo_form = prevo && (prevo["form"] =~ /^Same$/ ? species["form"] : prevo["form"])
+	
+	if (species["form"] =~ /^Base$/) && (species["forms"]) && (not species["forms"].include? "Base")
+		forms = species["forms"]
+	else
+		forms = [species["form"]]
+	end
 
-	current = Species.find_by(name: species["name"], form: species["form"])
-
-	current.prevo = Species.find_by(dexno: prevo_id, form: prevo_form)
-	current.save!
+	forms.each do |form|
+		current = Species.find_by(name: species["name"], form: form)
+	
+		current.prevo = Species.find_by(dexno: prevo_id, form: prevo_form)
+		current.save!
+	end
 end
