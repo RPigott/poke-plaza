@@ -1,0 +1,4 @@
+<%= content_tag :td,
+	tag( :span,
+		 :class => "pokemon-type pokemon-type-#{pokemon.hiddenpower.nil? ? :none : pokemon.hiddenpower.name.downcase}" )
+%>

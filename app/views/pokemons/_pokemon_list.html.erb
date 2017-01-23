@@ -1,7 +1,7 @@
 <table>
 <thead>
     <% unless local_assigns[:columns] %>
-        <% columns = ["Name, Gender, Nature, Ability, IVs, Hidden Power, Moves, Ball"] %>
+        <% columns = ["Name, Gender, Nature, Ability, IVs, Hidden Power, Moves, Ball Type"] %>
     <% end %>
     <tr>
         <% columns.each do |column| %>
@@ -34,5 +34,5 @@
         <% end %>
     </tr>
 </thead>
-    <%= render pokemons, locals: {columns: columns}%>
+    <%= render pokemons %>
 </table>
