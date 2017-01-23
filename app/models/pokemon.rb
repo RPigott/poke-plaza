@@ -9,7 +9,7 @@ class Pokemon < ApplicationRecord
 	belongs_to :move3, class_name: "Move", optional: true
 	belongs_to :move4, class_name: "Move", optional: true
 
-	belongs_to :hiddenpower, class_name: "Type"
+	belongs_to :hiddenpower, class_name: "Type", optional: true
 
 	belongs_to :ability
 	belongs_to :item, optional: true
@@ -50,12 +50,12 @@ class Pokemon < ApplicationRecord
 				end
 			end
 			if (value * scale).floor == n
-				legal.push type_names[n]
+				legal.push types[n]
 			end
 		end
 		
-		legal.push type_names[legal_min]
-		legal.push type_names[legal_max]
+		legal.push types[legal_min]
+		legal.push types[legal_max]
 		return legal.uniq
 	end
 end

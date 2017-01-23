@@ -32,7 +32,7 @@ number_of.times do
 	pokemon  = Pokemon.create!(
 		original_trainer_id: user.trainer_id,
 		nickname: species_name,
-		level: (1..100).sample,
+		level: rand(1..100),
 		gender: species.ratio && (rand < species.ratio ? :female : :male),
 		shiny: rand > 0.95,
 		nature: $natures.keys.push("").sample,
@@ -43,7 +43,7 @@ number_of.times do
 		SpAIV: ivs[3],
 		SpDIV: ivs[4],
 		SpeIV: ivs[5],
-		hiddenpower: pokemon.legal_hp_types.push(nil).sample,
+		hiddenpower: nil,
 		move1: moves[0],
 		move2: moves[1],
 		move3: moves[2],
@@ -52,6 +52,7 @@ number_of.times do
 		user: user,
 		species: species
 	)
+	pokemon.hiddenpower = pokemon.legal_hp_types.sample if rand > 0.2
 	species.pokemons << pokemon
 	user.pokemons << pokemon
 end

@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20170122105048) do
   create_table "pokemons", force: :cascade do |t|
     t.integer  "original_trainer_id"
     t.string   "nickname"
+    t.integer  "level"
     t.integer  "gender"
     t.boolean  "shiny"
     t.string   "nature"
@@ -82,7 +83,7 @@ ActiveRecord::Schema.define(version: 20170122105048) do
     t.integer  "SpAIV"
     t.integer  "SpDIV"
     t.integer  "SpeIV"
-    t.string   "hiddenpower"
+    t.integer  "hiddenpower_id"
     t.integer  "move1_id"
     t.integer  "move3_id"
     t.integer  "move2_id"

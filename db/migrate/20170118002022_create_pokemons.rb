@@ -14,6 +14,7 @@ class CreatePokemons < ActiveRecord::Migration[5.0]
       t.integer   :SpAIV
       t.integer   :SpDIV
       t.integer   :SpeIV
+      t.integer   :hiddenpower_id
       t.integer   :move1_id
       t.integer   :move3_id
       t.integer   :move2_id
@@ -26,7 +27,6 @@ class CreatePokemons < ActiveRecord::Migration[5.0]
       t.belongs_to :species, :index => true
       t.belongs_to :ability, :index => true
       t.belongs_to :item, :index => true
-      t.belongs_to :hiddenpower_id, :index => true
     end
   end
 end

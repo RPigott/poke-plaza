@@ -78,7 +78,7 @@
                 <%= content_tag :td, pokemon.SpAIV || "x" %>
                 <%= content_tag :td, pokemon.SpDIV || "x" %>
                 <%= content_tag :td, pokemon.SpeIV || "x" %>
-                <%= content_tag :td, tag( :span, :class => "pokemon-type pokemon-type-#{pokemon.hiddenpower.name.downcase}" ) %>
+                <%= content_tag :td, tag( :span, :class => "pokemon-type pokemon-type-#{pokemon.hiddenpower.nil? ? :none : pokemon.hiddenpower.name.downcase}" ) %>
                 <%= content_tag :td,
                     (content_tag :span, pokemon.move1.name, :class => "pokemon-move pokemon-move-#{pokemon.move1.type.name.downcase}" if pokemon.move1) +
                     (content_tag :span, pokemon.move2.name, :class => "pokemon-move pokemon-move-#{pokemon.move2.type.name.downcase}" if pokemon.move2) +
