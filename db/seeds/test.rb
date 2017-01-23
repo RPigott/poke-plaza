@@ -22,7 +22,7 @@ ivs = Enumerator.new { |g|
 	end
 }
 
-Species.all.each do |species|
+Species.all.sample(50).each do |species|
 	puts "#{species.id.to_s.rjust(3, '0')}: #{species.name}"
 	moves = species.moves.sample(4)
 	
