@@ -28,6 +28,10 @@ class Pokemon < ApplicationRecord
 		end
 		return san
 	end
+	
+	def moves
+		return [self.move1, self.move2, self.move3, self.move4]	
+	end
 
 	def legal_hp_types
 		ivs = [self.HPIV, self.AtkIV, self.DefIV, self.SpAIV, self.SpDIV, self.SpeIV]
