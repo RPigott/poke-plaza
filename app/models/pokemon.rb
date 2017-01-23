@@ -21,7 +21,7 @@ class Pokemon < ApplicationRecord
 	end
 
 	def form_name
-		san = self.species.form.split.first.sub(/[^A-Za-z0-9]/, "-").downcase
+		san = self.species.form.split.first.sub(/!/, "exclamation").sub(/\?/, "question").sub(/[^A-Za-z0-9]/, "-").downcase
 		case san
 		when /alolan/
 			san = "alola"
