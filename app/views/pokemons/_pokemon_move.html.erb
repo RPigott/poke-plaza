@@ -1,8 +1,0 @@
-<%=
-    content_tag(:abbr,
-    	(content_tag :span,
-    	    move.name,
-    	    :class => "pokemon-move pokemon-move-#{move.type.name.downcase}#{' pokemon-move-egg' if pokemon.species.egg_moves.include?(move)}" if move),
-	    :title => "#{move&.name}#{" (Egg Move)" if pokemon.species.egg_moves.include?(move)}"
-	) if move else tag(:span, :class => ["pokemon-move", "pokemon-move-none"])
-%>
