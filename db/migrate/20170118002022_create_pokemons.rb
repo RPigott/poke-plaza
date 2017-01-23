@@ -6,7 +6,6 @@ class CreatePokemons < ActiveRecord::Migration[5.0]
       t.integer   :level
       t.integer   :gender
       t.boolean   :shiny
-      t.string    :nature
       t.string    :ability
       t.integer   :HPIV
       t.integer   :AtkIV
@@ -27,6 +26,7 @@ class CreatePokemons < ActiveRecord::Migration[5.0]
       t.belongs_to :species, :index => true
       t.belongs_to :ability, :index => true
       t.belongs_to :item, :index => true
+      t.belongs_to :nature, :index => true
     end
   end
 end

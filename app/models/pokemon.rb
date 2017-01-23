@@ -12,6 +12,7 @@ class Pokemon < ApplicationRecord
 	belongs_to :hiddenpower, class_name: "Type", optional: true
 
 	belongs_to :ability
+	belongs_to :nature, optional: true
 	belongs_to :item, optional: true
 
 	def sprite_name

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170122105048) do
+ActiveRecord::Schema.define(version: 20170123043849) do
 
   create_table "abilities", force: :cascade do |t|
     t.string   "name"
@@ -69,13 +69,20 @@ ActiveRecord::Schema.define(version: 20170122105048) do
     t.index ["type_id"], name: "index_moves_on_type_id"
   end
 
+  create_table "natures", force: :cascade do |t|
+    t.string   "name"
+    t.string   "positive"
+    t.string   "negative"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pokemons", force: :cascade do |t|
     t.integer  "original_trainer_id"
     t.string   "nickname"
     t.integer  "level"
     t.integer  "gender"
     t.boolean  "shiny"
-    t.string   "nature"
     t.string   "ability"
     t.integer  "HPIV"
     t.integer  "AtkIV"
@@ -95,8 +102,10 @@ ActiveRecord::Schema.define(version: 20170122105048) do
     t.integer  "species_id"
     t.integer  "ability_id"
     t.integer  "item_id"
+    t.integer  "nature_id"
     t.index ["ability_id"], name: "index_pokemons_on_ability_id"
     t.index ["item_id"], name: "index_pokemons_on_item_id"
+    t.index ["nature_id"], name: "index_pokemons_on_nature_id"
     t.index ["species_id"], name: "index_pokemons_on_species_id"
     t.index ["user_id"], name: "index_pokemons_on_user_id"
   end

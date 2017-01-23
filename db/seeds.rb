@@ -69,6 +69,18 @@ abilities.each do |ability, info|
 	Ability.create!(name: ability)
 end
 
+# Populate nature table
+p "Populate nature table"
+natures = ActiveSupport::JSON.decode(File.read("db/seeds/natures.json"))
+natures.each do |name, info|
+	Nature.create!(
+			name: name,
+			positive: info["positive"],
+			negative: info["negative"]
+		)
+end
+
+
 # Populate the items table
 p "Populate the items table"
 items = ActiveSupport::JSON.decode(File.read("db/seeds/items.json"))
