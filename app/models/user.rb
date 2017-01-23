@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 	has_many :pokemons
+	
+	# before_destroy :destroy_pokemons
 
 	def email_required?
 		false

@@ -1,25 +1,29 @@
 <%=
 content_tag(:td,
-    (
-    	content_tag :span,
+    content_tag(:abbr,
+    	(content_tag :span,
     	    pokemon.move1.name,
-    	    :class => "pokemon-move pokemon-move-#{pokemon.move1.type.name.downcase}" if pokemon.move1
+    	    :class => "pokemon-move pokemon-move-#{pokemon.move1.type.name.downcase}#{' pokemon-move-egg' if pokemon.species.egg_moves.include?(pokemon.move1)}" if pokemon.move1),
+	    :title => "#{pokemon.move1&.name}#{" (Egg Move)" if pokemon.species.egg_moves.include?(pokemon.move1)}"
 	) +
-    (
-    	content_tag :span,
+    content_tag(:abbr,
+        (content_tag :span,
     	    pokemon.move2.name,
-    	    :class => "pokemon-move pokemon-move-#{pokemon.move2.type.name.downcase}" if pokemon.move2
+    	    :class => "pokemon-move pokemon-move-#{pokemon.move2.type.name.downcase}#{' pokemon-move-egg' if pokemon.species.egg_moves.include?(pokemon.move2)}" if pokemon.move2),
+	    :title => "#{pokemon.move2&.name}#{" (Egg Move)" if pokemon.species.egg_moves.include?(pokemon.move2)}"
 	) +
     tag(:br) +
-    (
-    	content_tag :span,
+    content_tag(:abbr,
+    	(content_tag :span,
     	    pokemon.move3.name,
-    	    :class => "pokemon-move pokemon-move-#{pokemon.move3.type.name.downcase}" if pokemon.move3
+    	    :class => "pokemon-move pokemon-move-#{pokemon.move3.type.name.downcase}#{' pokemon-move-egg' if pokemon.species.egg_moves.include?(pokemon.move3)}" if pokemon.move3),
+	    :title => "#{pokemon.move3&.name}#{" (Egg Move)" if pokemon.species.egg_moves.include?(pokemon.move3)}"
 	) +
-    (
-    	content_tag :span,
+    content_tag(:abbr,
+    	(content_tag :span,
     	    pokemon.move4.name,
-    	    :class => "pokemon-move pokemon-move-#{pokemon.move4.type.name.downcase}" if pokemon.move4
+    	    :class => "pokemon-move pokemon-move-#{pokemon.move4.type.name.downcase}#{' pokemon-move-egg' if pokemon.species.egg_moves.include?(pokemon.move4)}" if pokemon.move4),
+	    :title => "#{pokemon.move4&.name}#{" (Egg Move)" if pokemon.species.egg_moves.include?(pokemon.move4)}"
 	)
 )
 %>

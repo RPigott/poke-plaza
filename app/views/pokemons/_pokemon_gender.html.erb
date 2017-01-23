@@ -5,7 +5,7 @@
         image_tag("ungendered.svg", width: "15") : pokemon.female? ?
         image_tag("female.svg", width: "15") :
         image_tag("male.svg", width: "20"),
+      :title => pokemon.species.ratio.nil? ? 'Ungendered' : pokemon.female? ? 'Female' : 'Male'
     ),
-    :title => pokemon.species.ratio.nil? ? 'Ungendered' : pokemon.female? ? 'Female' : 'Male'
   )
 %>
