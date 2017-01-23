@@ -1,19 +1,22 @@
 <%=
-  content_tag :abbr,
-  tag(:span,
-  :class => ["pkspr",
-             "pokemon",
-             "pkmn-#{pokemon.sprite_name}",
-             ("color-shiny" if pokemon.shiny),
-             ("gender-#{pokemon.gender}" if pokemon.species.ratio),
-             "form-#{pokemon.form_name}"
-            ]) +
-      (content_tag :abbr, image_tag("ShinyStar.png", :class => "shiny-star"), :title => 'Shiny' if pokemon.shiny) +
-      (content_tag :abbr, image_tag("helditem.png", :class => "held-item"), :title => pokemon.item.name if pokemon.item),
-  :title => pokemon.nickname
+  content_tag(:abbr,
+    tag(:span,
+      :class => ["pkspr",
+        "pokemon",
+        "pkmn-#{pokemon.sprite_name}",
+        ("color-shiny" if pokemon.shiny),
+        ("gender-#{pokemon.gender}" if pokemon.species.ratio),
+        "form-#{pokemon.form_name}"
+      ]
+    ) +
+    (content_tag :abbr, image_tag("ShinyStar.png", :class => "shiny-star"), :title => 'Shiny' if pokemon.shiny) +
+    (content_tag :abbr, image_tag("helditem.png", :class => "held-item"), :title => pokemon.item.name if pokemon.item),
+    :title => pokemon.nickname
+  )
 %>
 
 <%=
-content_tag :td,
-pokemon.species.name + (pokemon.species.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + pokemon.species.form)
+content_tag(:td,
+  pokemon.species.name + (pokemon.species.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + pokemon.species.form)
+)
 %>

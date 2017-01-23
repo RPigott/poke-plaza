@@ -1,24 +1,29 @@
 <%=
-content_tag :td,
-        (
-        	content_tag :span,
-        	pokemon.move1.name,
-        	:class => "pokemon-move pokemon-move-#{pokemon.move1.type.name.downcase}" if pokemon.move1
-    	) +
-        (
-        	content_tag :span,
-        	pokemon.move2.name,
-        	:class => "pokemon-move pokemon-move-#{pokemon.move2.type.name.downcase}" if pokemon.move2
-    	) +
-        tag(:br) +
-        (
-        	content_tag :span,
-        	pokemon.move3.name,
-        	:class => "pokemon-move pokemon-move-#{pokemon.move3.type.name.downcase}" if pokemon.move3
-    	) +
-        (
-        	content_tag :span,
-        	pokemon.move4.name,
-        	:class => "pokemon-move pokemon-move-#{pokemon.move4.type.name.downcase}" if pokemon.move4
+content_tag(:td,
+    (
+    	content_tag(:span,
+    	    pokemon.move1.name,
+    	    :class => "pokemon-move pokemon-move-#{pokemon.move1.type.name.downcase}" if pokemon.move1
     	)
+	) +
+    (
+    	content_tag(:span,
+    	    pokemon.move2.name,
+    	    :class => "pokemon-move pokemon-move-#{pokemon.move2.type.name.downcase}" if pokemon.move2
+    	)
+	) +
+    tag(:br) +
+    (
+    	content_tag(:span,
+    	    pokemon.move3.name,
+    	    :class => "pokemon-move pokemon-move-#{pokemon.move3.type.name.downcase}" if pokemon.move3
+    	)
+	) +
+    (
+    	content_tag(:span,
+    	    pokemon.move4.name,
+    	    :class => "pokemon-move pokemon-move-#{pokemon.move4.type.name.downcase}" if pokemon.move4
+    	)
+	)
+)
 %>

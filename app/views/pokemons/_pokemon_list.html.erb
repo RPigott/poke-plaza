@@ -15,11 +15,12 @@
                 rowspan = 2
             end
             %>
-            <%= content_tag :th,
+            <%= content_tag(:th,
                     column
                     :class => columns.downcase.sub(/\s/, "-"),
                     :rowspan => rowspan,
                     :colspan => colspan
+                )
             %>
         <% end %>
     </tr>

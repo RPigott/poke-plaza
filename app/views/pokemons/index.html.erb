@@ -20,77 +20,10 @@
     </style>
 </head>
 
-<!-- <body> -->
-    <%# render "pokemon_list" %>
-<!-- </body> -->
+<body> 
+    <% render "pokemon_list" %>
+</body> 
 
-<body>
-    <h1><% flash[:notice] %></h1>
-    <table>
-        <thead>
-            <tr>
-                <th class="name" colspan="2" rowspan="2">Pokémon</th>
-                <th class="gender" rowspan="2">Gender</th>
-                <th class="nature" rowspan="2">Nature</th>
-                <th class="ability" rowspan="2">Ability</th>
-                <th class="ivs" colspan="6"><abbr title="Individual Values">IVs</abbr></th>
-                <th class="hidden-power" rowspan="2">Hidden Power</th>
-                <th class="egg-moves" rowspan="2"> Moves </th>
-                <th class="poke-balls" rowspan="2">Poké Ball</th>
-            </tr>
-            <tr>
-                <th class="hp"><abbr title="Hit Points">HP</abbr></th>
-                <th class="atk"><abbr title="Attack">Atk</abbr></th>
-                <th class="def"><abbr title="Defense">Def</abbr></th>
-                <th class="spa"><abbr title="Special Attack">SpA</abbr></th>
-                <th class="spd"><abbr title="Special Defense">SpD</abbr></th>
-                <th class="spe"><abbr title="Speed">Spe</abbr></th>
-            </tr>
-        </thead>
-        <% @pokemons.each do |pokemon| %>
-            <tr>
-                <td><%= content_tag :abbr, tag(:span,
-                :class => ["pkspr",
-                           "pokemon",
-                           "pkmn-#{pokemon.sprite_name}",
-                           ("color-shiny" if pokemon.shiny),
-                           ("gender-#{pokemon.gender}" if pokemon.species.ratio),
-                           "form-#{pokemon.form_name}"
-                          ]) +
-                    (content_tag :abbr, image_tag("ShinyStar.png", :class => "shiny-star"), :title => 'Shiny' if pokemon.shiny) +
-                    (content_tag :abbr, image_tag("helditem.png", :class => "held-item"), :title => pokemon.item.name if pokemon.item),
-                :title => pokemon.nickname
-                %>
-                </td>
-                <%= content_tag :td,
-                pokemon.species.name + (pokemon.species.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + pokemon.species.form)
-                %>
-                <%= content_tag :td, content_tag(:abbr, pokemon.species.ratio.nil? ?
-                image_tag("ungendered.svg", width: "15") : pokemon.female? ?
-                image_tag("female.svg", width: "15") :
-                image_tag("male.svg", width: "20"),
-                :title => pokemon.species.ratio.nil? ? 'Ungendered' : pokemon.female? ? 'Female' : 'Male') %>
-                <%= content_tag :td, pokemon.nature %>
-                <%= content_tag :td, pokemon.ability.name %>
-                <%= content_tag :td, pokemon.HPIV  || "x" %>
-                <%= content_tag :td, pokemon.AtkIV || "x" %>
-                <%= content_tag :td, pokemon.DefIV || "x" %>
-                <%= content_tag :td, pokemon.SpAIV || "x" %>
-                <%= content_tag :td, pokemon.SpDIV || "x" %>
-                <%= content_tag :td, pokemon.SpeIV || "x" %>
-                <%= content_tag :td, tag( :span, :class => "pokemon-type pokemon-type-#{pokemon.hiddenpower.nil? ? :none : pokemon.hiddenpower.name.downcase}" ) %>
-                <%= content_tag :td,
-                    (content_tag :span, pokemon.move1.name, :class => "pokemon-move pokemon-move-#{pokemon.move1.type.name.downcase}" if pokemon.move1) +
-                    (content_tag :span, pokemon.move2.name, :class => "pokemon-move pokemon-move-#{pokemon.move2.type.name.downcase}" if pokemon.move2) +
-                    tag(:br) +
-                    (content_tag :span, pokemon.move3.name, :class => "pokemon-move pokemon-move-#{pokemon.move3.type.name.downcase}" if pokemon.move3) +
-                    (content_tag :span, pokemon.move4.name, :class => "pokemon-move pokemon-move-#{pokemon.move4.type.name.downcase}" if pokemon.move4) %>
-                <td><%= content_tag :abbr, tag(:span, :class => "pkspr pokeball-#{pokemon.ball}"), :title => "#{pokemon.ball.capitalize} Ball" %><td>
-            </tr>
-        <% end %>
-    </table>
-
-</body>
 <script>
     PkSpr.process_dom();
 </script>
