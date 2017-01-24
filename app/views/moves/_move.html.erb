@@ -1,12 +1,10 @@
 <% if move %>
-    <%= content_tag :abbr, content_tag(:span,
+    <%= content_tag(:div,
         move.name,
-        :class => ["pokemon-move", "pokemon-move-#{move.type.name.downcase}", ("pokemon-move-egg" if egg)]),
-        :title => "#{move.name}#{' (Egg Move)' if egg}"
+        :class => ["pokemon-move", "pokemon-move-#{move.type.name.downcase}", ("pokemon-move-egg" if egg)])
     %>
 <% else %>
-    <%= content_tag :abbr, tag(:span,
-        :class => ["pokemon-move", "pokemon-move-none"]),
-        :title => '(no move)'
+    <%= tag(:div,
+        :class => ["pokemon-move", "pokemon-move-none"])
     %>
 <% end %>

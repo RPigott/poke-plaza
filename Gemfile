@@ -32,8 +32,12 @@ gem 'devise'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 
 # Bootstrap
-gem 'sprockets-rails', :require => 'sprockets/railtie'
-gem 'bootstrap', '~> 4.0.0.alpha6'
+# gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'bootstrap-sass'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
+gem 'bootswatch-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
