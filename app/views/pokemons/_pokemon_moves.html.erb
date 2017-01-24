@@ -1,8 +1,7 @@
 <% [pokemon.move1, pokemon.move2].each do |move| %>
 	<%= render "moves/move", egg: pokemon.species.egg_moves.include?(move), move: move %>
 <% end %>
-<pre>
-</pre>
+<br>
 <% [pokemon.move3, pokemon.move4].each do |move| %>
 	<%= render "moves/move", egg: pokemon.species.egg_moves.include?(move), move: move %>
 <% end %>

@@ -2,7 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+abbr {
+    border: none;
+}
+
 .pokemon-list {
+    width: 100%;
+    color: black;
+    
+    td, th {
+        text-align: center;
+        padding: 0.375em 0.5em;
+        vertical-align: middle;
+    }
+    
+    td {
+        border-bottom: 1px solid #8f8173;
+    }
+
+    
     .nature {
         &-adamant, &-brave, &-lonely, &-naughty {
             ~ .atkiv {
