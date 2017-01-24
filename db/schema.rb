@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170123043849) do
+ActiveRecord::Schema.define(version: 20170123232937) do
 
   create_table "abilities", force: :cascade do |t|
     t.string   "name"
@@ -77,6 +77,19 @@ ActiveRecord::Schema.define(version: 20170123043849) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "notes", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "poster_id"
+    t.integer  "postee_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "offered", id: false, force: :cascade do |t|
+    t.integer "trade_id"
+    t.integer "offered_id"
+  end
+
   create_table "pokemons", force: :cascade do |t|
     t.integer  "original_trainer_id"
     t.string   "nickname"
@@ -110,6 +123,11 @@ ActiveRecord::Schema.define(version: 20170123043849) do
     t.index ["user_id"], name: "index_pokemons_on_user_id"
   end
 
+  create_table "requested", id: false, force: :cascade do |t|
+    t.integer "trade_id"
+    t.integer "requested_id"
+  end
+
   create_table "resistances", id: false, force: :cascade do |t|
     t.integer "attacker_id"
     t.integer "defender_id"
@@ -137,6 +155,11 @@ ActiveRecord::Schema.define(version: 20170123043849) do
     t.integer "move_id"
     t.index ["move_id"], name: "index_tm_moves_on_move_id"
     t.index ["species_id"], name: "index_tm_moves_on_species_id"
+  end
+
+  create_table "trades", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "tutor_moves", id: false, force: :cascade do |t|
