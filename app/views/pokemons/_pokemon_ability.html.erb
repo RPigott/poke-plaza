@@ -1,4 +1,4 @@
-<% if current_user != pokemon.user %>
+<% if current_user == pokemon.user %>
     <%= content_tag :span,
         select_tag("ability",
             options_from_collection_for_select(pokemon.species.abilities,
