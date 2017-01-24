@@ -1,1 +1,16 @@
-<%= content_tag :td, pokemon.ability.name, :class => [("ability-hidden" if pokemon.ability == pokemon.species.ability3)] %>
+<% if current_user != pokemon.user %>
+    <%= content_tag :span,
+        select_tag("ability",
+            options_from_collection_for_select(pokemon.species.abilities,
+                :id,
+                :name,
+                pokemon.ability.id
+            ),
+            :include_blank => true,
+            :class => "pokemon-editable"
+        ),
+        :class => [("ability-hidden" if pokemon.ability == pokemon.species.ability3)]
+    %>
+<% else %>
+    <%= content_tag :span, pokemon.ability.name, :class => [("ability-hidden" if pokemon.ability == pokemon.species.ability3)] %>
+<% end %>

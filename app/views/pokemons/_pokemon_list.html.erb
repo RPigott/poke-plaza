@@ -1,7 +1,7 @@
 <table class="pokemon-list">
 <thead>
     <% unless local_assigns[:columns] %>
-        <% columns = ["Name", "Gender", "Nature", "Ability", "IVs", "Hidden Power", "Moves", "Ball"] %>
+        <% columns = ["Ball","Sprite", "Name", "Gender", "Nature", "IVs", "Hidden Power", "Ability", "Moves"] %>
     <% end %>
     <tr>
         <% columns.each do |column| %>
@@ -10,9 +10,6 @@
             when /IVs/
                 colspan = 6
                 rowspan = 1
-            when /Name/
-                colspan = 2
-                rowspan = 2
             else
                 colspan = 1
                 rowspan = 2

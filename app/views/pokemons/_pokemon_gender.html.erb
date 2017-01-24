@@ -1,11 +1,9 @@
 <%=
-  content_tag(:td,
-    content_tag(:abbr,
-      pokemon.species.ratio.nil? ?
-        image_tag("ungendered.svg", width: "15") : pokemon.female? ?
-        image_tag("female.svg", width: "15") :
-        image_tag("male.svg", width: "20"),
-      :title => pokemon.species.ratio.nil? ? 'Ungendered' : pokemon.female? ? 'Female' : 'Male'
-    ),
+  content_tag(:abbr,
+    pokemon.species.ratio.nil? ?
+      image_tag("ungendered.svg", width: "15") : pokemon.female? ?
+      image_tag("female.svg", width: "15") :
+      image_tag("male.svg", width: "20"),
+    :title => pokemon.species.ratio.nil? ? 'Ungendered' : pokemon.female? ? 'Female' : 'Male'
   )
 %>

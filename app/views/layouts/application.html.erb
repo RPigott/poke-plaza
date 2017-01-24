@@ -9,8 +9,18 @@
   </head>
 
   <body>
-  	<p class="notice"><%= notice %></p>
-  	<p class="alert"><%= alert %></p>
+    <div class="menu">
+      <ul>
+        <li>Poke Plaza</li>
+        
+        <li style="float: right;"><a href="/users/sign_in">Sign In</a></li>
+        <li style="float: right;"><a href="/pokemons">My Pokemon</a></li>
+      </ul>
+    </div>
+    
+  	<%= content_tag :p, notice, :class => "notice" if notice %>
+  	<%= content_tag :p, alert, :class => "alert" if alert %>
+  	
     <%= yield %>
   </body>
 </html>

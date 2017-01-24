@@ -1,7 +1,7 @@
 <table>
 <thead>
     <% unless local_assigns[:columns] %>
-        <% columns = ["Name, Gender, Nature, Ability, IVs, Hidden Power, Moves, Ball"] %>
+        <% columns = ["Sprite", "Name", "Gender", "Nature", "Ability", "IVs", "Hidden Power", "Moves", "Ball"] %>
     <% end %>
     <tr>
         <% columns.each do |column| %>
