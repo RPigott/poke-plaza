@@ -1,8 +1,3 @@
-<%=
-  content_tag(:abbr,
-    tag(:span,
-    	  :class => "pokemon-type pokemon-type-#{pokemon.hiddenpower&.name&.downcase || :none}"
-    ),
-    :title => pokemon.hiddenpower.nil? ? pokemon.legal_hp_types.map(&:name).join(", ") : pokemon.hiddenpower.name
-  )
+<%= tag :span,
+  :class => "pokemon-type pokemon-type-#{pokemon.hiddenpower&.name&.downcase || :none}"
 %>

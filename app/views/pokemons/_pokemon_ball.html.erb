@@ -1,8 +1,3 @@
-<%=
-  content_tag(:abbr,
-    tag(:span,
-  	    :class => "pkspr pokeball-#{pokemon.ball.spritename}"
-    ),
-    :title => "#{pokemon.ball.name}"
-  )
+<%= tag :span,
+ :class => "pkspr pokeball-#{pokemon.ball.spritename}"
 %>
