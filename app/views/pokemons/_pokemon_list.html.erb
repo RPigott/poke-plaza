@@ -1,4 +1,4 @@
-<table class="pokemon-list">
+<table class="pokemon-list table-hover">
 <thead>
     <% unless local_assigns[:columns] %>
         <% columns = ["Ball","Sprite", "Name", "Gender", "Nature", "IVs", "Hidden Power", "Ability", "Moves"] %>
@@ -26,12 +26,12 @@
     </tr>
     <tr>
         <% if columns.include? "IVs" %>
-            <th class="hp"><abbr title="Hit Points">HP</abbr></th>
-            <th class="atk"><abbr title="Attack">Atk</abbr></th>
-            <th class="def"><abbr title="Defense">Def</abbr></th>
-            <th class="spa"><abbr title="Special Attack">SpA</abbr></th>
-            <th class="spd"><abbr title="Special Defense">SpD</abbr></th>
-            <th class="spe"><abbr title="Speed">Spe</abbr></th>
+            <th class="hp"> HP </th>
+            <th class="atk">Atk</th>
+            <th class="def">Def</th>
+            <th class="spa">SpA</th>
+            <th class="spd">SpD</th>
+            <th class="spe">Spe</th>
         <% end %>
     </tr>
 </thead>

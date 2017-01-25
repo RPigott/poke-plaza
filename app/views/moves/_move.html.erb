@@ -4,7 +4,8 @@
         :class => ["pokemon-move", "pokemon-move-#{move.type.name.downcase}", ("pokemon-move-egg" if egg)])
     %>
 <% else %>
-    <%= tag(:div,
+    <%= content_tag(:div,
+        "",
         :class => ["pokemon-move", "pokemon-move-none"])
-    %>
+     %>
 <% end %>

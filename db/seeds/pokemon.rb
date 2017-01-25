@@ -17,8 +17,6 @@ user2 = User.find_by(:username => "Pojostick") || User.create!(
 	password: "password"
 )
 
-$natures = ActiveSupport::JSON.decode(File.read("db/seeds/natures.json"))
-
 number_of.times do
 	user = rand(2) == 1 ? user1 : user2
 	
