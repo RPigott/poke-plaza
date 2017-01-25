@@ -9,7 +9,6 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find_by(:username => params[:username])
-    render :html => "TODO: User '#{params[:username]}' not found" and return if not @user
     @pokemons = @user.pokemons
   end
 end
