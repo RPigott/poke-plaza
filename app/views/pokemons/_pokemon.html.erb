@@ -2,11 +2,12 @@
     <% columns.each do |column| %>
         <% partial_name = column.sub(/\s/, "").downcase %>
         <% if partial_name == 'ivs' %>
-            <%= render "pokemon_#{partial_name}", :pokemon => pokemon %>
+            <%= render "pokemons/#{partial_name}", :pokemon => pokemon %>
         <% else %>
-            <td>
-                <%= render "pokemon_#{partial_name}", :pokemon => pokemon %>
-            </td>
+            <%= content_tag :td,
+                render("pokemons/#{partial_name}", :pokemon => pokemon),
+                :class => partial_name
+            %>
         <% end %>
     <% end %>
 </tr>

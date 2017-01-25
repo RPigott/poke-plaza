@@ -1,0 +1,42 @@
+<%= content_tag :td, (pokemon.HPIV  || "x"),
+    class: ["hpiv" ,],
+    :data => {value: pokemon.HPIV }
+%>
+
+<% positive = pokemon.nature&.positive %>
+<% negative = pokemon.nature&.negative %>
+
+<%= content_tag :td, (pokemon.AtkIV || "x"),
+    class: ["atkiv",
+            ("nature-positive" if (positive == "Atk") && (negative != "Atk")),
+            ("nature-negative" if (negative == "Atk") && (positive != "Atk"))],
+    :data => {value: pokemon.AtkIV}
+%>
+
+<%= content_tag :td, (pokemon.DefIV || "x"),
+    class: ["defiv",
+            ("nature-positive" if (positive == "Def") && (negative != "Def")),
+            ("nature-negative" if (negative == "Def") && (positive != "Def"))],
+    :data => {value: pokemon.DefIV}
+%>
+
+<%= content_tag :td, (pokemon.SpAIV || "x"),
+    class: ["spaiv",
+            ("nature-positive" if (positive == "SpA") && (negative != "SpA")),
+            ("nature-negative" if (negative == "SpA") && (positive != "SpA"))],
+    :data => {value: pokemon.SpAIV}
+%>
+
+<%= content_tag :td, (pokemon.SpDIV || "x"),
+    class: ["spdiv",
+            ("nature-positive" if (positive == "SpD") && (negative != "SpD")),
+            ("nature-negative" if (negative == "SpD") && (positive != "SpD"))],
+    :data => {value: pokemon.SpDIV}
+%>
+
+<%= content_tag :td, (pokemon.SpeIV || "x"),
+    class: ["speiv",
+            ("nature-positive" if (positive == "Spe") && (negative != "Spe")),
+            ("nature-negative" if (negative == "Spe") && (positive != "Spe"))],
+    :data => {value: pokemon.SpeIV}
+%>

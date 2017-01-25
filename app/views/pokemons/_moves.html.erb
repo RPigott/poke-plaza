@@ -1,7 +1,10 @@
+<div class="moves-container">
 <% [pokemon.move1, pokemon.move2].each do |move| %>
 	<%= render "moves/move", egg: pokemon.species.egg_moves.include?(move), move: move %>
 <% end %>
-<br>
+</div>
+<div class="moves-container">
 <% [pokemon.move3, pokemon.move4].each do |move| %>
 	<%= render "moves/move", egg: pokemon.species.egg_moves.include?(move), move: move %>
 <% end %>
+</div>
