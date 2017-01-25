@@ -2,13 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-abbr {
-    border: none;
-}
-
 .pokemon-list {
-    width: 100%;
+    width: calc(100% - 20px);
     color: black;
+    background-color: #dadada;
+    margin: auto;
+    
+    th {
+        background-color: #252525;
+        color: white;
+    }
     
     td, th {
         text-align: center;
