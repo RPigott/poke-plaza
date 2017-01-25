@@ -12,23 +12,29 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">Poke-Plaza</a>
+          <%= link_to "Poke-Plaza", root_path, class: "navbar-brand" %>
         </div>
     
         <div class="collapse navbar-collapse">
           <% if user_signed_in? %>
             <ul class="nav navbar-nav">
-              <li><% link_to "Users", user_path(current_user) %></li>
+              <li><%= link_to "My Pokemon", user_path(current_user) %></li>
             </ul>
           <% end %>
           
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Sign up", new_registration_path(:user) %></li>
-          </ul>
-          
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Log in", new_session_path(:user) %></li>
-          </ul>
+          <% unless user_signed_in? %>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to "Sign up", new_registration_path(:user) %></li>
+            </ul>
+            
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to "Log in", new_session_path(:user) %></li>
+            </ul>
+          <% else %>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to("Log out", destroy_user_session_path, method: :delete) %></li>
+            </ul>
+          <% end %>
           
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
@@ -40,8 +46,19 @@
       </div>
     </nav>
     
-  	<%= content_tag :p, notice, :class => "notice" if notice %>
-  	<%= content_tag :p, alert, :class => "alert" if alert %>
+  	<% if notice %>
+  	  <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= content_tag :p, notice, :class => "notice" %>
+      </div>
+    <% end %>
+  	
+  	<% if alert %>
+  	  <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%= content_tag :p, alert, :class => "alert" %>
+      </div>
+    <% end %>
   	
     <%= yield %>
   </body>
