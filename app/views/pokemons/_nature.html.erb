@@ -1,1 +1,6 @@
-<%= content_tag :span, pokemon.nature&.name, :class => "nature-#{pokemon.nature&.name&.downcase || :none}", :data => {nature: pokemon.nature&.name} %>
+<%= content_tag :span,
+    pokemon.nature&.name,
+    :class => "nature-#{pokemon.nature&.name&.downcase || :none}",
+    :data => {nature: pokemon.nature&.name, toggle: "tooltip"},
+    :title => "+#{pokemon.nature.positive} / -#{pokemon.nature.negative}"
+%>

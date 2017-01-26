@@ -1,4 +1,6 @@
 <%= content_tag :span,
     pokemon.ability.name,
-    :class => [("ability-hidden" if pokemon.ability == pokemon.species.ability3)]
+    :class => [("ability-hidden" if pokemon.ability == pokemon.species.ability3)],
+    :data => {toggle: "tooltip"},
+    :title => "#{pokemon.ability&.name}#{' (HA)' if pokemon.ability == pokemon.species.ability3}"
 %>

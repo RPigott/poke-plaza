@@ -1,4 +1,10 @@
-<%= content_tag :span,
-  pokemon.species.name +
-  (pokemon.species.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + pokemon.species.form)
-%>
+<% if pokemon.nickname %>
+  <%= content_tag :span,
+      pokemon.nickname,
+      :class => ["pokemon-name", "pokemon-nickname"]
+  %>
+<% else %>
+  <%= content_tag :span,
+    pokemon.species_form_name
+  %>
+<% end %>

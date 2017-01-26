@@ -1,12 +1,29 @@
-<%= tag(:span,
-      :class => ["pkspr",
-        "pokemon",
-        "pkmn-#{pokemon.sprite_name}",
-        ("color-shiny" if pokemon.shiny),
-        ("gender-#{pokemon.gender}" if pokemon.species.ratio),
-        "form-#{pokemon.form_name}"
-      ]
-    ) +
-    (content_tag :abbr, image_tag("ShinyStar.png", :class => "shiny-star"), :title => 'Shiny' if pokemon.shiny) +
-    (content_tag :abbr, image_tag("helditem.png", :class => "held-item"), :title => pokemon.item.name if pokemon.item)
+<%=
+  tag :span,
+    :class => [
+      "pkspr",
+      "pokemon",
+      "pkmn-#{pokemon.sprite_name}",
+      ("color-shiny" if pokemon.shiny),
+      ("gender-#{pokemon.gender}" if pokemon.species.ratio),
+      "form-#{pokemon.form_name}"
+      ],
+    :data => {toggle: "tooltip"},
+    :title => pokemon.species_form_name
 %>
+
+<% if pokemon.shiny %>
+  <%= image_tag "ShinyStar.png",
+    :class => "shiny-star",
+    :data => {toggle: "tooltip"},
+    :title => 'Shiny'
+  %>
+<% end %>
+
+<% if pokemon.item %>
+  <%= image_tag "helditem.png",
+    :class => "held-item",
+    :data => {toggle: "tooltip"},
+    :title => pokemon.item.name
+  %>
+<% end %>

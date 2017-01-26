@@ -1,3 +1,5 @@
 <%= tag :span,
- :class => "pkspr pokeball-#{pokemon.ball.spritename}"
+  :class => ["pkspr", "pokeball-#{pokemon.ball.spritename}"],
+  :data => {toggle: "tooltip"},
+  :title => pokemon.ball.name
 %>

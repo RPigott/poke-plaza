@@ -29,6 +29,11 @@ class Pokemon < ApplicationRecord
 		return san
 	end
 	
+	def species_form_name
+		return self.species.name +
+    	(self.species.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + self.species.form)	
+	end
+	
 	def moves
 		return [self.move1, self.move2, self.move3, self.move4]	
 	end

@@ -1,3 +1,7 @@
 <%= tag :span,
-  :class => "pokemon-type pokemon-type-#{pokemon.hiddenpower&.name&.downcase || :none}"
+  :class => ["pokemon-type",
+             "pokemon-type-#{pokemon.hiddenpower&.name&.downcase || :none}"
+            ],
+  :data => {toggle: "tooltip", type: pokemon.hiddenpower&.name},
+  :title => pokemon.hiddenpower&.name || (pokemon.legal_hp_types.map(&:name).join(" | "))
 %>
