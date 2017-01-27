@@ -32,7 +32,7 @@ number_of.times do
 		ball: Item.where(group: "pokeball").sample,
 		user: user,
 		species: species,
-		item: rand > 0.8 ? nil : Item.all.sample
+		item: rand > 0.2 ? nil : Item.all.sample
 	)
 	pokemon.hiddenpower = pokemon.legal_hp_types.sample if rand > 0.2
 	species.pokemons << pokemon

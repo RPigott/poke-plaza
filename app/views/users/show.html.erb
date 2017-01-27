@@ -7,7 +7,10 @@
     <% stylesheet_link_tag "types.scss" %>
 </head>
 
-<body> 
+<body>
+    <div class="well well-lg col-lg-10 col-lg-offset-1">
+        <%= "#{@user.username}'s Pokemon" %>    
+    </div>
     <%= render "pokemons/pokemon_list" %>
 </body> 
 

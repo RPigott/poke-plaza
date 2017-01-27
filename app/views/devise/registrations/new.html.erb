@@ -9,6 +9,14 @@
     <%= f.label :username, class: ["control-label", "col-lg-2"] %>
     <div class="col-lg-10">
       <%= f.text_field :username, autofocus: true, class: "form-control" %>
+      
+      <div class="help-block">
+        <%= content_tag :em, "Username already taken.", id: "sign-up-error-username", class: "danger", hidden: true %>
+        <%= content_tag :em, "Username available.", id: "sign-up-error-username-success", class: "success", hidden: true %>
+        <%= content_tag :em, "Checking availability...", id: "sign-up-error-username-availability", class: "info", hidden: true %>
+        <%= content_tag :em, "Username may only contain alphanumeric characters.", id: "sign-up-error-username-invalid", class: ["warning", "message-right-justify"], hidden: true %>
+        <span>&nbsp;</span>
+      </div>
     </div>
   </div>
   
@@ -21,39 +29,43 @@
   
   <div class="form-group">
     <%= f.label "Friend Code", class: ["control-label", "col-lg-2"] %>
-    <div class="col-lg-10 fc-container">
-      <%= number_field :fc1, :fc1, type: "number", maxlength: 4 , class: ["fc-segment", "fc-1", "form-control", "col-lg-3"] %>
-      <span class="fc-separator col-lg-1"> - </span>
-      <%= number_field :fc1, :fc2, type: "number", maxlength: 4 , class: ["fc-segment", "fc-2", "form-control", "col-lg-3"] %>
-      <span class="fc-separator col-lg-1"> - </span>
-      <%= number_field :fc1, :fc3, type: "number", maxlength: 4 , class: ["fc-segment", "fc-3", "form-control", "col-lg-3"] %>
+    <div class="col-lg-10">
+      <%= f.text_field :friend_code, placeholder: "0000-0000-0000", class: "form-control" %>
+
+      <div class="help-block">
+        <%= content_tag :em, "Friend code invalid or missing.", id: "sign-up-error-friend-code", class: "danger" %>
+        <%= content_tag :em, "Friend code valid.", id: "sign-up-error-friend-code-success", class: "success", hidden: true %>
+        <span>&nbsp;</span>
+      </div>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :password, class: ["control-label", "col-lg-2"] %>
     <div class="col-lg-10">
-      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-      <% if @minimum_password_length %>
-        <%= content_tag :em, "(#{@minimum_password_length} characters minimum)", class: "help-block" %>
-      <% end %>
+      <%= f.password_field :password, autocomplete: "off", class: "form-control", data: {:min_length => @minimum_password_length} %>
     </div>
   </div>
 
   <div class="form-group">
     <%= f.label :confirm_password, class: ["control-label", "col-lg-2"] %>
     <div class="col-lg-10">
-      <%= f.password_field :confirm_password,
-          autocomplete: "off",
-          class: "form-control"
-      %>
+      <%= f.password_field :confirm_password, autocomplete: "off", class: "form-control" %>
+
+      <div class="help-block">
+        <% if @minimum_password_length %>
+          <%= content_tag :em, "#{@minimum_password_length} characters minimum.", id: "sign-up-error-length", class: "warning" %>
+        <% end %>
+        <%= content_tag :em, "Passwords do not match.", id: "sign-up-error-match", class: "danger", hidden: true%>
+        <span>&nbsp;</span>
+      </div>
     </div>
   </div>
 
   <div class="actions form-group">
     <div class="col-lg-10 col-lg-offset-2">
       <%= button_tag "Cancel", type: :reset, class: ["btn" ,"btn-default"]  %>
-      <%= f.submit "Sign up", class: ["btn", "btn-primary"] %>
+      <%= f.submit "Sign up", id: "sign-up-submit", class: ["btn", "btn-primary"], disabled: true %>
     </div>
   </div>
   

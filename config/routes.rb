@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: "pokemons#index"
 
   get 'pokemons/search', :to => 'pokemons#search', :as => :pokemon_search
+  get 'pokemons/username_availability', :to => 'users#availability', :as => :user_availability
 
   resources :pokemons
   resources :users, :param => :username

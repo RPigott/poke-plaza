@@ -4,10 +4,10 @@
 
 .pokemon-list {
     width: calc(100% - 20px);
-    font: 100%/1.5 "Open Sans";
     color: black;
     background-color: #dadada;
     margin: auto;
+    font-size: 100%;
     
     tbody tr:hover td {
         background-color: #7391af;

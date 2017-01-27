@@ -8,24 +8,27 @@
     }
 }
 
-/* Hide HTML5 Up and Down arrows. */
-.fc-segment::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.success {
+    color: $brand-success;
 }
 
-.fc-segment {
-    -moz-appearance: textfield;
-    display: inline-flex;
-    flex-grow: 1;
+.info {
+    color: $brand-info;
 }
 
-.fc-container {
-    display: flex;
+.warning {
+    color: $brand-warning;
 }
 
-.fc-separator {
-    display: inline-flex;
-    justify-content: center;
-    font-weight: bold;
+.danger {
+    color: $brand-danger;
+}
+
+.help-block > * {
+    margin-right: 1em;
+}
+
+.message-right-justify {
+    float: right;
+    margin-right: 0;
 }

@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
-    validates_uniqueness_of :username
+    validates_uniqueness_of :username, case_sensitive: false
 
 	has_many :pokemons, dependent: :destroy
 	has_many :my_notes, foreign_key: :poster_id, class_name: "Note"
