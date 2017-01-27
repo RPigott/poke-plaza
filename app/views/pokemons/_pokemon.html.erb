@@ -1,13 +1,16 @@
-<tr>
-    <% columns.each do |column| %>
-        <% partial_name = column.sub(/\s/, "").downcase %>
-        <% if partial_name == 'ivs' %>
-            <%= render "pokemons/#{partial_name}", :pokemon => pokemon %>
-        <% else %>
-            <%= content_tag :td,
+<%= content_tag :tr,
+    class: "pokemon",
+    data: {link: user_path(pokemon.user)} do
+        columns.each do |column|
+            partial_name = column.sub(/\s/, "").downcase
+            if partial_name == 'ivs'
+                concat render("pokemons/#{partial_name}", :pokemon => pokemon)
+            else
+                concat content_tag(:td,
                 render("pokemons/#{partial_name}", :pokemon => pokemon),
                 :class => partial_name
-            %>
-        <% end %>
-    <% end %>
-</tr>
+                )
+            end
+        end
+    end
+%>

@@ -9,21 +9,17 @@
       "form-#{pokemon.form_name}"
       ],
     :data => {toggle: "tooltip"},
-    :title => pokemon.species_form_name
+    :title => "#{pokemon.species_form_name}#{' (shiny)' if pokemon.shiny}#{' @ ' + pokemon.item.name if pokemon.item}"
 %>
 
 <% if pokemon.shiny %>
   <%= image_tag "ShinyStar.png",
-    :class => "shiny-star",
-    :data => {toggle: "tooltip"},
-    :title => 'Shiny'
+    :class => "shiny-star"
   %>
 <% end %>
 
 <% if pokemon.item %>
   <%= image_tag "helditem.png",
-    :class => "held-item",
-    :data => {toggle: "tooltip"},
-    :title => pokemon.item.name
+    :class => "held-item"
   %>
 <% end %>

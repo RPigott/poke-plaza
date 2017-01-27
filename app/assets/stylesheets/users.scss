@@ -7,3 +7,25 @@
         height: 3em;
     }
 }
+
+/* Hide HTML5 Up and Down arrows. */
+.fc-segment::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.fc-segment {
+    -moz-appearance: textfield;
+    display: inline-flex;
+    flex-grow: 1;
+}
+
+.fc-container {
+    display: flex;
+}
+
+.fc-separator {
+    display: inline-flex;
+    justify-content: center;
+    font-weight: bold;
+}

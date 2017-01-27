@@ -3,12 +3,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+         
+    validates_uniqueness_of :username
 
-	has_many :pokemons
+	has_many :pokemons, dependent: :destroy
 	has_many :my_notes, foreign_key: :poster_id, class_name: "Note"
 	has_many :notes, foreign_key: :postee_id, class_name: "Note"
-	
-	before_destroy :destroy_pokemons
 	
 	def to_param
 		username

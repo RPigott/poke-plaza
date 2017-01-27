@@ -2,23 +2,8 @@ number_of = ENV["count"].to_i || 1
 species_name = ENV["species"]
 form = ENV["form"] || "Base"
 
-user1 = User.find_by(:username => "Brocellous") || User.create!(
-	username: "Brocellous",
-	ign: "Ronan",
-	friend_code: "0000-0000-0000",
-	trainer_id: 1,
-	password: "password"
-)
-user2 = User.find_by(:username => "Pojostick") || User.create!(
-	username: "Pojostick",
-	ign: "Joseph",
-	friend_code: "1111-1111-1111",
-	trainer_id: 111111,
-	password: "password"
-)
-
 number_of.times do
-	user = rand(2) == 1 ? user1 : user2
+	user = User.all.sample
 	
 	species = Species.find_by(name: species_name, form: form) || Species.find(rand(1..Species.all.count))
 	
@@ -46,7 +31,8 @@ number_of.times do
 		move4: moves[3],
 		ball: Item.where(group: "pokeball").sample,
 		user: user,
-		species: species
+		species: species,
+		item: rand > 0.8 ? nil : Item.all.sample
 	)
 	pokemon.hiddenpower = pokemon.legal_hp_types.sample if rand > 0.2
 	species.pokemons << pokemon
