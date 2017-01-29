@@ -19,7 +19,11 @@ $(document).ready(function() {
     
     function validateRegistration() {
         var success = true;
-        if (!validUsername) {
+        if ($("#user_username").val().length == 0) {
+            $("#sign-up-error-username").hide();
+            $("#sign-up-error-username-success").hide();
+            success = false;
+        } else if (!validUsername) {
             $("#sign-up-error-username").show();
             $("#sign-up-error-username-success").hide();
             success = false;
@@ -56,7 +60,11 @@ $(document).ready(function() {
     }
     
     function queryUsername() {
-        if (queryStatus == -1) {
+        if ($("#user_username").val().length == 0) {
+            $("#sign-up-error-username-availability").hide();
+            validateRegistration();
+        } else if (queryStatus == -1) {
+            $("#sign-up-submit").prop('disabled', true);
             $("#sign-up-error-username-availability").show();
             queryStatus = 1;
             $.ajax({
@@ -73,10 +81,6 @@ $(document).ready(function() {
                     queryStatus = -1;
                     return queryUsername();
                 }
-                if ($("#user_username").val().length == 0) {
-                    validUsername = false;
-                    validateRegistration();
-                }
                 $("#sign-up-error-username-availability").hide();
                 queryStatus = -1;
             });
@@ -89,11 +93,7 @@ $(document).ready(function() {
             $("#sign-up-error-username-invalid").stop(true, true).show().delay("slow").fadeOut();
             $(this).val(valid);
         } else {
-            if ($(this).val().length == 0) {
-                validUsername = false;
-                validateRegistration();
-                $("#sign-up-error-username").hide();
-            } else if (queryStatus == -1) {
+            if (queryStatus == -1) {
                 queryUsername();
             } else {
                 queryStatus = 0;

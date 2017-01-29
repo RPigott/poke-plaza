@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find_by(:username => params[:username].downcase)
+    @user = User.find_by(:username => params[:username])
     @pokemons = @user.pokemons
   end
   

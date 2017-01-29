@@ -8,8 +8,17 @@
 </head>
 
 <body>
-    <div class="well well-lg col-lg-10 col-lg-offset-1">
-        <%= "#{@user.username}'s Pokemon" %>    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          <%= "#{@user.username}'s Pokemon"%>
+      </div>
+      <div class="panel-body">
+        <div style="height: 100px; width: 100px; float: left; background-color: white; margin-right: 20px;"></div>
+        <%= "FC: #{@user.friend_code}" %><br>
+        <%= "IGN: #{@user.ign}" %><br>
+        <%= "Trainer ID: #{@user&.trainer_id}" %>
+        <%= image_tag "pokemon-sun-logo.png", height: 100, width: 100 %>
+      </div>
     </div>
     <%= render "pokemons/pokemon_list" %>
 </body> 

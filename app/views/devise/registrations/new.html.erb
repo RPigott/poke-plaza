@@ -8,7 +8,7 @@
   <div class="form-group">
     <%= f.label :username, class: ["control-label", "col-lg-2"] %>
     <div class="col-lg-10">
-      <%= f.text_field :username, autofocus: true, class: "form-control" %>
+      <%= f.text_field :username, maxlength: MAX_USERNAME_CHARS, autofocus: true, class: "form-control" %>
       
       <div class="help-block">
         <%= content_tag :em, "Username already taken.", id: "sign-up-error-username", class: "danger", hidden: true %>
@@ -23,7 +23,7 @@
   <div class="form-group">
     <%= f.label :ign, class: ["control-label", "col-lg-2"] %>
     <div class="col-lg-10">
-      <%= f.text_field :ign, class: "form-control" %>
+      <%= f.text_field :ign, maxlength: MAX_IGN_CHARS, class: "form-control" %>
     </div>
   </div>
   
