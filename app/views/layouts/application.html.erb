@@ -29,6 +29,11 @@
             </ul>
           <% else %>
             <ul class="nav navbar-nav navbar-right">
+              <li>
+                <p class="navbar-text">
+                  <%= "Logged in as #{current_user.username}" %>
+                </p>
+              </li>
               <li><%= link_to("Log out", destroy_user_session_path, method: :delete) %></li>
             </ul>
           <% end %>

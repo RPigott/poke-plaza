@@ -61,3 +61,8 @@ option {
 [title] {
     cursor: help;
 }
+
+#game-logo {
+    float: right;
+    filter: grayscale(100%) opacity(50%);
+}

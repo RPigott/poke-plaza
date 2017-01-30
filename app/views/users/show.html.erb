@@ -14,10 +14,10 @@
       </div>
       <div class="panel-body">
         <div style="height: 100px; width: 100px; float: left; background-color: white; margin-right: 20px;"></div>
+        <%= image_tag "pokemon-moon-logo.png", id: "game-logo", height: 100, width: 100 %>
         <%= "FC: #{@user.friend_code}" %><br>
         <%= "IGN: #{@user.ign}" %><br>
-        <%= "Trainer ID: #{@user&.trainer_id}" %>
-        <%= image_tag "pokemon-sun-logo.png", height: 100, width: 100 %>
+        <%= "Trainer ID: #{@user&.trainer_id}" %><br>
       </div>
     </div>
     <%= render "pokemons/pokemon_list" %>
