@@ -9,7 +9,7 @@
       "form-#{pokemon.form_name}"
       ],
     :data => {toggle: "tooltip"},
-    :title => "#{pokemon.species_form_name}#{' (shiny)' if pokemon.shiny}#{' @ ' + pokemon.item.name if pokemon.item}"
+    :title => "#{pokemon.species.fullname}#{' (shiny)' if pokemon.shiny}#{' @ ' + pokemon.item.name if pokemon.item}"
 %>
 
 <% if pokemon.shiny %>

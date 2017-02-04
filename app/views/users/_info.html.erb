@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <%= "#{@user.username}'s Pokemon"%>
+  </div>
+  <div class="panel-body">
+    <%= image_tag "mytrainer.png", id: "trainer-picture", height: 60, width: 60 %>
+    <%= image_tag "pokemon-moon-logo.png", id: "game-logo", height: 60, width: 60 %>
+    <%= "FC: #{@user.friend_code}" %><br>
+    <%= "IGN: #{@user.ign}" %><br>
+    <%= "Trainer ID: #{@user&.trainer_id}" %><br>
+  </div>
+</div>

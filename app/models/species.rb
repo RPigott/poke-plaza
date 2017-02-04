@@ -29,6 +29,11 @@ class Species < ApplicationRecord
 				(self.prevo.nil? ? [] : self.prevo.moves)
 			   ).uniq
 	end
+	
+	def fullname
+		return self.name +
+    	(self.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + self.form)	
+	end
 
 	def types
 		return [self.type1, self.type2].compact

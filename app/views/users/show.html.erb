@@ -8,19 +8,13 @@
 </head>
 
 <body>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-          <%= "#{@user.username}'s Pokemon"%>
-      </div>
-      <div class="panel-body">
-        <div style="height: 100px; width: 100px; float: left; background-color: white; margin-right: 20px;"></div>
-        <%= image_tag "pokemon-moon-logo.png", id: "game-logo", height: 100, width: 100 %>
-        <%= "FC: #{@user.friend_code}" %><br>
-        <%= "IGN: #{@user.ign}" %><br>
-        <%= "Trainer ID: #{@user&.trainer_id}" %><br>
-      </div>
-    </div>
+    
+    <%= render "info" %>
+    
+    <%= render "pokemons/new" %>
+    
     <%= render "pokemons/pokemon_list" %>
+    <%= button_tag "+ Add a pokemon", id: "new-pokemon-btn", class: ["btn btn-success"], onclick: "addPokemon();" %>
 </body> 
 
 <script>

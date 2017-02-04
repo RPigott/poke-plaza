@@ -1,20 +1,20 @@
 class Pokemon < ApplicationRecord
 	enum gender: [:male, :female]
 
-	belongs_to :species
+	belongs_to :species, optional: true
 	belongs_to :user
 
-	belongs_to :move1, class_name: "Move"
+	belongs_to :move1, class_name: "Move", optional: true
 	belongs_to :move2, class_name: "Move", optional: true
 	belongs_to :move3, class_name: "Move", optional: true
 	belongs_to :move4, class_name: "Move", optional: true
 
 	belongs_to :hiddenpower, class_name: "Type", optional: true
 
-	belongs_to :ability
+	belongs_to :ability, optional: true
 	belongs_to :nature, optional: true
 	belongs_to :item, optional: true
-	belongs_to :ball, class_name: "Item"
+	belongs_to :ball, class_name: "Item", optional: true
 
 	def sprite_name
 		return self.species.name.delete("'").delete(".").delete(":").sub(" ", "-").sub("♀", "-f").sub("♂", "-m").sub("ébé", "ebe").downcase
@@ -27,11 +27,6 @@ class Pokemon < ApplicationRecord
 			san = "alola"
 		end
 		return san
-	end
-	
-	def species_form_name
-		return self.species.name +
-    	(self.species.form =~ /(Base)|(Male)|(Female)/ ? "" : "-" + self.species.form)	
 	end
 	
 	def moves

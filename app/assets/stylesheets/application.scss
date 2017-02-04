@@ -23,8 +23,8 @@
 // Then bootstrap itself
 @import "bootstrap";
 
-// Bootstrap body padding for fixed navbar
-// body { padding-top: 60px; }
+// Add Bootstrap Select
+@import "bootstrap-select";
 
 // And finally bootswatch style itself
 @import "bootswatch/superhero/bootswatch";
@@ -32,6 +32,7 @@
 @import "pokemons/*";
 @import "pokesprite";
 @import "users";
+@import "typeahead";
 
 body {
     font-family: Lato;

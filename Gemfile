@@ -37,7 +37,10 @@ gem 'bootstrap-sass'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
+gem 'rails-bootstrap-select'
 gem 'bootswatch-rails'
+
+gem 'twitter-typeahead-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

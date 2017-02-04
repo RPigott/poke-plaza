@@ -1,0 +1,54 @@
+<div class="new-pokemon">
+    
+    <div id="select-ball">
+        <%= content_tag :select, id: "ball-selector", class: "selectpicker", data: {live_search: true} do %>
+            <% Item.where(group: "pokeball").each do |ball| %>
+                <% concat content_tag(:option,
+                    ball.id,
+                    data: {
+                        content: tag(:span, class: ["pkspr", "pokeball-#{ball.spritename}"]) +
+                                content_tag(:span, ball.name)
+                    })
+                %>
+            <% end %>
+        <% end %>
+    </div>
+    
+    <div id="select-species" class="form-group">
+        <label class="control-label" for="species-selector">Species</label>
+        <input id="species-selector" class="typeahead form-control" type="text" placeholder="Bulbasaur">
+    </div>
+    
+    <div class="select-nature">
+        <%= content_tag :select, id: "nature-selector", class: "selectpicker", data: {live_search: true} do %>
+            <% Nature.all.each do |nature| %>
+                <% concat content_tag(:option,
+                    nature.id,
+                    data: {
+                        content: content_tag(:span, "#{nature.name} &nbsp; (+#{nature.positive}/-#{nature.negative})")
+                    })
+                %>
+            <% end %>
+        <% end %>
+    </div>
+    
+    <div class="select-hp">
+        <%= content_tag :select, id: "hp-selector", class: "selectpicker", data: {live_search: true} do %>
+            <% concat content_tag(:option, "???") %>
+            <% Type.all.each do |type| %>
+                <% concat content_tag(:option,
+                    type.id,
+                    data: {
+                        content: content_tag(:span, type.name)
+                    }) %>
+            <% end %>
+        <% end %>
+    </div>
+    
+    <div class="select-ability">
+        <%= content_tag :select, id: "ability-selector", class: "selectpicker", data: {live_seach: true}, disabled: true do %>
+            
+        <% end %>
+    </div>
+    
+</div>

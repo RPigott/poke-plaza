@@ -8,6 +8,7 @@
     background-color: #dadada;
     margin: auto;
     font-size: 100%;
+    margin-bottom: 10px;
     
     tbody tr:hover td {
         background-color: #7391af;
@@ -62,7 +63,30 @@ option {
     cursor: help;
 }
 
+#trainer-picture {
+    float: left;
+    margin-right: 1em;
+}
+
 #game-logo {
     float: right;
     filter: grayscale(100%) opacity(50%);
+}
+
+#new-pokemon-btn {
+    float: right;
+}
+
+#ball-selector + .bootstrap-select {
+    .selectpicker {
+        height: 50px;
+    }
+    i, span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.new-pokemon {
+    margin-bottom: 20px;
 }

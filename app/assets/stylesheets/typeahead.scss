@@ -1,0 +1,27 @@
+.tt-input {
+    background-color: $gray-light;
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-menu {    /* used to be tt-dropdown-menu in older versions */
+  width: 300px;
+  padding: 4px 0;
+  background-color: $gray-light;
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  line-height: 24px;
+}
+
+.tt-suggestion.tt-cursor,.tt-suggestion:hover {
+  color: $component-active-color;
+  background-color: $component-active-bg;
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
