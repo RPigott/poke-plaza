@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get 'pokemons/search', :to => 'pokemons#search', :as => :pokemon_search
   get 'pokemons/username_availability', :to => 'users#availability', :as => :user_availability
+  get 'species/:id/abilities', :to => 'species#abilities'
 
   resources :pokemons
   resources :users, :param => :username

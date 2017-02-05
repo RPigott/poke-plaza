@@ -40,7 +40,7 @@ class Species < ApplicationRecord
 	end
 
 	def abilities
-		return [self.ability1, self.ability2, self.ability3].compact
+		return [self.ability1, self.ability2, self.ability3]
 	end
 
 	def egg_groups

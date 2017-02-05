@@ -1,0 +1,19 @@
+<% if abilities[0] %>
+    <%= content_tag(:option,
+        abilities[0].id,
+        data: {content: content_tag(:span, abilities[0].name)}
+    )%>
+<% end %>
+<% if abilities[1] %>
+    <%= content_tag(:option,
+        abilities[1].id,
+        data: {content: content_tag(:span, abilities[1].name)}
+    )%>
+<% end %>
+<% if abilities[2] %>
+    <%= content_tag(:option,
+        abilities[2].id,
+        data: {content: content_tag(:span, abilities[2].name)},
+        style: "font-weight: bold;"
+    )%>
+<% end %>

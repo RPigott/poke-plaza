@@ -1,6 +1,6 @@
 /* Place all the behaviors and hooks related to the matching controller here. */
 /* All this logic will automatically be available in application.js. */
-/* global $, PkSpr, Bloodhound */
+/* global $, PkSpr, Bloodhound, species_typeahead */
 
 function addPokemon() {
     
@@ -25,16 +25,25 @@ $(document).ready(function() {
     }, {
         name: "Species",
         source: new Bloodhound({
-            datumTokenizer: Bloodhound.tokenizers.whitespace,
+            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
             queryTokenizer: Bloodhound.tokenizers.whitespace,
-            local: species_typeahead
-        })
+            local: species_typeahead,
+            identifier: function(datum) {
+                return datum.id
+            }
+        }),
+        display: 'name'
     }).on('typeahead:selected', function(obj, datum, name) {
-        $("#ability-selector").prop('disabled', false).selectpicker('refresh');
-        $('#ability-selector').selectpicker('refresh');
+        // Fill related abilities in the ability selector
+        $.ajax({
+            url: '/species/' + datum.id + '/abilities',
+            dataType: 'script'
+        });
     }).on('keyup', function(e) {
         if(e.which == 13) {
-            $("#select-species .tt-suggestion:first-child").trigger('click');
+            if ($('#select-species .tt-menu').css('display') != "none") {
+                $("#select-species .tt-suggestion:first-child").trigger('click');
+            }
         }
     });
 });
