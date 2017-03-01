@@ -11,12 +11,14 @@ $(document).ready(function() {
         document.location = $(this).data("link");
     });
     
-    $('.selectpicker').selectpicker({tickIcon: ""})
+    $('.selectpicker').selectpicker({tickIcon: ""});
+    $('.move-selector').selectpicker({tickIcon: null, maxOptions: 4});
     
-    $('#select-ball .selectpicker').on('change', function() {
+    $('.select-ball .selectpicker').on('change', function() {
         PkSpr.process_container(this);
+        console.log($(this).val());
     });
-    PkSpr.process_container($('#select-ball .dropdown-menu'));
+    PkSpr.process_container($('.select-ball .dropdown-menu'));
     
     $('#select-species .typeahead').typeahead({
         hint: true,
@@ -34,16 +36,36 @@ $(document).ready(function() {
         }),
         display: 'name'
     }).on('typeahead:selected', function(obj, datum, name) {
-        // Fill related abilities in the ability selector
+        // Fill species id
+        $('#pokemon_species_id').val(datum.id);
+        
+        // Fill related fields in the selector
+        $.ajax({
+            url: '/species/' + datum.id + '/genders',
+            dataType: 'script'
+        })
+        
         $.ajax({
             url: '/species/' + datum.id + '/abilities',
             dataType: 'script'
         });
+        
+        $.ajax({
+           url: '/species/' + datum.id + '/moves',
+           dataType: 'script'
+        });
+        
     }).on('keyup', function(e) {
         if(e.which == 13) {
             if ($('#select-species .tt-menu').css('display') != "none") {
                 $("#select-species .tt-suggestion:first-child").trigger('click');
             }
+        }
+    });
+    
+    $('#new-pokemon').on('keypress', function(e) {
+        if (e.which == 13) {
+            e.preventDefault();
         }
     });
 });

@@ -1,0 +1,8 @@
+// Quite possibly the dumbest thing I've ever written. Just temporarily here until users have column state
+// please, #FIXME
+"<% unless local_assigns[:columns] %>"
+    "<% columns = ['Ball','Sprite', 'Name', 'Gender', 'Nature', 'IVs', 'Hidden Power', 'Ability', 'Moves'] %>"
+"<% end %>"
+
+$('.pokemon-list').append("<%= j render @pokemon, columns: columns %>");
+PkSpr.process_container($('.pokemon-list tr:last-child'));

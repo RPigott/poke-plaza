@@ -1,0 +1,10 @@
+<% if ratio.nil? %>
+    <%# Nothing to render %>
+<% elsif ratio == 0.0 %>
+    <%= content_tag(:option, 0, data: {content: content_tag(:span, "Male")}) %>
+<% elsif ratio == 1.0 %>
+    <%= content_tag(:option, 1, data: {content: content_tag(:span, "Female")}) %>
+<% else %>
+    <%= content_tag(:option, 0, data: {content: content_tag(:span, "Male")}) %>
+    <%= content_tag(:option, 1, data: {content: content_tag(:span, "Female")}) %>
+<% end %>

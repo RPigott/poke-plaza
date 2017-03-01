@@ -1,1 +1,1 @@
-$('#ability-selector').html("<%= j render('abilities', abilities: @species.abilities) %>").prop('disabled', false).selectpicker('refresh');
+$('.ability-selector.selectpicker').html("<%= j render('abilities', abilities: @species.abilities) %>").prop('disabled', false).selectpicker('refresh');

@@ -1,7 +1,7 @@
 class Pokemon < ApplicationRecord
 	enum gender: [:male, :female]
 
-	belongs_to :species, optional: true
+	belongs_to :species
 	belongs_to :user
 
 	belongs_to :move1, class_name: "Move", optional: true

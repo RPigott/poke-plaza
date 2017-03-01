@@ -59,9 +59,9 @@ option {
     color: black;
 }
 
-[title] {
-    cursor: help;
-}
+// [title] {
+//     cursor: help;
+// }
 
 #trainer-picture {
     float: left;
@@ -77,7 +77,7 @@ option {
     float: right;
 }
 
-#ball-selector + .bootstrap-select {
+.ball-selector + .bootstrap-select {
     .selectpicker {
         height: 50px;
     }

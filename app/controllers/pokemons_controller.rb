@@ -1,31 +1,25 @@
 class PokemonsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show, :search]
   
-  def pokemon_params
-    params.require(:pokemon).permit(:original_trainer_id, :nickname, :gender, :shiny, :nature, :ability, :HPIV, :AtkIV, :DefIV, :SpAIV, :SpDIV, :SpeIV, :hiddenpower, :move1, :move2, :move3, :move4, :ball)
-  end
-  
   def search_params
     params.permit(:original_trainer_id, :nickname, :gender, :shiny, :nature, :ability, :HPIV, :AtkIV, :DefIV, :SpAIV, :SpDIV, :SpeIV, :hiddenpower, :move1, :move2, :move3, :move4, :ball)
   end
   
   def create
-    species = Species.find_by(:name => params[:pokemon][:species])
-    if not species
-      flash[:notice] = "Species '#{params[:pokemon][:species]}' not found."
-      render :new and return 
+    moves = params["pokemon"]["moves"]
+    # Kinda hacky, should fix
+    (1..4).each do |n|
+      params["pokemon"]["move" + n.to_s + "_id"] = (moves || [])[n - 1]&.to_i
     end
     
-    pokemon = pokemon_params
-    pokemon[:user] = current_user
-    pokemon[:species] = species
-    @pokemon = Pokemon.create!(pokemon)
-
-    current_user.pokemons << @pokemon
-    species.pokemons << @pokemon
-    
-    flash[:notice] = "Created #{@pokemon.nickname} (#{@pokemon.species.name})"
-    redirect_to pokemons_path
+    @pokemon = Pokemon.new(params["pokemon"].permit(:user, :species_id, :ball_id, :nature_id, :hidden_power_id, :ability_id, :move1_id, :move2_id, :move3_id, :move4_id))
+    @pokemon.user = current_user
+    @pokemon.save!
+    respond_to do |format|
+      format.js {render "new", layout: false}
+    end
+    # redirect_to user_path(current_user)
+    # redirect_to pokemons_path
   end
   
   def index

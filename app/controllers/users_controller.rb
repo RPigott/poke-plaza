@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(:username => params[:username])
     @pokemons = @user.pokemons
+    @pokemon = Pokemon.new
   end
   
   def availability

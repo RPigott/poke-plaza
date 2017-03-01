@@ -1,52 +1,117 @@
-<div class="new-pokemon">
+<div id="new-pokemon" class="userform">
     
-    <div id="select-ball">
-        <%= content_tag :select, id: "ball-selector", class: "selectpicker", data: {live_search: true} do %>
-            <% Item.where(group: "pokeball").each do |ball| %>
-                <% concat content_tag(:option,
-                    ball.id,
-                    data: {
-                        content: tag(:span, class: ["pkspr", "pokeball-#{ball.spritename}"]) +
-                                content_tag(:span, ball.name)
-                    })
-                %>
-            <% end %>
-        <% end %>
+    <%= form_for(@pokemon, class: "form-horizontal", remote: true) do |f| %>
+    <fieldset>
+    
+    <div class="form-group">
+        <%= f.label :ball, class: ["control-label", "col-lg-2"] %>
+        <div class="select-ball">
+            <%= f.select :ball_id,
+                Item.where(group: "pokeball").collect{ |ball|
+                    [ball.name, ball.id, {"data-content" =>
+                        tag(:span, class: ["pkspr", "pokeball-#{ball.spritename}"]) + content_tag(:span, ball.name)
+                    }]
+                    
+                },
+                {},
+                {
+                 class: ["ball-selector", "selectpicker"],
+                 data: {live_search: true}
+                }
+            %>
+        </div>
     </div>
     
     <div id="select-species" class="form-group">
-        <label class="control-label" for="species-selector">Species</label>
-        <input id="species-selector" class="typeahead form-control" type="text" placeholder="Bulbasaur">
+        <%= f.label :species, class: ["control-label", "col-lg-2"] %>
+        <%= f.text_field :species, class: ["species-selector", "typeahead", "form-control"], placeholder: "Bulbasaur" %>
+        <%= f.hidden_field :species_id %>
     </div>
     
-    <div class="select-nature">
-        <%= content_tag :select, id: "nature-selector", class: "selectpicker", data: {live_search: true} do %>
-            <% Nature.all.each do |nature| %>
-                <% concat content_tag(:option,
-                    nature.id,
-                    data: {
-                        content: content_tag(:span, "#{nature.name} &nbsp; (+#{nature.positive}/-#{nature.negative})")
-                    })
-                %>
-            <% end %>
-        <% end %>
+    <div id="select-gender" class="form-group">
+        <%= f.label :gender, class: ["control-label", "col-lg-2"] %>
+        <%= f.select :gender, [], {}, {class: ["gender-selector", "selectpicker"], disabled: true} %>
     </div>
     
-    <div class="select-hp">
-        <%= content_tag :select, id: "hp-selector", class: "selectpicker", data: {live_search: true} do %>
-            <% concat content_tag(:option, "???") %>
-            <% Type.all.each do |type| %>
-                <% concat content_tag(:option,
-                    type.id,
-                    data: {
-                        content: content_tag(:span, type.name)
-                    }) %>
-            <% end %>
-        <% end %>
+    <div class="form-group">
+        <%= f.label :nature, class: ["control-label", "col-lg-2"]%>
+        <div class="select-nature">
+            <%= f.select :nature_id,
+                Nature.all.collect{|nature|
+                    [nature.name, nature.id, {"data-content" => 
+                        content_tag(:span, "#{nature.name} &nbsp; (+#{nature.positive}/-#{nature.negative})")
+                    }]},
+                {},
+                {
+                    class: ["nature-selector", "selectpicker"],
+                    data: {live_search: true}
+                }
+            %>
+        </div>
     </div>
     
-    <div class="select-ability">
-        <%= content_tag :select, id: "ability-selector", class: "selectpicker", data: {live_seach: true}, disabled: true do %>
-        <% end %>
+    <div class="form-group">
+        <%= f.label :IVs, class: ["control-label", "col-lg-2"] %>
+        <div class="select-ivs">
+            <%= f.text_field :HPIV , class: ["iv-field"] %>
+            <%= f.text_field :AtkIV, class: ["iv-field"] %>
+            <%= f.text_field :DefIV, class: ["iv-field"] %>
+            <%= f.text_field :SpAIV, class: ["iv-field"] %>
+            <%= f.text_field :SpDIV, class: ["iv-field"] %>
+            <%= f.text_field :SpeIV, class: ["iv-field"] %>
+        </div>
     </div>
+    
+    <div class="form-group">
+        <%= f.label :hidden_power_type, class: ["control-label", "col-lg-2"]%>
+        <div class="select-hp">
+            <%= f.select :hiddenpower_id,
+                Type.all.collect{|type|
+                    [type.name, type.id, {"data-content" => content_tag(:span, type.name)}]
+                }.unshift(["???", nil, {"data-content" => content_tag(:span, "???")}]),
+                {},
+                {
+                    class: ["hp-selector", "selectpicker"],
+                    data: {live_search: true}
+                }   
+            %>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :ability, class: ["control-label", "col-lg-2"] %>
+        <div class="select-ability">
+            <%= f.select :ability_id, [], {},
+                {
+                    class: ["ability-selector", "selectpicker"],
+                    data: {live_seach: true},
+                    disabled: true
+                }
+            %>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <%= f.label :moves, class: ["control-label", "col-lg-2"] %>
+        <div id="select-moves">
+            <%= f.select :moves, [], {},
+                {
+                    class: ["move-selector", "selectpicker"],
+                    data: {live_search: true},
+                    disabled: true,
+                    multiple: true
+                }
+            %>
+        </div>
+    </div>
+    
+    <div class="actions form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+            <%= button_tag "Clear", type: :reset, class: ["btn" ,"btn-default"]  %>
+            <%= f.submit "Add", class: ["btn", "btn-primary"] %>
+        </div>
+    </div>
+    
+    </fieldset>
+    <% end %>
 </div>

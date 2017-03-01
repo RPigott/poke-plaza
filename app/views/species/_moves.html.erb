@@ -1,0 +1,3 @@
+<% moves.each do |move| %>
+    <%= content_tag(:option, move.id, data: {content: content_tag(:span, move.name)}) %>
+<% end %>
