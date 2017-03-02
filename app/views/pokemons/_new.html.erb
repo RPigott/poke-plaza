@@ -53,12 +53,13 @@
     <div class="form-group">
         <%= f.label :IVs, class: ["control-label", "col-lg-2"] %>
         <div class="select-ivs">
-            <%= f.text_field :HPIV , class: ["iv-field"] %>
-            <%= f.text_field :AtkIV, class: ["iv-field"] %>
-            <%= f.text_field :DefIV, class: ["iv-field"] %>
-            <%= f.text_field :SpAIV, class: ["iv-field"] %>
-            <%= f.text_field :SpDIV, class: ["iv-field"] %>
-            <%= f.text_field :SpeIV, class: ["iv-field"] %>
+            <%= f.text_field :HPIV , class: ["iv-field"], maxlength: 2 %>
+            <%= f.text_field :AtkIV, class: ["iv-field"], maxlength: 2 %>
+            <%= f.text_field :DefIV, class: ["iv-field"], maxlength: 2 %>
+            <%= f.text_field :SpAIV, class: ["iv-field"], maxlength: 2 %>
+            <%= f.text_field :SpDIV, class: ["iv-field"], maxlength: 2 %>
+            <%= f.text_field :SpeIV, class: ["iv-field"], maxlength: 2 %>
+            <%# content_tag :span, "HP / Atk / Def / SpA / Spd / Spe", class: ["help-block"] %>
         </div>
     </div>
     

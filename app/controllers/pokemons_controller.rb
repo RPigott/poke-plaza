@@ -12,7 +12,29 @@ class PokemonsController < ApplicationController
       params["pokemon"]["move" + n.to_s + "_id"] = (moves || [])[n - 1]&.to_i
     end
     
-    @pokemon = Pokemon.new(params["pokemon"].permit(:user, :species_id, :ball_id, :nature_id, :hidden_power_id, :ability_id, :move1_id, :move2_id, :move3_id, :move4_id))
+    ivs = [:HPIV, :AtkIV, :DefIV, :SpAIV, :SpDIV, :SpeIV]
+    ivs.each do |sym|
+      iv = params["pokemon"][sym]
+      if iv =~ /^[0-9][0-9]?$/
+        n = iv.to_i
+        case n
+        when n < 0
+          n = 0
+        when n > 31
+          n = 31
+        end
+        params["pokemon"][sym] = n
+      else
+        params["pokemon"][sym] = nil
+      end
+    end
+        
+    
+    @pokemon = Pokemon.new(params["pokemon"].permit(
+      :user, :species_id, :ball_id, :nature_id, :hidden_power_id, :ability_id,
+      :move1_id, :move2_id, :move3_id, :move4_id,
+      :HPIV, :AtkIV, :SpAIV, :DefIV, :SpDIV, :SpeIV
+      ))
     @pokemon.user = current_user
     @pokemon.save!
     respond_to do |format|

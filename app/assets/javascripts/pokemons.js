@@ -16,7 +16,6 @@ $(document).ready(function() {
     
     $('.select-ball .selectpicker').on('change', function() {
         PkSpr.process_container(this);
-        console.log($(this).val());
     });
     PkSpr.process_container($('.select-ball .dropdown-menu'));
     

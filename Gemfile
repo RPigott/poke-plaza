@@ -41,6 +41,7 @@ gem 'rails-bootstrap-select'
 gem 'bootswatch-rails'
 
 gem 'twitter-typeahead-rails'
+# gem 'jquery-datatables-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
