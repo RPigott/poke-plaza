@@ -8,11 +8,6 @@
 </head>
 
 <body> 
-    <%= render "pokemon_list" %>
-</body> 
-
-<script>
-    PkSpr.process_dom();
-    jQuery("[data-toggle='tooltip']").tooltip();
-</script>
+    <%= render "pokemon_list", :columns => @columns %>
+</body>
 </html>

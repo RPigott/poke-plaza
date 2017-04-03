@@ -78,10 +78,11 @@ class PokemonsController < ApplicationController
   end
   
   def search
-    query = search_params
-    query['species'] = Species.find_by(:name => params['species']).id if params['species']
-    query['user'] = User.find_by(:username => params['username']).id if params['username']
+    query = {}
+    query[:species] = Species.where("lower(name) = ?", params.permit(:query)[:query].downcase)
+    
     @pokemons = Pokemon.where(query)
+    @columns = ["Owner", "Ball","Sprite", "Name", "Gender", "Nature", "IVs", "Hidden Power", "Ability", "Moves"]
     render :index
   end
 end

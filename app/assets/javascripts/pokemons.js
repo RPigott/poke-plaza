@@ -82,4 +82,7 @@ $(document).ready(function() {
         
         $('tr.pokemon.selected').remove();
     });
+    
+    PkSpr.process_dom();
+    $("[data-toggle='tooltip']").tooltip();
 });
