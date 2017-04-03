@@ -2,13 +2,14 @@
 /* All this logic will automatically be available in application.js. */
 /* global $, PkSpr, Bloodhound, species_typeahead */
 
-function addPokemon() {
-    
-}
-
 $(document).ready(function() {
     $('tr.pokemon').click(function() {
-        document.location = $(this).data("link");
+        // document.location = $(this).data("link");
+        if ($(this).hasClass("selected")) {
+            $(this).removeClass("selected");
+        } else {
+            $(this).addClass("selected");
+        }
     });
     
     $('.selectpicker').selectpicker({tickIcon: ""});
@@ -66,5 +67,19 @@ $(document).ready(function() {
         if (e.which == 13) {
             e.preventDefault();
         }
+    });
+    
+    $('.actions .delete').on('click', function(e) {
+        var ids = $('tr.pokemon.selected').map(function() {
+            return $(this).data('id');
+        }).toArray();
+        
+        $.ajax({
+            url: '/pokemons/delete',
+            method: 'POST',
+            data: {ids: ids}
+        });
+        
+        $('tr.pokemon.selected').remove();
     });
 });

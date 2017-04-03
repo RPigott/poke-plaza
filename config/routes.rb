@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'species/:id/abilities', :to => 'species#abilities'
   get 'species/:id/moves', :to => 'species#moves'
   get 'species/:id/genders', :to => 'species#genders'
+  post 'pokemons/delete', :to => 'pokemons#delete'
 
   resources :pokemons
   resources :users, :param => :username

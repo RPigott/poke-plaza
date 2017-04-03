@@ -63,6 +63,20 @@ class PokemonsController < ApplicationController
     redirect_to pokemons_path
   end
   
+  def delete
+    @pokemons = Pokemon.where(id: params.permit(:ids => [])[:ids], user: current_user)
+    
+    puts @pokemons.map { |pokemon| pokemon.species.name }
+    
+    @pokemons.each do |pokemon|
+      pokemon.destroy
+    end
+    
+    # respond_to do |format|
+    #   format.js {flash[:notice] = "Deleted (#{@pokemons.length}) pokemon"}
+    # end
+  end
+  
   def search
     query = search_params
     query['species'] = Species.find_by(:name => params['species']).id if params['species']

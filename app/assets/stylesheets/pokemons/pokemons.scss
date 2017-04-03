@@ -11,7 +11,8 @@
     margin-bottom: 10px;
     
     tbody tr:hover td {
-        background-color: #7391af;
+        
+        // background-color: #7391af;
     }
     
     th {
@@ -89,4 +90,8 @@ option {
 
 .new-pokemon {
     margin-bottom: 20px;
+}
+
+tr.pokemon.selected {
+    background-color: darken($table-bg-hover, 3%);
 }

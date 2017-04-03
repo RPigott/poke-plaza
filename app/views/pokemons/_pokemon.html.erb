@@ -1,6 +1,6 @@
 <%= content_tag :tr,
     class: "pokemon",
-    data: {link: user_path(pokemon.user)} do
+    data: {link: user_path(pokemon.user), id: pokemon.id} do
         columns.each do |column|
             partial_name = column.sub(/\s/, "").downcase
             if partial_name == 'ivs'
