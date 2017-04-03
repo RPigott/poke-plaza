@@ -85,4 +85,6 @@ $(document).ready(function() {
     
     PkSpr.process_dom();
     $("[data-toggle='tooltip']").tooltip();
+    
+    window.onunload(function() {});
 });
